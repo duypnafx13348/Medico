@@ -1,0 +1,24 @@
+.container 
+    .dashboard__main__content__title.primary-title Add Expense
+    form.addExpense-form
+        .row.addExpense-row.dashboard__main__content__information__group
+            .col-lg-6.addExpense-col 
+                +signupForm("Expense Head", "text", "expenseHead", "Repair Equipment")
+            .col-lg-6.addExpense-col
+                +selectForm("Select Category","selectCategory", ["Utilities Bill", "Tax Payment", "Salary Payment", "Others"])
+        .row.addExpense-row.dashboard__main__content__information__group
+            .col-lg-6.addExpense-col 
+                +signupForm("Amount", "text", "amount", "$5,600")
+            .col-lg-6.addExpense-col
+                +selectForm("Date","date", ["31 January, 2021", "11 January, 2021"])
+        .row.addExpense-row.dashboard__main__content__information__group
+            .col-lg-12.addExpense-col
+                .form-group
+                    label(for="description") Description
+                    textarea(name="description" id="description" rows="4")
+        .row.addExpense-row.dashboard__main__content__information__group
+            .col-lg-6.addExpense-col 
+                +signupForm("Check Number", "text", "checkNumber", "**** **** **** 5648")
+            .col-lg-6.addExpense-col
+                +selectForm("Bank Account","bankAccount", ["SHB", "TECHCOMBANK", "VIB", "SACOMBANK"])
+        div(class="serviceInformation__card__button cssButton addExpense-submit") Submit

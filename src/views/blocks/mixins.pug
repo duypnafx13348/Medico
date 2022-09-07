@@ -1,0 +1,103 @@
+mixin signupForm(label, type, name, placeholder, hidden) 
+    .form-group
+        label(for= name class="cssLabel")= label
+        if hidden
+            input(type= type id= name hidden class="form-control cssInput" placeholder= placeholder name= name)
+        else
+            input(type= type id= name class="form-control cssInput" placeholder= placeholder name= name)
+
+mixin selectForm(label, name, dataOption)
+    .form-group
+        label(for= name, class="form-label")= label
+        select(name= name, id= name, class="form-select") 
+            each value in dataOption
+                option(value= value)= value
+
+mixin listItem(classLi, srcImg, text, arrow)
+    li(class= classLi) 
+        div(class="d-flex justify-content-between align-items-start")
+            div(class="d-flex align-items-start")
+                img(src= srcImg, alt= text)
+                span.text= text
+            if arrow
+                i(class= arrow aria-hidden="true")
+        if block 
+            block
+
+
+mixin list-child(li_child, text_child)
+    li(class= li_child)= text_child
+
+mixin card(srcImg, text, number)
+    .col-lg-3
+        .dashboard__main__content__card
+            .dashboard__main__content__card-img
+                img(src= srcImg, alt="Icon")
+            .dashboard__main__content__card-desc 
+                .cssText= text 
+                span.number= number
+
+
+mixin topDoctor(imgAvatar, title, text, imgStar, textReview)
+    .dashboard__main__content__history__card__rank__info 
+        .dashboard__main__content__history__card__rank__info-flex
+            .dashboard__main__content__history__card__rank__info__avatar
+                img(src= imgAvatar, alt="avatar")
+            .dashboard__main__content__history__card__rank__info__name 
+                .cssText= title
+                span.cssText= text
+        .dashboard__main__content__history__card__rank__info__rating 
+            .dashboard__main__content__history__card__rank__info__rating-star 
+                img(src= imgStar, alt="star")
+                img(src= imgStar, alt="star")
+                img(src= imgStar, alt="star")
+                img(src= imgStar, alt="star")
+                img(src= imgStar, alt="star")
+            .dashboard__main__content__history__card__rank__info__rating-review 
+                span= textReview
+
+mixin recentActivity(imgAvatar, title, textAddress, textSick, textStatus)
+    .dashboard__main__content__history__card__content__info
+        .dashboard__main__content__history__card__content__info-flex
+            .dashboard__main__content__history__card__content__info__avatar
+                img(src= imgAvatar, alt="avatar")
+            .dashboard__main__content__history__card__content__info__name 
+                .cssText= title
+                span.cssText= textAddress
+        .dashboard__main__content__history__card__content__info__sick
+            span.cssText= textSick
+        .dashboard__main__content__history__card__content__info__status
+            span.cssText= textStatus
+
+mixin patientProfile(addClass, title, text)
+    div(class= addClass)
+        div.col-lg-6
+            span.key= title
+        div.col-lg-6
+            span.value= text
+
+mixin bloodReport(title, text)
+    .dashboard__main__content__other__bloodReport__table__group
+        .dashboard__main__content__other__bloodReport__table__group__title= title
+        .dashboard__main__content__other__bloodReport__table__group__text= text
+
+mixin slider(image, title, text)
+    .dashboard__main__content__slider__card.bg-card
+        .dashboard__main__content__slider__card__avatar 
+            img(src= image, alt="avatar")
+        .dashboard__main__content__slider__card__info
+            .dashboard__main__content__slider__card__info__title.cssTitleChild= title
+            .dashboard__main__content__slider__card__info__text.cssTextDownLoad= text
+
+mixin serviceInformation(name, price)
+    .serviceInformation__card__box 
+        .serviceInformation__card__header__name.cssText= name
+        .serviceInformation__card__header__price.cssText= price
+
+
+mixin progressReport(textLabel, id, value)
+    .form-group 
+        label(for= id, class="cssLabel")= textLabel 
+        .wrapper
+            progress(id= id, value= value, max="100", class="form-control")
+            .progressValue #{value}%

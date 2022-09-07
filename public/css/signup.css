@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+}
+
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.full-width {
+  display: flex;
+  background: linear-gradient(180deg, #f0f2fd 0%, #fff8f9 100%);
+}
+.full-width .signup {
+  background: #f6f8fe;
+  mix-blend-mode: multiply;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.full-width .signup__title h2 {
+  color: #292968;
+  font-weight: 600;
+}
+.full-width .signup .form-group {
+  margin-top: 21px;
+}
+.full-width .signup .form-group:first-child {
+  margin-top: 57px;
+}
+.full-width .signup .form-group label {
+  font-weight: 400;
+  color: #3d3d66;
+}
+.full-width .signup .form-group input {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+  border: 0.5px solid #e0e7fe;
+  padding: 16px 20px;
+}
+.full-width .signup .form-group input::placeholder {
+  font-weight: 400;
+  color: #70708c;
+}
+.full-width .signup .form-group input:not(input[type=checkbox]),
+.full-width .signup .form-group button {
+  height: 50px;
+}
+.full-width .signup .form-group button {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+.full-width .signup .form-group button:first-child {
+  background-color: #605bff;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+.full-width .signup .form-group button:nth-child(2) {
+  background-color: #ffffff;
+}
+.full-width .signup .form-group button:nth-child(2) span,
+.full-width .signup .form-group button:nth-child(2) i {
+  font-weight: 500;
+  color: #ff8f6b;
+  padding: 0 9px;
+  display: inline-block;
+}
+.full-width .signup .form-group:nth-child(5) label {
+  display: inline;
+  color: #70708c;
+}
+.full-width .signup .form-group span {
+  font-weight: 400;
+  color: #70708c;
+  display: block;
+  text-align: center;
+}
+.full-width .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 420px) {
+  * {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .full-width .signup {
+    width: 100%;
+    padding: 99px 24px;
+  }
+  .full-width .signup__title h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .full-width .signup .form-group {
+    margin-top: 15px;
+  }
+  .full-width .signup .form-group:first-child {
+    margin-top: 40px;
+  }
+  .full-width .signup .form-group input {
+    padding: 15px;
+  }
+  .full-width .signup .form-group input::placeholder {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .full-width .signup .form-group input:not(input[type=checkbox]),
+.full-width .signup .form-group button {
+    height: 45px;
+  }
+  .full-width .signup .form-group button {
+    margin: 16px auto;
+  }
+  .full-width .signup .form-group:nth-child(5) label {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .full-width .banner {
+    display: none;
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 1025px) {
+  .full-width .signup {
+    width: 450px;
+    padding: 81px 75px 84px;
+  }
+  .full-width .signup__title h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .full-width .signup .form-group {
+    margin-top: 15px;
+  }
+  .full-width .signup .form-group:first-child {
+    margin-top: 40px;
+  }
+  .full-width .signup .form-group label {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .full-width .signup .form-group input {
+    padding: 15px;
+  }
+  .full-width .signup .form-group input::placeholder {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .full-width .signup .form-group input:not(input[type=checkbox]),
+.full-width .signup .form-group button {
+    height: 45px;
+  }
+  .full-width .signup .form-group button {
+    margin: 16px auto;
+  }
+  .full-width .signup .form-group button:first-child {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .full-width .signup .form-group button:nth-child(2) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .full-width .signup .form-group:nth-child(5) label {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .full-width .signup .form-group span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .full-width .banner {
+    width: calc(100% - 450px);
+  }
+  .full-width .banner__bg {
+    max-width: 400px;
+    height: 321.67px;
+  }
+  .full-width .banner__bg img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .full-width .signup {
+    width: 570px;
+    padding: 144px 100px;
+  }
+  .full-width .signup__title h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .full-width .signup .form-group {
+    margin-top: 21px;
+  }
+  .full-width .signup .form-group:first-child {
+    margin-top: 57px;
+  }
+  .full-width .signup .form-group label {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .full-width .signup .form-group input {
+    padding: 16px 20px;
+  }
+  .full-width .signup .form-group input::placeholder {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .full-width .signup .form-group input:not(input[type=checkbox]),
+.full-width .signup .form-group button {
+    height: 50px;
+  }
+  .full-width .signup .form-group button {
+    margin: 20px auto;
+  }
+  .full-width .signup .form-group button:first-child {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .full-width .signup .form-group button:nth-child(2) i,
+.full-width .signup .form-group button:nth-child(2) span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .full-width .signup .form-group:nth-child(5) label {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .full-width .signup .form-group span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .full-width .banner {
+    width: calc(100% - 570px);
+  }
+  .full-width .banner__bg {
+    width: 621.75px;
+    height: 500px;
+  }
+  .full-width .banner__bg img {
+    width: 100%;
+  }
+}

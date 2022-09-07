@@ -1,0 +1,74 @@
+.container 
+    .dashboard__main__content__title.primary-title Accounts
+    .row.accounts-row 
+        .col-lg-4.accounts-col 
+            .accounts.bg-card
+                .accounts__img 
+                    img(src="./images/profit.svg", alt="profit")
+                .accounts__content 
+                    .accounts__content__title.cssText Profit in this Week
+                    .accounts__content__text.textAccounts $25,600
+        .col-lg-4.accounts-col 
+            .accounts.bg-card
+                .accounts__img 
+                    img(src="./images/expense.svg", alt="expense")
+                .accounts__content 
+                    .accounts__content__title.cssText Expense in this Week
+                    .accounts__content__text.textAccounts $25,600
+        .col-lg-4.accounts-col 
+            .accounts.bg-card
+                .accounts__img 
+                    img(src="./images/income.svg", alt="income")
+                .accounts__content 
+                    .accounts__content__title.cssText Income in this Week
+                    .accounts__content__text.textAccounts $25,600
+
+    .row.accounts-row 
+        .col-lg-8.accounts-col 
+            .dashboard__main__content__title.primary-title Revenue
+            canvas(id="revenueBarChart" class="bg-card" height="175")
+        .col-lg-4.accounts-col 
+            .dashboard__main__content__title.primary-title Expense Statistics
+            canvas(id="expenseDoughnutChart" class="bg-card" height="370")
+    
+    .row.accounts-row 
+        .col-lg-6.accounts-col 
+            .dashboard__main__content__title.primary-title Visitors
+            canvas(id="visitorsLineChart" class="bg-card" height="175")
+        .col-lg-6.accounts-col 
+            .dashboard__main__content__title.primary-title Recent Review
+            - var dataInfoReview = [{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 4},{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 5}]
+                each value in dataInfoReview
+                    .accounts__review.bg-card
+                        .accounts__review__group 
+                            .accounts__review__group__avatar.cssAvatar
+                                img(src= value.avatar, alt="avatar")
+                            .accounts__review__group__info
+                                .accounts__review__group__info__name.cssTitleChild= value.name
+                                .accounts__review__group__info__review.cssText= value.review
+                        .accounts__review__star
+                            .accounts__review__star__numberStar.cssNumberStar= value.star
+                            .accounts__review__star__imgStar
+                                case value.star 
+                                    when 1
+                                        img(src="./images/star.svg", alt="star")
+                                    when 2
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                    when 3
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                    when 4
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                    default 
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        img(src="./images/star.svg", alt="star")
+                                        
+                

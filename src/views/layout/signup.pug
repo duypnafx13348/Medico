@@ -1,0 +1,73 @@
+include ../blocks/mixins.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sign Up
+        //- import css
+        link(rel="stylesheet", href="./css/signup.css")
+
+        //- bootstrap
+        link(rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous")
+
+        //- font-awesome
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+    body
+        //- form signup
+        .full-width
+            .signup
+                .signup__title
+                    h2 Register to Medico
+                form#signup__form
+                    +signupForm("Full Name", "text", "fullname", "John Doe")
+                    +signupForm("Email Address", "email", "email", "johndoe.admin@gmail.com")
+                    +signupForm("User Name", "text", "username", "johndoe")
+                    +signupForm("Password", "password", "password")
+                    .form-group
+                        input(type="checkbox" id="checkbox" name="checkbox")
+                        label(for="checkbox") I agree to the terms and conditions of 
+                            a(href="#") Privacy Policy.
+                    .form-group
+                        button.submit.btn.register Create Account
+                        button.submit.btn.social
+                            i(class="fa fa-google" aria-hidden="true")
+                            span Sign Up With Google
+                        span Already have an account? 
+                            a(href="#") Log in
+
+            .banner 
+                .banner__bg
+                    img(src="./images/Group 615.svg", alt="background-signup")
+
+        //- form signin
+        .full-width
+            .signup
+                .signup__title
+                    h2 Welcome to Medico
+                form#signup__form
+                    +signupForm("Email Address", "email", "email", "johndoe.admin@gmail.com")
+                    +signupForm("Password", "password", "password")
+                    .form-group.d-flex.justify-content-between
+                        .form-checkbox
+                            input(type="checkbox" id="checkbox" name="checkbox")
+                            label(for="checkbox") Remember me
+                        .form-rememberme
+                            a(href="#") Reset Password
+                    .form-group
+                        button.submit.btn.signin Sign In
+                        button.submit.btn.social
+                            i(class="fa fa-google" aria-hidden="true") 
+                            span Sign In With Google
+                        span Don’t have an account? 
+                            a(href="#") Create New
+
+            .banner 
+                .banner__bg
+                    img(src="./images/Group 639.svg", alt="background-signin")

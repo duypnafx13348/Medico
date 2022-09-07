@@ -1,0 +1,77 @@
+.accounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  &-row {
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+    &__group {
+      display: flex;
+      align-items: center;
+
+      &__info {
+        &__name {
+          margin-bottom: 11px;
+        }
+        &__review {
+          max-width: 200px;
+        }
+      }
+
+      .cssAvatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 100rem;
+        overflow: hidden;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__star {
+      .cssNumberStar {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $secondary-color-title;
+        text-align: center;
+      }
+
+      &__numberStar {
+        text-align: center;
+      }
+      &__imgStar {
+        img {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .textAccounts {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 31px;
+    color: $secondary-color-title;
+  }
+}

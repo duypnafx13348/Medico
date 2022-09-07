@@ -1,0 +1,116 @@
+.dashboard {
+  background: linear-gradient(
+    180deg,
+    $secondary-background-color 0%,
+    $primary-background-color 100%
+  );
+  min-height: 100vh;
+  padding: 0 35px 30px 35px !important;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    &-right {
+      display: flex;
+    }
+
+    &__search,
+    &__add,
+    &__notification {
+      display: inline-block;
+    }
+
+    &__logo {
+      padding-right: 80px;
+    }
+
+    &__search {
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+        width: 17.23px;
+        height: 17.23px;
+        color: #70708c;
+        cursor: pointer;
+      }
+
+      input {
+        width: 325px;
+        height: 50px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.6) 0%,
+          rgba(255, 255, 255, 0.6) 100%
+        );
+        border: 0.5px solid #e0e7fe;
+        border-radius: 30px;
+        padding: 16px 0 16px 56px;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          color: #70708c;
+        }
+      }
+    }
+
+    &__add {
+      width: 150px;
+      height: 50px;
+      background: #605bff;
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    &__notification {
+      padding: 0 36px;
+      margin: auto;
+      color: #a5aab6;
+      cursor: pointer;
+
+      i {
+        font-size: 20.83px;
+        height: 18.75px;
+        position: relative;
+      }
+
+      &-red {
+        width: 10.42px;
+        height: 10.42px;
+        background-color: #f51e1e;
+        border-radius: 50%;
+        position: absolute;
+        top: -2px;
+        right: 1px;
+      }
+    }
+
+    &__avatar {
+      &-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

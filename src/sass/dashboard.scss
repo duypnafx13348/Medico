@@ -1,0 +1,231 @@
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+@import "./navbar";
+@import "./sidebar";
+@import "./content";
+@import "./patientProfile";
+@import "./patientList";
+@import "./addNewPatient";
+@import "./addNewDoctor";
+@import "./allDoctor";
+@import "./doctorProfile";
+@import "./emergencyForm.scss";
+@import "./operation";
+@import "./reports";
+@import "./accounts";
+
+* {
+  font-family: $font-inter;
+  color: $text-color;
+}
+
+.pagination {
+  .page-item .page-link {
+    color: $secondary-color-button;
+    border: none !important;
+    background-color: transparent !important;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .page-item.active .page-link {
+    background: #ff8f6b !important;
+    color: white !important;
+    border-radius: 10px;
+  }
+
+  li.previous,
+  li.next a.page-link {
+    position: relative;
+  }
+
+  li.previous a.page-link:before {
+    content: "<";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  li.next a.page-link:after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.block {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border: 0.5px solid #e0e7fe;
+  border-radius: 10px;
+}
+
+.bg-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border: 0.5px solid #e0e7fe;
+  border-radius: 30px;
+}
+
+.primary-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: $secondary-color-title;
+  margin-bottom: 20px;
+}
+
+.secondary-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: $secondary-color-title;
+  margin: 26px 0 20px 15px;
+}
+
+.cssTitleChild {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #292968;
+}
+
+.cssLabel {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $primary-color-title;
+  // margin-top: 22px;
+}
+
+.cssInput {
+  display: block;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border: 0.5px solid #e0e7fe;
+  border-radius: 10px;
+  padding: 16px 0 16px 20px;
+
+  ::placeholder {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.15px;
+    color: $text-color;
+  }
+}
+
+.li-item {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: $primary-color-title;
+  cursor: pointer;
+}
+
+.cssButton {
+  background: $secondary-color-button;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cssText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $text-color;
+  margin-bottom: 2px;
+}
+
+.cssTextDownLoad {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.titleDoc {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #292968;
+}
+
+.form-group {
+  margin-bottom: 22px !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1025px) {
+  .primary-title,
+  .secondary-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cssText {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+  }
+
+  .dashboard__main__content__card {
+    border-radius: 20px;
+    padding: 20px 8px 20px 12px;
+
+    &-img {
+      width: 40px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    &-desc {
+      span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1367px) {
+  .cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content {
+    &__card {
+      &-desc {
+        span {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

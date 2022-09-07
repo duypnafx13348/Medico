@@ -1,0 +1,59 @@
+.container 
+    .row.row-profile
+        .col-lg-7
+            .dashboard__main__content__title.primary-title Patient Profile
+
+            .dashboard__main__content__profile
+                .dashboard__main__content__profile__header 
+                    //- each patient in dataPatient
+                    .dashboard__main__content__profile__header-avatar
+                        img(src="")
+                    .dashboard__main__content__profile__header-name
+                        //- h3= patient.patientName
+                        h3
+                        .dashboard__main__content__profile__header-name-id
+                            //- span= patient.patientID
+                            //- span= patient.disease 
+                            span.patientId 
+                            span.disease
+
+                ul.dashboard__main__content__list
+                    li.dashboard__main__content__item.li-item.active Patient Information
+                    li.dashboard__main__content__item.li-item Visits
+                    li.dashboard__main__content__item.li-item Lab
+                    li.dashboard__main__content__item.li-item Prescriptions
+                .dashboard__main__content__profile__body 
+                    +patientProfile("dashboard__main__content__profile__body--doB row", "Date of Birth", "30 Nov 1995")
+                    +patientProfile("dashboard__main__content__profile__body--age row", "Age", 20)
+                    +patientProfile("dashboard__main__content__profile__body--gender row", "Gender", "Male")
+                    +patientProfile("dashboard__main__content__profile__body--religion row", "Religion", "Islam")
+                    +patientProfile("dashboard__main__content__profile__body--occupation row", "Occupation", "QC")
+                    +patientProfile("dashboard__main__content__profile__body--maritalStatus row", "Marital Status", "Single")
+                    +patientProfile("dashboard__main__content__profile__body--address row", "Address", "tan binh")
+                    +patientProfile("dashboard__main__content__profile__body--phone row", "Phone Number", "123")
+                    +patientProfile("dashboard__main__content__profile__body--guardianName row", "Guardian Name", "Alex")
+                    +patientProfile("dashboard__main__content__profile__body--relationship row", "Relationship", "Brother")
+                    +patientProfile("dashboard__main__content__profile__body--guardianPhone row", "Guardian Phone Number", "456")
+                        
+        .col-lg-5.dashboard__main__content__other 
+            .row 
+                .col-lg-12.dashboard__main__content__other__heartRate
+                    .dashboard__main__content__other__heartRate__title.primary-title Heart rate
+                    .dashboard__main__content__other__heartRate__chart
+                        canvas(id="myHeartRateChart" height="189")
+                .col-lg-12.dashboard__main__content__other__bloodPressure
+                    .dashboard__main__content__other__bloodPressure__title.primary-title Blood Pressure
+                    .row.dashboard__main__content__other__bloodPressure__chartList
+                        .col-lg-6
+                            canvas(id="mySystolicChart" class="dashboard__main__content__other__bloodPressure__chartItem" height="189")
+                        .col-lg-6
+                            canvas(id="myDiastolicChart" class="dashboard__main__content__other__bloodPressure__chartItem" height="189")
+
+                .col-lg-12.dashboard__main__content__other__bloodReport
+                    .dashboard__main__content__other__bloodReport__title.primary-title Blood Report
+                    .dashboard__main__content__other__bloodReport__table
+                        +bloodReport("Down Cluster", "90.9%")
+                        +bloodReport("Down Fiber", "1.8%")
+                        +bloodReport("Waterfowl Feathers", "1.7%")
+                        +bloodReport("Quill", "0.0%")
+

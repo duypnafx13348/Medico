@@ -1,0 +1,94 @@
+.container 
+    .dashboard__main__content__title.primary-title Emergency Form
+    ul.dashboard__main__content__list 
+        li.dashboard__main__content__item.li-item.active Personal Information
+        li.dashboard__main__content__item.li-item Service Information
+        li.dashboard__main__content__item.li-item Payment
+    .personalInformation
+        form(action="", class="dashboard__main__content__information")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Patient Name", "text", "patientName", "Charlene Reed")
+                .col-lg-4
+                    +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
+                .col-lg-4
+                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Age", "number", "age", 20)
+                .col-lg-4
+                    +selectForm("Blood Group","bloodGroup", ['O', 'A+', 'B+', 'AB'])
+                .col-lg-4
+                    +selectForm("Occupation","occupation", ['Bussiness', 'Sale', 'IT', 'QC'])
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +selectForm("Religion","religion", ['Islam'])
+                .col-lg-4
+                    +selectForm("Gender","gender", ["Male", "Female"])
+                .col-lg-4
+                    +selectForm("Marital Status","maritalStatus", ["Married", "Single"])
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Guardian Name", "text", "guardianName", "Charlene Reed ")
+                .col-lg-4
+                    +signupForm("Phone Number", "tel", "phoneNumberGN", "8975 456 25")
+                .col-lg-4
+                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +selectForm("Relationship","relationship", ['Father', 'Mother', 'Brother'])
+                .col-lg-8
+                    +signupForm("Remark", "text", "remark", "Write here")
+            .row.dashboard__main__content__information__group
+                .col-lg-6
+                    +selectForm("Referral","referral", ['Self', 'Oh Yeah!'])
+                .col-lg-6
+                    +selectForm("Consultant","consultant", ["Self Consultant", "OK"])
+            .serviceInformation__card__button.cssButton.personalInformation-next Next
+
+    .serviceInformation
+        .serviceInformation.secondary-title Select your desire service
+        .row.serviceInformation-row
+            .col-lg-7.serviceInformation-col
+                .serviceInformation__card 
+                    .serviceInformation__card__header
+                        .serviceInformation__card__header__titleName.cssTitleChild Service Name
+                        .serviceInformation__card__header__titlePrice.cssTitleChild Price
+                    for value in service
+                        div(class="serviceInformation__card__box" id= value.id )
+                            .serviceInformation__card__header__name.cssText= value.serviceName
+                            .serviceInformation__card__header__price.cssText $#{value.price}
+                    .serviceInformation__card__button.cssButton.serviceInformation-next Next
+
+            .col-lg-5.serviceInformation-col
+                .serviceInformation__card 
+                    .serviceInformation__card__header2
+                        .serviceInformation__card__header2__title.cssTitleChild Given Services List
+                        table#myTable.serviceInformation__card__table
+                            thead 
+                                tr 
+                                    th.cssText SL
+                                    th.cssText Service Name
+                                    th.cssText Price
+                            tbody
+                            tfoot 
+                                tr 
+                                    td
+                                    td.cssTitleChild Total 
+                                    td.cssTitleChild $0
+
+    .row.payment
+        .col-lg-6.payment-col
+            form.payment-form
+                +signupForm("Sub Total", "text", "subTotal", "$3400")
+                .row.payment-form-row 
+                    .col-lg-6.payment-form-col 
+                        +signupForm("Discount", "text", "discount", "10%")
+                    .col-lg-6.payment-form-col 
+                        +signupForm("Less", "text", "less", "$340")
+                +signupForm("Grand Total", "text", "grandTotal", "$3060")
+                +signupForm("Paid Amount", "text", "paidAmount", "$3060")
+                +signupForm("Due", "text", "due", "0")
+                .serviceInformation__card__button.cssButton.payment-submit Submit
+        .col-lg-6.payment-col
+            img(src="./images/payment.svg", alt="payment")

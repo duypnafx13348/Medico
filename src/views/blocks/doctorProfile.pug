@@ -1,0 +1,31 @@
+.container 
+    .row
+        .col-lg-8
+            .dashboard__main__content__title.primary-title Doctor Profile
+            .bg-card.dashboard__main__content__docprofile
+                .dashboard__main__content__docprofile__header
+
+                ul.dashboard__main__content__list.dashboard__main__content__list--mt
+                    li.dashboard__main__content__item.active Biography
+                    li.dashboard__main__content__item Skills
+                    li.dashboard__main__content__item Contact Information
+                .dashboard__main__content__text 
+                    p George A. Sample, MD, FCCP, is a graduate of George Washington University Medical School. He trained in internal medicine at the University of Oregon Health Sciences (UOHS) and pulmonary critical care medicine at UOHS and the University of Southern California.
+                    p Sample has been practicing since 1976, the last 12 years in Washington, D.C., at the Washington Hospital Center, selected as one of the top 100 hospitals in the United States. Sample's practice specializes in the care of critically.
+
+        .col-lg-4 
+            .dashboard__main__content__title.primary-title Appointment
+            .dashboard__main__content__calendar
+                div(class="calendar-wrapper" id="calendar-wrapper")
+            .dashboard__main__content__workTime 
+                .dashboard__main__content__workTime__title.cssTitleChild Friday, February 2
+                .dashboard__main__content__workTime__clock 09:00 AM - 12:00 PM
+            .dashboard__main__content__workTime 
+                .dashboard__main__content__workTime__title.cssTitleChild Friday, February 2
+                .dashboard__main__content__workTime__clock 09:00 AM - 12:00 PM
+
+    .dashboard__main__content__slider
+        +slider("./images/avatar.svg", "William Oliver", "“Excellent visit. This was for a second opinion and an attempt to see.”")
+        +slider("./images/avatar.svg", "William Oliver", "“Excellent visit. This was for a second opinion and an attempt to see.”")
+        +slider("./images/avatar.svg", "William Oliver", "“Excellent visit. This was for a second opinion and an attempt to see.”")
+        +slider("./images/avatar.svg", "William Oliver", "“Excellent visit. This was for a second opinion and an attempt to see.”")

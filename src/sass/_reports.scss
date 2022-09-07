@@ -1,0 +1,127 @@
+.reports__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--2 {
+    // width: 135px;
+    // height: 45px;
+    // border: 1.5px solid #70708c;
+    // border-radius: 10px;
+    // position: relative;
+    // color: rgb(96, 91, 255);
+
+    .btn-group {
+      button.dropdown-toggle {
+        width: 135px;
+        height: 45px;
+        border: 1.5px solid #70708c;
+        border-radius: 10px;
+        color: #70708c;
+        cursor: pointer;
+      }
+
+      button {
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .dropdown-toggle::after {
+        margin-left: 1.255em;
+      }
+
+      .dropdown-menu.show {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 100% !important;
+        height: 250px;
+        overflow-y: scroll;
+
+        .dropdown-item {
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__list {
+    li:not(:first-child) {
+      display: none;
+    }
+    .reports__card__item {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #70708c;
+      padding: 13px 25px;
+      cursor: pointer;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 300;
+    color: #70708c;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &--block {
+    padding: 30px;
+  }
+
+  &__revenues,
+  &__expenses {
+    .wrapper {
+      position: relative;
+      width: 85%;
+
+      .progressValue {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+      progress {
+        &::-webkit-progress-value {
+          border-radius: 30px;
+        }
+
+        &::-webkit-progress-bar {
+          background-color: white;
+        }
+      }
+
+      progress.form-control {
+        padding: 0;
+        border-radius: 30px;
+        border: none;
+      }
+    }
+  }
+
+  &__revenues {
+    progress {
+      &::-webkit-progress-value {
+        background-color: #605bff;
+      }
+    }
+  }
+
+  &__expenses {
+    progress {
+      &::-webkit-progress-value {
+        background-color: #ff8f6b;
+      }
+    }
+  }
+}
+
+#generalLineChart {
+  padding: 30px;
+}

@@ -1,0 +1,73 @@
+.box1,
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 44px;
+
+  &__button {
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+
+    input {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    .cssTextDownLoad {
+      color: $secondary-color-button;
+    }
+  }
+}
+
+.box1 {
+  &__img {
+    img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  &__button {
+    width: 262px;
+  }
+}
+
+.box2 {
+  &__img {
+    img {
+      max-height: 200px;
+    }
+  }
+
+  &__button {
+    width: 350px;
+  }
+}
+
+.buttonDownload {
+  height: 45px;
+  background: #f8f8fe;
+  border: 0.5px solid #e0e7fe;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: $text-color;
+  padding: 14px 0 13px 0;
+
+  &:focus {
+    outline: none;
+  }
+}

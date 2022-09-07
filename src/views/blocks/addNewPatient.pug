@@ -1,0 +1,63 @@
+.container 
+    .dashboard__main__content__title.primary-title Add New Patient
+    ul.dashboard__main__content__list 
+        li.dashboard__main__content__item.li-item.active Personal Information
+        li.dashboard__main__content__item.li-item Guardian Information
+    .personalInformation
+        .dashboard__main__content__avatar 
+            img(src="" id="avatar")
+            .editAvatar
+                label(for="patientAvatar") 
+                    img(src="./images/EditAvatar.svg", alt="editavatar" id="EditAvatar")
+                input(type="file" id="patientAvatar" name="patientAvatar")
+        form(action="", class="dashboard__main__content__information-personalInformation")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Patient Name", "text", "patientName", "Charlene Reed")
+                .col-lg-4
+                    +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
+                .col-lg-4
+                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Age", "number", "age", 20)
+                .col-lg-4
+                    +selectForm("Blood Group","bloodGroup", ['O', 'A+', 'B+', 'AB'])
+                .col-lg-4
+                    +selectForm("Occupation","occupation", ['Bussiness', 'Sale', 'IT', 'QC'])
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +selectForm("Religion","religion", ['Islam'])
+                .col-lg-4
+                    +selectForm("Gender","gender", ["Male", "Female"])
+                .col-lg-4
+                    +selectForm("Marital Status","maritalStatus", ["Married", "Single"])
+            .row.dashboard__main__content__information__group
+                .col-lg-12.form-group 
+                    label(for="description") Description
+                    textarea(name="description", rows="4", id="description")
+            .serviceInformation__card__button.cssButton.personalInformation-next Next
+            .hehe
+
+    .guardianInformation
+        form(action="", class="dashboard__main__content__information-guardianInformation")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Guardian Name", "text", "guardianName", "Charlene Reed")
+                .col-lg-4
+                    +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
+                .col-lg-4
+                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+            .row.dashboard__main__content__information__group
+                .col-lg-4
+                    +signupForm("Age", "number", "age", 59)
+                .col-lg-4
+                    +selectForm("Relation","relation", ['Father', 'Mother', 'Brother'])
+                .col-lg-4
+                    +selectForm("Occupation","occupation", ['Bussiness', 'Sale', 'IT', 'QC'])
+            .row.dashboard__main__content__information__group
+                .col-lg-12.form-group 
+                    label(for="description") Description
+                    textarea(name="description", rows="4", placeholder="Write a short description") 
+                    //- +signupForm("Description", "text", "desc", "Write a short description")
+            .serviceInformation__card__button.cssButton.guardianInformation-add Add Patient

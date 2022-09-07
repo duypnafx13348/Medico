@@ -1,0 +1,139 @@
+.dashboard__main__content {
+  width: calc(100% - 240px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  border: 0.5px solid #e0e7fe;
+  border-radius: 30px;
+  padding: 30px 15px;
+
+  &-padding {
+    padding: 0 15px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 25px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+    border: 0.5px solid #e0e7fe;
+    border-radius: 30px;
+
+    &-img {
+      width: 55px;
+      height: 55px;
+      background: rgba(255, 85, 191, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+
+    &-desc {
+      h6 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      span {
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 31px;
+        color: #292968;
+      }
+    }
+  }
+
+  &__history {
+    &__card {
+      &__chart,
+      &__rank,
+      &__content {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.9) 100%
+        );
+        border: 0.5px solid #e0e7fe;
+        border-radius: 30px;
+      }
+
+      &__chart {
+        padding: 30px;
+      }
+
+      &__rank {
+        padding: 40px 25px;
+
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &-flex {
+            display: flex;
+          }
+
+          &__avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 100rem;
+            overflow: hidden;
+            margin-right: 23px;
+          }
+
+          &__rating {
+            &-star {
+              img {
+                margin-right: 4px;
+              }
+            }
+            &-review {
+              text-align: right;
+              span {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 21px;
+                color: #9898a3;
+              }
+            }
+          }
+        }
+      }
+
+      &__content {
+        padding: 25px;
+
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &-flex {
+            display: flex;
+          }
+
+          &__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 100rem;
+            overflow: hidden;
+            margin-right: 15px;
+          }
+        }
+      }
+
+      hr {
+        margin: 29px 0;
+      }
+    }
+  }
+}

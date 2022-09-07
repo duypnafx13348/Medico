@@ -1,0 +1,80 @@
+.serviceInformation {
+  display: none;
+}
+.serviceInformation .secondary-title {
+  margin-left: 0;
+}
+.serviceInformation__card__header, .serviceInformation__card__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.serviceInformation__card__header {
+  padding: 20px 60px 20px 25px;
+}
+.serviceInformation__card__box {
+  height: 60px;
+  padding: 20px 60px 20px 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ff6864;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.serviceInformation__card__button {
+  height: 60px;
+  width: 255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.serviceInformation__card__header2__title {
+  padding: 20px 60px 20px 0;
+}
+
+.payment.row {
+  display: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+table th,
+table td {
+  padding: 15px 25px;
+}
+table th.cssText {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #ff8f6b;
+}
+table th:first-child {
+  border-top-left-radius: 20px;
+}
+table th:last-child {
+  border-top-right-radius: 20px;
+}
+table td {
+  border: 1px solid #dfe4ee;
+}
+table tbody td {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+table tbody td input {
+  border: none;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+table tfoot td:first-child {
+  border-bottom-left-radius: 20px;
+  border-right: none;
+}
+table tfoot td:nth-child(2) {
+  border-left: none;
+}
+table tfoot td:last-child {
+  border-bottom-right-radius: 20px;
+}

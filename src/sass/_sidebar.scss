@@ -1,0 +1,72 @@
+.dashboard__main {
+  display: flex;
+
+  &__sidebar {
+    width: 240px;
+    padding-right: 35px;
+
+    &__list {
+      &-child {
+        margin-left: 18px;
+        display: none;
+      }
+    }
+
+    &__item {
+      margin-top: 45px;
+      cursor: pointer;
+
+      &-event {
+        svg.active {
+          color: #605bff !important;
+        }
+        a.link {
+          color: #70708c;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 21px;
+
+          &.active,
+          &:hover {
+            color: #605bff !important;
+          }
+        }
+      }
+
+      &:first-child {
+        margin-top: 72px;
+      }
+
+      &-child {
+        cursor: pointer;
+        padding: 15px 0 15px;
+
+        a {
+          color: #70708c;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 21px;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &.active {
+            color: #605bff;
+          }
+        }
+      }
+
+      a {
+        padding-bottom: 15px;
+        padding-left: 16px;
+      }
+
+      i.active {
+        color: #605bff;
+      }
+    }
+  }
+}

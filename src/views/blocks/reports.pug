@@ -1,0 +1,39 @@
+.container 
+    .dashboard__main__content__title.primary-title Reports
+    .reports__card
+        .reports__card--1 
+            .reports__card--1__statement.cssTitleChild Income Statement
+            .reports__card--1__date.cssText From 01 January 2021 to 31 January 2021
+        .reports__card--2
+            .btn-group
+                button.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Months
+                .dropdown-menu.dropdown-menu-right
+                    - var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
+                        each value in month
+                            button.dropdown-item(type='button')= value
+
+    .row.reports__card-row.mb-4.mt-5
+        .col-lg-4.reports__card-col 
+            .reports__card__chart 
+                .reports__card__chart__revenue.mb-4
+                    canvas(id="revenueLineChart" class="bg-card" height="175")
+                .reports__card__chart__expense
+                    canvas(id="expenseLineChart" class="bg-card" height="175")
+        .col-lg-8.reports__card-col
+            canvas(id="generalLineChart" class="bg-card" height="213")
+    .row.reports__card-row
+        .col-lg-6.reports__card-col 
+            .reports__card__revenues.primary-title Revenues
+            .reports__card__revenues.reports__card--block.bg-card
+                - var revenues = [{id: "hospitalBill", title: "Hospital Bill", percent: 50},{id: "operation", title: "Operation", percent: 25},{id: "emergencyBill", title: "Emergency Bill", percent: 30},{id: "bedService", title: "Bed Service", percent: 20},{id: "dueCollection", title: "Due Collection", percent: 25}]
+                    each value, key in revenues 
+                        +progressReport(value.title, value.id, value.percent)
+        .col-lg-6.reports__card-col 
+            .reports__card__expenses.primary-title Expenses
+            .reports__card__expenses.reports__card--block.bg-card
+                - var expenses = [{id: "salary", title: "Salary", percent: 100},{id: "equipment", title: "Equipment", percent: 30},{id: "servicing", title: "Servicing", percent: 30},{id: "referralPayment ", title: "Referral Payment ", percent: 20},{id: "others", title: "Others", percent: 25}]
+                    each value, key in expenses 
+                        +progressReport(value.title, value.id, value.percent)
+
+                    

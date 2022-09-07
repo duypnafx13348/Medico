@@ -1,0 +1,54 @@
+.container 
+    .dashboard__main__content__title.primary-title Welcome
+    .row
+        +card("./images/patient.svg", "Today’s Patients", "159")
+        +card("./images/hospital.svg", "Our Doctors", "18")
+        +card("./images/bed.svg", "Our Beds", "18")
+        +card("./images/needle.svg", "Today’s Operation", "10")
+
+    .row.dashboard__main__content__history
+        .col-lg-8 
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Patient History
+                .dashboard__main__content__history__card__chart 
+                    canvas(id="myLineChart" height="126")
+
+        .col-lg-4
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Top Diseases
+                .dashboard__main__content__history__card__chart 
+                    canvas(id="myDoughnutChart" width="175" height="175")
+
+    .row.dashboard__main__content__history
+        .col-lg-7
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Total Patient Per Day
+                .dashboard__main__content__history__card__chart 
+                    canvas(id="myBarChart" width="635" height="360")
+
+        .col-lg-5 
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Top Doctors
+                .dashboard__main__content__history__card__rank 
+                    +topDoctor("./images/avatar.svg", "Charlotte", "Gynecologist", "./images/star.svg", "315 reviews")
+                    hr
+                    +topDoctor("./images/avatar.svg", "Isabella Ava", "Medicine Specialist", "./images/star.svg", "290 reviews")
+                    hr
+                    +topDoctor("./images/avatar.svg", "Olivia Amma", "Gynecologist", "./images/star.svg", "290 reviews")
+
+    .row.dashboard__main__content__history
+        .col-lg-6 
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Recent Patient Activity
+                .dashboard__main__content__history__card__content
+                    +recentActivity("./images/avatar.svg", "Roby Romio", "Los AngeUSA", "Insomnia", "In Treatment")
+                    hr
+                    +recentActivity("./images/avatar.svg", "Roby Romio", "Los Angeles, USA", "Diabetes", "New Patient")
+                    hr
+                    +recentActivity("./images/avatar.svg", "Roby Romio", "Los Angeles, USA", "Covid-19", "Recovered")
+
+        .col-lg-6 
+            .dashboard__main__content__history__card 
+                .dashboard__main__content__history__card__title.secondary-title Revenue
+                .dashboard__main__content__history__card__chart 
+                    canvas(id="myNewLineChart" height="189")
