@@ -40,3 +40,37 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  #example,
+  #expenseListTable {
+    width: 100% !important;
+    thead {
+      th {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #3d3d66;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(7) {
+          display: none;
+        }
+      }
+    }
+    tbody {
+      td {
+        line-height: 15px;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(7) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -75,3 +75,19 @@
     color: $secondary-color-title;
   }
 }
+
+@media screen and (max-width: 767px) {
+  #expenseDoughnutChart {
+    width: 100%;
+    height: auto;
+  }
+  .accounts-row {
+    margin: 0;
+  }
+  .accounts-col {
+    margin-bottom: 20px;
+  }
+  .accounts__review__star {
+    display: none;
+  }
+}

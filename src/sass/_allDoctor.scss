@@ -69,3 +69,27 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .dashboard__main__content__box__item__info__workTime {
+    span {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .dashboard__main__content {
+    padding: 30px 0;
+  }
+
+  .box2 {
+    &__button {
+      width: 262px;
+    }
+    &__img {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}

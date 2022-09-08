@@ -8,13 +8,14 @@
   padding: 0 35px 30px 35px !important;
 
   &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 25px 0;
 
     &-right {
       display: flex;
+    }
+
+    &__title {
+      display: none;
     }
 
     &__search,
@@ -29,6 +30,10 @@
 
     &__search {
       position: relative;
+
+      &-tablet {
+        display: none;
+      }
 
       i {
         position: absolute;
@@ -110,6 +115,86 @@
         img {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  // .navbar-expand-lg .navbar-collapse#navbarTogglerDashboard {
+  //   display: none !important;
+  // }
+  .collapse {
+    display: none !important;
+  }
+
+  nav.navbar {
+    button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .dashboard {
+    padding: 0 !important;
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      background: linear-gradient(180deg, #f0f2fd 100%, #fff8f9 0%);
+      width: 100%;
+      z-index: 3;
+
+      button {
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__search {
+        &-tablet {
+          display: block;
+          width: 100%;
+
+          i {
+            left: calc(25% + 25px);
+          }
+
+          input {
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      &__title {
+        display: block;
+      }
+    }
+  }
+
+  .dashboard__nav-left,
+  .dashboard__nav__notification,
+  .dashboard__nav__add {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dashboard__nav {
+    &__avatar-circle {
+      width: 35px;
+      height: 35px;
+    }
+    &__search-tablet {
+      margin-top: 20px;
+
+      i {
+        left: calc(0% + 25px);
+      }
+      input {
+        width: 100%;
       }
     }
   }

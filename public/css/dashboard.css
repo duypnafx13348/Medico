@@ -46,13 +46,13 @@ h6 {
   padding: 0 35px 30px 35px !important;
 }
 .dashboard__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px 0;
 }
 .dashboard__nav-right {
   display: flex;
+}
+.dashboard__nav__title {
+  display: none;
 }
 .dashboard__nav__search, .dashboard__nav__add, .dashboard__nav__notification {
   display: inline-block;
@@ -62,6 +62,9 @@ h6 {
 }
 .dashboard__nav__search {
   position: relative;
+}
+.dashboard__nav__search-tablet {
+  display: none;
 }
 .dashboard__nav__search i {
   position: absolute;
@@ -131,6 +134,63 @@ h6 {
   width: 100%;
 }
 
+@media screen and (min-width: 992px) {
+  .collapse {
+    display: none !important;
+  }
+  nav.navbar button {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .dashboard {
+    padding: 0 !important;
+  }
+  .dashboard__nav {
+    position: fixed;
+    top: 0;
+    background: linear-gradient(180deg, #f0f2fd 100%, #fff8f9 0%);
+    width: 100%;
+    z-index: 3;
+  }
+  .dashboard__nav button:focus {
+    outline: none;
+  }
+  .dashboard__nav__search-tablet {
+    display: block;
+    width: 100%;
+  }
+  .dashboard__nav__search-tablet i {
+    left: calc(25% + 25px);
+  }
+  .dashboard__nav__search-tablet input {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .dashboard__nav__title {
+    display: block;
+  }
+  .dashboard__nav-left,
+.dashboard__nav__notification,
+.dashboard__nav__add {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard__nav__avatar-circle {
+    width: 35px;
+    height: 35px;
+  }
+  .dashboard__nav__search-tablet {
+    margin-top: 20px;
+  }
+  .dashboard__nav__search-tablet i {
+    left: calc(0% + 25px);
+  }
+  .dashboard__nav__search-tablet input {
+    width: 100%;
+  }
+}
 .dashboard__main {
   display: flex;
 }
@@ -187,6 +247,17 @@ h6 {
   color: #605bff;
 }
 
+@media screen and (max-width: 991px) {
+  .dashboard__main__sidebar {
+    display: none;
+  }
+  .dashboard__main__sidebar__item {
+    margin-top: 10px;
+  }
+  .dashboard__main__sidebar__item:first-child {
+    margin-top: 10px;
+  }
+}
 .dashboard__main__content {
   width: calc(100% - 240px);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
@@ -412,6 +483,39 @@ h6 {
   border-right: 0.5px solid #e0e7fe;
 }
 
+@media screen and (max-width: 767px) {
+  #example,
+#expenseListTable {
+    width: 100% !important;
+  }
+  #example thead th,
+#expenseListTable thead th {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3d3d66;
+  }
+  #example thead th:nth-child(1), #example thead th:nth-child(2), #example thead th:nth-child(4), #example thead th:nth-child(5), #example thead th:nth-child(7),
+#expenseListTable thead th:nth-child(1),
+#expenseListTable thead th:nth-child(2),
+#expenseListTable thead th:nth-child(4),
+#expenseListTable thead th:nth-child(5),
+#expenseListTable thead th:nth-child(7) {
+    display: none;
+  }
+  #example tbody td,
+#expenseListTable tbody td {
+    line-height: 15px;
+  }
+  #example tbody td:nth-child(1), #example tbody td:nth-child(2), #example tbody td:nth-child(4), #example tbody td:nth-child(5), #example tbody td:nth-child(7),
+#expenseListTable tbody td:nth-child(1),
+#expenseListTable tbody td:nth-child(2),
+#expenseListTable tbody td:nth-child(4),
+#expenseListTable tbody td:nth-child(5),
+#expenseListTable tbody td:nth-child(7) {
+    display: none;
+  }
+}
 .dashboard__main__content__list {
   display: flex;
 }
@@ -484,6 +588,14 @@ h6 {
   margin-top: 32px;
 }
 
+@media screen and (max-width: 767px) {
+  .dashboard__main__content__list {
+    justify-content: space-between;
+  }
+  .dashboard__main__content__list .dashboard__main__content__item {
+    margin-right: 0;
+  }
+}
 .box1,
 .box2 {
   display: flex;
@@ -545,6 +657,11 @@ h6 {
   outline: none;
 }
 
+@media screen and (max-width: 767px) {
+  .imgbb-container {
+    display: none !important;
+  }
+}
 .dashboard__main__content__column {
   margin: 15px 0;
 }
@@ -600,6 +717,21 @@ h6 {
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .dashboard__main__content__box__item__info__workTime span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content {
+    padding: 30px 0;
+  }
+  .box2__button {
+    width: 262px;
+  }
+  .box2__img img {
+    max-width: 200px;
+  }
+}
 .dashboard__main__content__docprofile__header {
   position: relative;
 }
@@ -766,6 +898,48 @@ h6 {
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .dashboard__main__content__docprofile {
+    margin-bottom: 20px;
+  }
+  .dashboard__main__content__docprofile__header__bg {
+    height: 150px;
+  }
+  .dashboard__main__content__docprofile__header__avatar {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+  }
+  .dashboard__main__content__docprofile__header__info {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .dashboard__main__content__docprofile__header__info__name {
+    text-align: center;
+  }
+  .dashboard__main__content__docprofile__header__info__workTime {
+    display: none;
+  }
+  .dashboard__main__content__docprofile__header__rating {
+    display: none;
+  }
+  .dashboard__main__content__list--mt {
+    margin-top: 200px;
+    padding: 0 10px;
+  }
+  .dashboard__main__content__workTime__title, .dashboard__main__content__workTime__clock {
+    text-align: center;
+  }
+  .dashboard__main__content__slider__card__avatar {
+    width: 45px;
+    height: 45px;
+  }
+  .dashboard__main__content__slider__card__info {
+    width: 70%;
+  }
+}
 .serviceInformation {
   display: none;
 }
@@ -933,6 +1107,11 @@ table tfoot td:last-child {
   padding: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .reports__card-col {
+    margin-bottom: 20px;
+  }
+}
 .accounts {
   display: flex;
   justify-content: center;
@@ -995,6 +1174,21 @@ table tfoot td:last-child {
   color: #292968;
 }
 
+@media screen and (max-width: 767px) {
+  #expenseDoughnutChart {
+    width: 100%;
+    height: auto;
+  }
+  .accounts-row {
+    margin: 0;
+  }
+  .accounts-col {
+    margin-bottom: 20px;
+  }
+  .accounts__review__star {
+    display: none;
+  }
+}
 * {
   font-family: "Inter", sans-serif;
   color: #70708c;
@@ -1012,6 +1206,7 @@ table tfoot td:last-child {
   background: #ff8f6b !important;
   color: white !important;
   border-radius: 10px;
+  z-index: 2;
 }
 .pagination li.previous,
 .pagination li.next a.page-link {
@@ -1137,7 +1332,18 @@ ul li {
   margin-bottom: 22px !important;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1025px) {
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__card-desc span {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
   .primary-title,
 .secondary-title {
     font-size: 18px;
@@ -1163,14 +1369,52 @@ ul li {
     line-height: 22px;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1367px) {
+@media screen and (max-width: 991px) {
+  .dashboard__main {
+    margin-top: 166px;
+  }
+  .dashboard__main__content {
+    width: 100%;
+  }
+  .dashboard__main__content__title {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .primary-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .li-item {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .cssLabel {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .cssButton {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .titleDoc {
+    font-size: 16px;
+    line-height: 19px;
+  }
   .cssText {
     font-size: 13px;
     line-height: 16px;
   }
-  .dashboard__main__content__card-desc span {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
+  .cssTextDownLoad {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main {
+    margin-top: 176px;
+  }
+  .serviceInformation__card__button {
+    width: 100%;
+    height: 45px;
   }
 }

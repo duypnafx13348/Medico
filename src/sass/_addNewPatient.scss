@@ -87,3 +87,15 @@
   display: none;
   margin-top: 32px;
 }
+
+@media screen and (max-width: 767px) {
+  .dashboard__main__content {
+    &__list {
+      justify-content: space-between;
+
+      .dashboard__main__content__item {
+        margin-right: 0;
+      }
+    }
+  }
+}

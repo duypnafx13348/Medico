@@ -25,18 +25,18 @@
 
     .row.accounts-row 
         .col-lg-8.accounts-col 
-            .dashboard__main__content__title.primary-title Revenue
+            .dashboard__main__content__title-child.primary-title Revenue
             canvas(id="revenueBarChart" class="bg-card" height="175")
         .col-lg-4.accounts-col 
-            .dashboard__main__content__title.primary-title Expense Statistics
+            .dashboard__main__content__title-child.primary-title Expense Statistics
             canvas(id="expenseDoughnutChart" class="bg-card" height="370")
     
     .row.accounts-row 
         .col-lg-6.accounts-col 
-            .dashboard__main__content__title.primary-title Visitors
+            .dashboard__main__content__title-child.primary-title Visitors
             canvas(id="visitorsLineChart" class="bg-card" height="175")
         .col-lg-6.accounts-col 
-            .dashboard__main__content__title.primary-title Recent Review
+            .dashboard__main__content__title-child.primary-title Recent Review
             - var dataInfoReview = [{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 4},{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 5}]
                 each value in dataInfoReview
                     .accounts__review.bg-card

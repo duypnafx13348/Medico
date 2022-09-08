@@ -1,18 +1,37 @@
 .dashboard__nav
-  button.navbar-toggler.d-none(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDashboard', aria-controls='navbarTogglerDashboard', aria-expanded='false', aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  .dashboard__nav-left
-    a.navbar-brand.dashboard__nav__logo(href='#')
-      img(src="./images/Logo.svg", alt="Logo")
-      //- #navbarTogglerDashboard.collapse.navbar-collapse
-    form.dashboard__nav__search
+  nav.navbar-light.navbar
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDashboard', aria-controls='navbarTogglerDashboard', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    .dashboard__nav__title.primary-title.m-auto
+    .dashboard__nav-left
+      a.navbar-brand.dashboard__nav__logo(href='#')
+        img(src="./images/Logo.svg", alt="Logo")
+      form.dashboard__nav__search
+        i.fa.fa-search
+        input.form-control(type='search', placeholder='Search patients', aria-label='Search')
+    .dashboard__nav-right
+      .dashboard__nav__add + Add Patient
+      .dashboard__nav__notification
+        i(class="fa fa-bell dashboard__nav__notification-bell" aria-hidden="true")
+          .dashboard__nav__notification-red
+      .dashboard__nav__avatar 
+        .dashboard__nav__avatar-circle 
+          img(src="./images/avatar.svg", alt="avatar")
+    form.dashboard__nav__search.dashboard__nav__search-tablet
       i.fa.fa-search
-      input.form-control.me-2(type='search', placeholder='Search patients', aria-label='Search')
-  .dashboard__nav-right
-    .dashboard__nav__add + Add Patient
-    .dashboard__nav__notification
-      i(class="fa fa-bell dashboard__nav__notification-bell" aria-hidden="true")
-        .dashboard__nav__notification-red
-    .dashboard__nav__avatar 
-      .dashboard__nav__avatar-circle 
-        img(src="./images/avatar.svg", alt="avatar")
+      input.form-control(type='search', placeholder='Search patients', aria-label='Search')
+    #navbarTogglerDashboard.collapse.navbar-collapse
+      ul.dashboard__main__sidebar__list
+        each value in sidebarList
+          li(class="dashboard__main__sidebar__item") 
+            div(class="d-flex justify-content-between align-items-start dashboard__main__sidebar__item-event")
+              div(class="d-flex align-items-start") !{value.image}
+                a(href= value.url, class="link")= value.title
+              if (value.listChild.length > 0)
+                i(class="fa fa-chevron-right" aria-hidden="true")
+            if(value.listChild.length > 0)
+              ul.dashboard__main__sidebar__list-child
+                each valChild, index in value.listChild
+                  li.dashboard__main__sidebar__item-child
+                      a(href= valChild.url, class="link__child")= valChild.titleChild 
+  

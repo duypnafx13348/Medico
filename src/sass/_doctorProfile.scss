@@ -205,3 +205,56 @@
   font-size: 19px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .dashboard__main__content__docprofile {
+    margin-bottom: 20px;
+    &__header {
+      &__bg {
+        height: 150px;
+      }
+      &__avatar {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+      }
+      &__info {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        &__name {
+          text-align: center;
+        }
+        &__workTime {
+          display: none;
+        }
+      }
+      &__rating {
+        display: none;
+      }
+    }
+  }
+
+  .dashboard__main__content__list--mt {
+    margin-top: 200px;
+    padding: 0 10px;
+  }
+
+  .dashboard__main__content__workTime {
+    &__title,
+    &__clock {
+      text-align: center;
+    }
+  }
+  .dashboard__main__content__slider__card {
+    &__avatar {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__info {
+      width: 70%;
+    }
+  }
+}

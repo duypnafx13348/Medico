@@ -70,3 +70,18 @@
     }
   }
 }
+
+@media screen and (max-width: 991px) {
+  .dashboard__main {
+    &__sidebar {
+      display: none;
+    }
+  }
+
+  .dashboard__main__sidebar__item {
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+}

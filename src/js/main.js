@@ -1,6 +1,14 @@
 const pathName = location.pathname.slice(1);
 
 $(document).ready(function () {
+  // handle TitleNavbar
+  $(".dashboard__nav__title").text(
+    $(".dashboard__main__content__title").text()
+  );
+  if ($(".dashboard__nav__title").text().toLowerCase().includes("list")) {
+    $(".dashboard__main__content .container").removeClass("container");
+  }
+  // handle ActiveSidebar
   const activeSideBar = $(`a[href="${pathName}"]`).addClass("active");
   $(`a[href="${pathName}"]`)
     .closest(".dashboard__main__sidebar__item")
