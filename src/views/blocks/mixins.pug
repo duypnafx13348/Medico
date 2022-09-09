@@ -29,13 +29,12 @@ mixin list-child(li_child, text_child)
     li(class= li_child)= text_child
 
 mixin card(srcImg, text, number)
-    .col-lg-3
-        .dashboard__main__content__card
-            .dashboard__main__content__card-img
-                img(src= srcImg, alt="Icon")
-            .dashboard__main__content__card-desc 
-                .cssText= text 
-                span.number= number
+    .dashboard__main__content__slider__card
+        .dashboard__main__content__slider__card-img
+            img(src= srcImg, alt="Icon")
+        .dashboard__main__content__slider__card-desc 
+            .cssText= text 
+            span.number= number
 
 
 mixin topDoctor(imgAvatar, title, text, imgStar, textReview)
@@ -69,12 +68,10 @@ mixin recentActivity(imgAvatar, title, textAddress, textSick, textStatus)
         .dashboard__main__content__history__card__content__info__status
             span.cssText= textStatus
 
-mixin patientProfile(addClass, title, text)
-    div(class= addClass)
-        div.col-lg-6
-            span.key= title
-        div.col-lg-6
-            span.value= text
+mixin patientProfile(title)
+    div(class="dashboard__main__content__profile__body__item")
+        span.key= title
+        span.value
 
 mixin bloodReport(title, text)
     .dashboard__main__content__other__bloodReport__table__group

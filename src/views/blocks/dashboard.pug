@@ -1,6 +1,6 @@
 .container 
     .dashboard__main__content__title.primary-title Welcome
-    .row
+    .dashboard__main__content__slider
         +card("./images/patient.svg", "Today’s Patients", "159")
         +card("./images/hospital.svg", "Our Doctors", "18")
         +card("./images/bed.svg", "Our Beds", "18")
@@ -11,13 +11,15 @@
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Patient History
                 .dashboard__main__content__history__card__chart 
-                    canvas(id="myLineChart" height="126")
+                    .dashboard__main__content__history__card__chart__box
+                        canvas(id="myLineChart")
 
         .col-lg-4
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Top Diseases
                 .dashboard__main__content__history__card__chart 
-                    canvas(id="myDoughnutChart" width="175" height="175")
+                    .dashboard__main__content__history__card__chart__box
+                        canvas(id="myDoughnutChart")
 
     .row.dashboard__main__content__history
         .col-lg-7
@@ -41,7 +43,7 @@
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Recent Patient Activity
                 .dashboard__main__content__history__card__content
-                    +recentActivity("./images/avatar.svg", "Roby Romio", "Los AngeUSA", "Insomnia", "In Treatment")
+                    +recentActivity("./images/avatar.svg", "Roby Romio", "Los Angeles, USA", "Insomnia", "In Treatment")
                     hr
                     +recentActivity("./images/avatar.svg", "Roby Romio", "Los Angeles, USA", "Diabetes", "New Patient")
                     hr

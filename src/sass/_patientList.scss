@@ -71,6 +71,12 @@
           display: none;
         }
       }
+      td {
+        &:nth-child(3) {
+          border-radius: 10px 0 0 10px;
+          border-left: 0.5px solid #e0e7fe;
+        }
+      }
     }
   }
 }

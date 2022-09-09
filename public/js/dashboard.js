@@ -40,6 +40,7 @@ const myLineChart = new Chart(lineChart, {
   type: "line",
   data: data,
   options: {
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,
@@ -116,7 +117,7 @@ const myDoughnutChart = new Chart(doughnutChart, {
   type: "doughnut",
   data: dataDoughnut,
   options: {
-    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "bottom",
@@ -291,4 +292,42 @@ const myNewLineChart = new Chart(newLineChart, {
       },
     },
   },
+});
+
+$(document).ready(function () {
+  $(".dashboard__main__content__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
+  });
 });

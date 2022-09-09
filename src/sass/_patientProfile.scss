@@ -47,36 +47,12 @@
         }
       }
 
-      // &__list {
-      //   ul {
-      //     display: flex;
-      //     // justify-content: space-between;
-      //     align-items: center;
-
-      //     .dashboard__main__content__profile__item {
-      //       border-bottom: 2px solid #ededf2;
-      //       cursor: pointer;
-
-      //       &:first-child {
-      //         flex-grow: 1;
-      //       }
-
-      //       &:nth-child(2),
-      //       &:nth-child(3),
-      //       &:nth-child(4) {
-      //         flex-grow: 1;
-      //       }
-
-      //       &:hover {
-      //         border-bottom: 2px solid #ff8f6b;
-      //       }
-      //     }
-      //   }
-      // }
-
       &__body {
-        .row {
+        &__item {
           padding: 7px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
       }
 
@@ -147,6 +123,40 @@
           padding: 13px 25px;
           border: 1px solid #e0e7fe;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    .dashboard__main__content__other__bloodReport__table__group__title {
+      padding: 13px 15px;
+    }
+    .row-profile .dashboard__main__content__profile {
+      padding: 0;
+      margin-bottom: 40px;
+      border: none;
+      background: none;
+      border-radius: inherit;
+    }
+    .dashboard__main__content__other__bloodPressure__chartList {
+      .col-lg-6 {
+        :first-child {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .dashboard__main__content__profile__body__item {
+      .key {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+      }
+      .value {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
       }
     }
   }

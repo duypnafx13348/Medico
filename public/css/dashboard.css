@@ -181,6 +181,9 @@ h6 {
     width: 35px;
     height: 35px;
   }
+  .dashboard__nav .navbar-toggler {
+    padding: 0.2rem 0.5rem !important;
+  }
   .dashboard__nav__search-tablet {
     margin-top: 20px;
   }
@@ -252,10 +255,10 @@ h6 {
     display: none;
   }
   .dashboard__main__sidebar__item {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .dashboard__main__sidebar__item:first-child {
-    margin-top: 10px;
+    margin-top: 35px;
   }
 }
 .dashboard__main__content {
@@ -268,7 +271,7 @@ h6 {
 .dashboard__main__content-padding {
   padding: 0 15px;
 }
-.dashboard__main__content__card {
+.dashboard__main__content__slider__card {
   display: flex;
   align-items: center;
   padding: 25px 0 25px 25px;
@@ -276,7 +279,7 @@ h6 {
   border: 0.5px solid #e0e7fe;
   border-radius: 30px;
 }
-.dashboard__main__content__card-img {
+.dashboard__main__content__slider__card-img {
   width: 55px;
   height: 55px;
   background: rgba(255, 85, 191, 0.2);
@@ -286,12 +289,12 @@ h6 {
   justify-content: center;
   margin-right: 20px;
 }
-.dashboard__main__content__card-desc h6 {
+.dashboard__main__content__slider__card-desc h6 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 }
-.dashboard__main__content__card-desc span {
+.dashboard__main__content__slider__card-desc span {
   font-weight: 800;
   font-size: 26px;
   line-height: 31px;
@@ -305,6 +308,9 @@ h6 {
 .dashboard__main__content__history__card__chart {
   padding: 30px;
 }
+.dashboard__main__content__history__card__chart__box {
+  height: 325px;
+}
 .dashboard__main__content__history__card__rank {
   padding: 40px 25px;
 }
@@ -315,6 +321,16 @@ h6 {
 }
 .dashboard__main__content__history__card__rank__info-flex {
   display: flex;
+}
+.dashboard__main__content__history__card__rank__info__name div.cssText {
+  color: #3d3d66;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+}
+.dashboard__main__content__history__card__rank__info__name span.cssText {
+  font-size: 16px;
+  line-height: 21px;
 }
 .dashboard__main__content__history__card__rank__info__avatar {
   width: 48px;
@@ -342,6 +358,9 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.dashboard__main__content__history__card__content__info__name div.cssText {
+  color: #3d3d66;
 }
 .dashboard__main__content__history__card__content__info-flex {
   display: flex;
@@ -394,8 +413,11 @@ h6 {
   line-height: 19px;
   color: #70708c;
 }
-.container .row-profile .dashboard__main__content__profile__body .row {
+.container .row-profile .dashboard__main__content__profile__body__item {
   padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container .row-profile .dashboard__main__content__profile .dashboard__main__content__list {
   justify-content: space-between;
@@ -442,6 +464,31 @@ h6 {
   border: 1px solid #e0e7fe;
 }
 
+@media screen and (max-width: 767px) {
+  .container .dashboard__main__content__other__bloodReport__table__group__title {
+    padding: 13px 15px;
+  }
+  .container .row-profile .dashboard__main__content__profile {
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+    background: none;
+    border-radius: inherit;
+  }
+  .container .dashboard__main__content__other__bloodPressure__chartList .col-lg-6 :first-child {
+    margin-bottom: 25px;
+  }
+  .container .dashboard__main__content__profile__body__item .key {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .container .dashboard__main__content__profile__body__item .value {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
 #example,
 #expenseListTable {
   border-spacing: 0 7px;
@@ -514,6 +561,11 @@ h6 {
 #expenseListTable tbody td:nth-child(5),
 #expenseListTable tbody td:nth-child(7) {
     display: none;
+  }
+  #example tbody td:nth-child(3),
+#expenseListTable tbody td:nth-child(3) {
+    border-radius: 10px 0 0 10px;
+    border-left: 0.5px solid #e0e7fe;
   }
 }
 .dashboard__main__content__list {
@@ -899,15 +951,20 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
+  .dashboard__main__content__docprofile.bg-card {
+    border-radius: 0;
+    border: none;
+    background: none;
+  }
   .dashboard__main__content__docprofile {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .dashboard__main__content__docprofile__header__bg {
     height: 150px;
   }
   .dashboard__main__content__docprofile__header__avatar {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin-right: 0;
   }
   .dashboard__main__content__docprofile__header__info {
@@ -932,12 +989,18 @@ h6 {
   .dashboard__main__content__workTime__title, .dashboard__main__content__workTime__clock {
     text-align: center;
   }
+  .dashboard__main__content__slider {
+    margin-top: 30px;
+  }
   .dashboard__main__content__slider__card__avatar {
     width: 45px;
     height: 45px;
   }
   .dashboard__main__content__slider__card__info {
     width: 70%;
+  }
+  .dashboard__main__content__slider__card__info__text {
+    margin-top: 5px;
   }
 }
 .serviceInformation {
@@ -1108,6 +1171,21 @@ table tfoot td:last-child {
 }
 
 @media screen and (max-width: 767px) {
+  .reports__card--1 .cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .reports__card--2 .btn-group button.dropdown-toggle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100px;
+    height: 35px;
+  }
+  .reports__card--2 .btn-group .dropdown-menu {
+    z-index: 1;
+    min-width: 8rem;
+  }
   .reports__card-col {
     margin-bottom: 20px;
   }
@@ -1256,7 +1334,7 @@ ul li {
   font-size: 20px;
   line-height: 24px;
   color: #292968;
-  margin: 26px 0 20px 15px;
+  margin: 26px 0 20px;
 }
 
 .cssTitleChild {
@@ -1385,6 +1463,15 @@ ul li {
     font-size: 18px;
     line-height: 22px;
   }
+  .cssTitleChild {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .secondary-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 20px 0 12px;
+  }
   .li-item {
     font-size: 13px;
     line-height: 16px;
@@ -1410,8 +1497,82 @@ ul li {
     font-size: 12px;
     line-height: 15px;
   }
+  .slick-dots li {
+    margin: 0 10px !important;
+  }
+  .slick-dots li button::before {
+    font-size: 10px !important;
+  }
   .dashboard__main {
-    margin-top: 176px;
+    margin-top: 174px;
+  }
+  .dashboard__main__content {
+    padding: 30px 10px;
+  }
+  .dashboard__main__content__slider__card {
+    margin: 0 0.5rem 1rem;
+    padding: 20px 0 20px 8px;
+    border-radius: 12px;
+  }
+  .dashboard__main__content__slider__card-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+  .dashboard__main__content__slider__card-img img {
+    width: 18px;
+  }
+  .dashboard__main__content__slider__card-desc .cssText {
+    font-size: 12px;
+    line-height: 15px;
+    width: max-content;
+  }
+  .dashboard__main__content__slider__card-desc span {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+  }
+  .dashboard__main__content__history__card__rank__info__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .dashboard__main__content__history__card__rank__info__avatar img {
+    width: 100%;
+  }
+  .dashboard__main__content__history__card__rank__info__name div.cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__history__card__rank__info__name span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-star img {
+    width: 15px;
+    margin-right: 3px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-review span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__content__info__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .dashboard__main__content__history__card__content__info__avatar img {
+    width: 100%;
+  }
+  .dashboard__main__content__history__card__content__info__sick {
+    display: none;
+  }
+  .dashboard__main__content__history__card__content__info__name div.cssText,
+.dashboard__main__content__history__card__content__info__name span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__content__info__status span.cssText {
+    font-size: 12px;
+    line-height: 15px;
   }
   .serviceInformation__card__button {
     width: 100%;

@@ -216,7 +216,6 @@ const myLineDiastolicChart = new Chart(myDiastolicChart, {
 
 $(document).ready(function () {
   $.get(api, function (data) {
-    console.log("data", data);
     const parseData = JSON.parse(data.guardian);
     $(".dashboard__main__content__profile__header-avatar img").attr(
       "src",
@@ -231,36 +230,29 @@ $(document).ready(function () {
     $(
       ".dashboard__main__content__profile__header-name-id span:last-child"
     ).text(data.disease);
-    $(".dashboard__main__content__profile__body--doB .value").text(
-      "30 Nov 1996"
-    );
-    $(".dashboard__main__content__profile__body--age .value").text(data.age);
-    $(".dashboard__main__content__profile__body--gender .value").text(
-      data.gender
-    );
-    $(".dashboard__main__content__profile__body--religion .value").text(
-      data.religion
-    );
-    $(".dashboard__main__content__profile__body--occupation .value").text(
-      data.occupation
-    );
-    $(".dashboard__main__content__profile__body--maritalStatus .value").text(
-      data.maritalStatus
-    );
-    $(".dashboard__main__content__profile__body--address .value").text(
-      data.address
-    );
-    $(".dashboard__main__content__profile__body--phone .value").text(
-      data.phoneNumber
-    );
-    $(".dashboard__main__content__profile__body--guardianName .value").text(
-      parseData.guardianName
-    );
-    $(".dashboard__main__content__profile__body--relationship .value").text(
-      parseData.relation
-    );
-    $(".dashboard__main__content__profile__body--guardianPhone .value").text(
-      parseData.phoneNumber
-    );
+
+    const dataValueProfile = [
+      "30 Nov 1996",
+      data.age,
+      data.gender,
+      data.religion,
+      data.occupation,
+      data.maritalStatus,
+      data.address,
+      data.phoneNumber,
+      parseData.guardianName,
+      parseData.relation,
+      parseData.phoneNumber,
+    ];
+
+    const itemProfileLength = $(
+      ".dashboard__main__content__profile__body__item"
+    ).length;
+
+    for (let i = 1; i <= itemProfileLength; i++) {
+      $(
+        `.dashboard__main__content__profile__body__item:nth-child(${i}) .value`
+      ).text(dataValueProfile[i - 1]);
+    }
   });
 });

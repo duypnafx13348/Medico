@@ -127,7 +127,31 @@
 }
 
 @media screen and (max-width: 767px) {
-  .reports__card-col {
-    margin-bottom: 20px;
+  .reports__card {
+    &--1 {
+      .cssText {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &--2 {
+      .btn-group {
+        button.dropdown-toggle {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          width: 100px;
+          height: 35px;
+        }
+        .dropdown-menu {
+          z-index: 1;
+          min-width: 8rem;
+        }
+      }
+    }
+
+    &-col {
+      margin-bottom: 20px;
+    }
   }
 }

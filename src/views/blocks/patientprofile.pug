@@ -5,15 +5,11 @@
 
             .dashboard__main__content__profile
                 .dashboard__main__content__profile__header 
-                    //- each patient in dataPatient
                     .dashboard__main__content__profile__header-avatar
                         img(src="")
                     .dashboard__main__content__profile__header-name
-                        //- h3= patient.patientName
                         h3
                         .dashboard__main__content__profile__header-name-id
-                            //- span= patient.patientID
-                            //- span= patient.disease 
                             span.patientId 
                             span.disease
 
@@ -23,17 +19,9 @@
                     li.dashboard__main__content__item.li-item Lab
                     li.dashboard__main__content__item.li-item Prescriptions
                 .dashboard__main__content__profile__body 
-                    +patientProfile("dashboard__main__content__profile__body--doB row", "Date of Birth", "30 Nov 1995")
-                    +patientProfile("dashboard__main__content__profile__body--age row", "Age", 20)
-                    +patientProfile("dashboard__main__content__profile__body--gender row", "Gender", "Male")
-                    +patientProfile("dashboard__main__content__profile__body--religion row", "Religion", "Islam")
-                    +patientProfile("dashboard__main__content__profile__body--occupation row", "Occupation", "QC")
-                    +patientProfile("dashboard__main__content__profile__body--maritalStatus row", "Marital Status", "Single")
-                    +patientProfile("dashboard__main__content__profile__body--address row", "Address", "tan binh")
-                    +patientProfile("dashboard__main__content__profile__body--phone row", "Phone Number", "123")
-                    +patientProfile("dashboard__main__content__profile__body--guardianName row", "Guardian Name", "Alex")
-                    +patientProfile("dashboard__main__content__profile__body--relationship row", "Relationship", "Brother")
-                    +patientProfile("dashboard__main__content__profile__body--guardianPhone row", "Guardian Phone Number", "456")
+                    - var dataPatientProfile = ["Date of Birth", "Age", "Gender", "Religion", "Occupation", "Marital Status", "Address", "Phone Number", "Guardian Name", "Relationship", "Guardian Phone Number"]
+                    each value in dataPatientProfile
+                        +patientProfile(value)
                         
         .col-lg-5.dashboard__main__content__other 
             .row 

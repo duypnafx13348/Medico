@@ -1,7 +1,13 @@
 extends index.pug
 block title
     title Dashboard
+block link
+    //- slick slider
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
 block content 
     include ../blocks/dashboard.pug
 block scriptjs
+    //- slick slider
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
     script(src="./js/dashboard.js") 

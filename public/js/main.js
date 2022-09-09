@@ -1,13 +1,21 @@
 const pathName = location.pathname.slice(1);
-
+// const pathName = window.location.pathname.slice(15);
 $(document).ready(function () {
+  // handle remove ListTable
+  const windowSize = $(window).width();
+  console.log("size", windowSize);
+  const checkTitleVal = $(".dashboard__main__content__title")
+    .text()
+    .toLowerCase()
+    .includes("list");
+  console.log("checkTitleVal", checkTitleVal);
+  if (windowSize < 500 && 768 < windowSize < 1045 && checkTitleVal) {
+    $(".dashboard__main__content .container").removeClass("container");
+  }
   // handle TitleNavbar
   $(".dashboard__nav__title").text(
     $(".dashboard__main__content__title").text()
   );
-  if ($(".dashboard__nav__title").text().toLowerCase().includes("list")) {
-    $(".dashboard__main__content .container").removeClass("container");
-  }
   // handle ActiveSidebar
   const activeSideBar = $(`a[href="${pathName}"]`).addClass("active");
   $(`a[href="${pathName}"]`)

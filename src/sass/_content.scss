@@ -12,42 +12,43 @@
   &-padding {
     padding: 0 15px;
   }
-
-  &__card {
-    display: flex;
-    align-items: center;
-    padding: 25px 0 25px 25px;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 255, 255, 0.9) 100%
-    );
-    border: 0.5px solid #e0e7fe;
-    border-radius: 30px;
-
-    &-img {
-      width: 55px;
-      height: 55px;
-      background: rgba(255, 85, 191, 0.2);
-      border-radius: 10px;
+  &__slider {
+    &__card {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-    }
+      padding: 25px 0 25px 25px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      );
+      border: 0.5px solid #e0e7fe;
+      border-radius: 30px;
 
-    &-desc {
-      h6 {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+      &-img {
+        width: 55px;
+        height: 55px;
+        background: rgba(255, 85, 191, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
       }
 
-      span {
-        font-weight: 800;
-        font-size: 26px;
-        line-height: 31px;
-        color: #292968;
+      &-desc {
+        h6 {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        span {
+          font-weight: 800;
+          font-size: 26px;
+          line-height: 31px;
+          color: #292968;
+        }
       }
     }
   }
@@ -68,6 +69,9 @@
 
       &__chart {
         padding: 30px;
+        &__box {
+          height: 325px;
+        }
       }
 
       &__rank {
@@ -80,6 +84,19 @@
 
           &-flex {
             display: flex;
+          }
+
+          &__name {
+            div.cssText {
+              color: $primary-color-title;
+              font-weight: 500;
+              font-size: 17px;
+              line-height: 21px;
+            }
+            span.cssText {
+              font-size: 16px;
+              line-height: 21px;
+            }
           }
 
           &__avatar {
@@ -116,6 +133,12 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          &__name {
+            div.cssText {
+              color: $primary-color-title;
+            }
+          }
 
           &-flex {
             display: flex;
