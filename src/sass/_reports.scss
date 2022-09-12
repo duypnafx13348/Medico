@@ -3,14 +3,11 @@
   justify-content: space-between;
   align-items: center;
 
-  &--2 {
-    // width: 135px;
-    // height: 45px;
-    // border: 1.5px solid #70708c;
-    // border-radius: 10px;
-    // position: relative;
-    // color: rgb(96, 91, 255);
+  &-row {
+    margin-bottom: 20px;
+  }
 
+  &--2 {
     .btn-group {
       button.dropdown-toggle {
         width: 135px;
@@ -122,8 +119,26 @@
   }
 }
 
+.reports__card-row {
+  .reports__card__chart {
+    &__revenue.revenueLineChart-setHeight,
+    &__expense.expenseLineChart-setHeight {
+      height: 175px;
+    }
+  }
+  .generalLineChart-setHeight {
+    height: 374px;
+  }
+}
+
 #generalLineChart {
   padding: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .reports__card-col {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {

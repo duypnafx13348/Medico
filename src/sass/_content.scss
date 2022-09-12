@@ -28,8 +28,6 @@
       &-img {
         width: 55px;
         height: 55px;
-        background: rgba(255, 85, 191, 0.2);
-        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -68,9 +66,18 @@
       }
 
       &__chart {
-        padding: 30px;
-        &__box {
+        .myLineChart-setHeight,
+        .myDoughnutChart-setHeight {
           height: 325px;
+          padding: 30px;
+        }
+        .myBarChart-setHeight {
+          height: 344px;
+          padding: 30px;
+        }
+        .myNewLineChart-setHeight {
+          height: 320px;
+          padding: 30px;
         }
       }
 

@@ -234,7 +234,7 @@ ul {
 @media screen and (max-width: 991px) {
   .dashboard {
     &__main {
-      margin-top: 166px;
+      padding-top: 166px;
 
       &__content {
         width: 100%;
@@ -242,11 +242,31 @@ ul {
         &__title {
           display: none;
         }
+        &__slider {
+          &__card {
+            &-desc {
+              .cssText {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                width: max-content;
+              }
+              .number {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
-@media screen and (min-width: 740px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .serviceInformation__card__button {
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -307,22 +327,22 @@ ul {
   }
 
   .dashboard__main {
-    margin-top: 174px;
+    padding-top: 174px;
 
     &__content {
       padding: 30px 10px;
 
       &__slider__card {
         margin: 0 0.5rem 1rem;
-        padding: 20px 0 20px 8px;
+        padding: 20px 15px;
         border-radius: 12px;
 
         &-img {
-          width: 30px;
-          height: 30px;
-          margin-right: 8px;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
           img {
-            width: 18px;
+            width: 100%;
           }
         }
         &-desc {

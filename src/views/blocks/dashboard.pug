@@ -11,22 +11,23 @@
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Patient History
                 .dashboard__main__content__history__card__chart 
-                    .dashboard__main__content__history__card__chart__box
+                    .myLineChart-setHeight
                         canvas(id="myLineChart")
 
         .col-lg-4
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Top Diseases
                 .dashboard__main__content__history__card__chart 
-                    .dashboard__main__content__history__card__chart__box
-                        canvas(id="myDoughnutChart")
+                    .myDoughnutChart-setHeight
+                        canvas(id="myDoughnutChart" style="height: 100%")
 
     .row.dashboard__main__content__history
         .col-lg-7
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Total Patient Per Day
                 .dashboard__main__content__history__card__chart 
-                    canvas(id="myBarChart" width="635" height="360")
+                    .myBarChart-setHeight
+                        canvas(id="myBarChart" style="height: 100%")
 
         .col-lg-5 
             .dashboard__main__content__history__card 
@@ -53,4 +54,5 @@
             .dashboard__main__content__history__card 
                 .dashboard__main__content__history__card__title.secondary-title Revenue
                 .dashboard__main__content__history__card__chart 
-                    canvas(id="myNewLineChart" height="189")
+                    .myNewLineChart-setHeight
+                        canvas(id="myNewLineChart" style="height: 100%")

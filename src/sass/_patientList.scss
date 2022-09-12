@@ -40,6 +40,29 @@
     }
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #example,
+  #expenseListTable {
+    thead,
+    tbody {
+      th,
+      td {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+
+      td {
+        &:nth-child(3) {
+          border-radius: 10px 0 0 10px;
+          border-left: 0.5px solid #e0e7fe;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   #example,

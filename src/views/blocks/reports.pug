@@ -16,12 +16,13 @@
     .row.reports__card-row.mt-5
         .col-lg-4.reports__card-col 
             .reports__card__chart 
-                .reports__card__chart__revenue.mb-4
-                    canvas(id="revenueLineChart" class="bg-card" height="175")
-                .reports__card__chart__expense
-                    canvas(id="expenseLineChart" class="bg-card" height="175")
+                .reports__card__chart__revenue.revenueLineChart-setHeight.mb-4
+                    canvas(id="revenueLineChart" class="bg-card" style="height: 100%")
+                .reports__card__chart__expense.expenseLineChart-setHeight
+                    canvas(id="expenseLineChart" class="bg-card" style="height: 100%")
         .col-lg-8.reports__card-col
-            canvas(id="generalLineChart" class="bg-card" height="213")
+            .generalLineChart-setHeight
+                canvas(id="generalLineChart" class="bg-card" style="height: 100%")
     .row.reports__card-row
         .col-lg-6.reports__card-col 
             .reports__card__revenues.primary-title Revenues

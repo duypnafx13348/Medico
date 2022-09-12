@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function handleChart() {
   const labelsRevenueChart = [
     "Jan",
     "Feb",
@@ -207,4 +207,57 @@ $(document).ready(function () {
     configVisitorsLineChart
   );
   // ---------------------------------------------------------------------------------------------
+}
+handleChart();
+$(document).ready(function () {
+  $(".dashboard__main__content__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          centerMode: true,
+        },
+      },
+    ],
+  });
 });

@@ -192,16 +192,18 @@
             <div class="row reports__card-row mt-5">
               <div class="col-lg-4 reports__card-col"> 
                 <div class="reports__card__chart"> 
-                  <div class="reports__card__chart__revenue mb-4">
-                    <canvas class="bg-card" id="revenueLineChart" height="175"></canvas>
+                  <div class="reports__card__chart__revenue revenueLineChart-setHeight mb-4">
+                    <canvas class="bg-card" id="revenueLineChart" style="height: 100%"></canvas>
                   </div>
-                  <div class="reports__card__chart__expense">
-                    <canvas class="bg-card" id="expenseLineChart" height="175"></canvas>
+                  <div class="reports__card__chart__expense expenseLineChart-setHeight">
+                    <canvas class="bg-card" id="expenseLineChart" style="height: 100%"></canvas>
                   </div>
                 </div>
               </div>
               <div class="col-lg-8 reports__card-col">
-                <canvas class="bg-card" id="generalLineChart" height="213"></canvas>
+                <div class="generalLineChart-setHeight">
+                  <canvas class="bg-card" id="generalLineChart" style="height: 100%"></canvas>
+                </div>
               </div>
             </div>
             <div class="row reports__card-row">

@@ -200,17 +200,23 @@
                   <div class="col-lg-12 dashboard__main__content__other__heartRate">
                     <div class="dashboard__main__content__other__heartRate__title primary-title">Heart rate</div>
                     <div class="dashboard__main__content__other__heartRate__chart">
-                      <canvas id="myHeartRateChart" height="189"></canvas>
+                      <div class="myHeartRateChart-setHeight">
+                        <canvas id="myHeartRateChart" style="height: 100%"></canvas>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-12 dashboard__main__content__other__bloodPressure">
                     <div class="dashboard__main__content__other__bloodPressure__title primary-title">Blood Pressure</div>
                     <div class="row dashboard__main__content__other__bloodPressure__chartList">
                       <div class="col-lg-6">
-                        <canvas class="dashboard__main__content__other__bloodPressure__chartItem" id="mySystolicChart" height="189"></canvas>
+                        <div class="mySystolicChart-setHeight">
+                          <canvas id="mySystolicChart" style="height: 100%"></canvas>
+                        </div>
                       </div>
                       <div class="col-lg-6">
-                        <canvas class="dashboard__main__content__other__bloodPressure__chartItem" id="myDiastolicChart" height="189"></canvas>
+                        <div class="myDiastolicChart-setHeight">
+                          <canvas id="myDiastolicChart" style="height: 100%"></canvas>
+                        </div>
                       </div>
                     </div>
                   </div>

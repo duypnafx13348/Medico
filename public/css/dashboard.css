@@ -282,8 +282,6 @@ h6 {
 .dashboard__main__content__slider__card-img {
   width: 55px;
   height: 55px;
-  background: rgba(255, 85, 191, 0.2);
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,11 +303,18 @@ h6 {
   border: 0.5px solid #e0e7fe;
   border-radius: 30px;
 }
-.dashboard__main__content__history__card__chart {
+.dashboard__main__content__history__card__chart .myLineChart-setHeight,
+.dashboard__main__content__history__card__chart .myDoughnutChart-setHeight {
+  height: 325px;
   padding: 30px;
 }
-.dashboard__main__content__history__card__chart__box {
-  height: 325px;
+.dashboard__main__content__history__card__chart .myBarChart-setHeight {
+  height: 344px;
+  padding: 30px;
+}
+.dashboard__main__content__history__card__chart .myNewLineChart-setHeight {
+  height: 320px;
+  padding: 30px;
 }
 .dashboard__main__content__history__card__rank {
   padding: 40px 25px;
@@ -425,6 +430,13 @@ h6 {
 .container .row-profile .dashboard__main__content__profile .dashboard__main__content__list .dashboard__main__content__item {
   margin-right: 0;
 }
+.container .dashboard__main__content__other .mySystolicChart-setHeight,
+.container .dashboard__main__content__other .myDiastolicChart-setHeight {
+  height: 140px;
+}
+.container .dashboard__main__content__other .myHeartRateChart-setHeight {
+  height: 260px;
+}
 .container .dashboard__main__content__other__heartRate__chart, .container .dashboard__main__content__other__bloodPressure__chartItem {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
   border: 0.5px solid #e0e7fe;
@@ -464,6 +476,14 @@ h6 {
   border: 1px solid #e0e7fe;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container .row-profile .dashboard__main__content__profile {
+    margin-bottom: 20px;
+  }
+  .container .dashboard__main__content__other__bloodPressure__chartList .col-lg-6:first-child {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 767px) {
   .container .dashboard__main__content__other__bloodReport__table__group__title {
     padding: 13px 15px;
@@ -530,6 +550,39 @@ h6 {
   border-right: 0.5px solid #e0e7fe;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #example thead th:nth-child(1), #example thead th:nth-child(2), #example thead th:nth-child(4),
+#example thead td:nth-child(1),
+#example thead td:nth-child(2),
+#example thead td:nth-child(4),
+#example tbody th:nth-child(1),
+#example tbody th:nth-child(2),
+#example tbody th:nth-child(4),
+#example tbody td:nth-child(1),
+#example tbody td:nth-child(2),
+#example tbody td:nth-child(4),
+#expenseListTable thead th:nth-child(1),
+#expenseListTable thead th:nth-child(2),
+#expenseListTable thead th:nth-child(4),
+#expenseListTable thead td:nth-child(1),
+#expenseListTable thead td:nth-child(2),
+#expenseListTable thead td:nth-child(4),
+#expenseListTable tbody th:nth-child(1),
+#expenseListTable tbody th:nth-child(2),
+#expenseListTable tbody th:nth-child(4),
+#expenseListTable tbody td:nth-child(1),
+#expenseListTable tbody td:nth-child(2),
+#expenseListTable tbody td:nth-child(4) {
+    display: none;
+  }
+  #example thead td:nth-child(3),
+#example tbody td:nth-child(3),
+#expenseListTable thead td:nth-child(3),
+#expenseListTable tbody td:nth-child(3) {
+    border-radius: 10px 0 0 10px;
+    border-left: 0.5px solid #e0e7fe;
+  }
+}
 @media screen and (max-width: 767px) {
   #example,
 #expenseListTable {
@@ -709,11 +762,10 @@ h6 {
   outline: none;
 }
 
-@media screen and (max-width: 767px) {
-  .imgbb-container {
-    display: none !important;
-  }
+.imgbb-container {
+  display: none !important;
 }
+
 .dashboard__main__content__column {
   margin: 15px 0;
 }
@@ -950,6 +1002,19 @@ h6 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .dashboard__main__content__docprofile.bg-card {
+    border-radius: 0;
+    border: none;
+    background: none;
+    margin-bottom: 20px;
+  }
+  .dashboard__main__content__workTime {
+    width: 50%;
+    text-align: center;
+    float: left;
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content__docprofile.bg-card {
     border-radius: 0;
@@ -1084,10 +1149,24 @@ table tfoot td:last-child {
   border-bottom-right-radius: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .serviceInformation__card__box {
+    padding: 15px 12px;
+  }
+  table#myTable tbody td {
+    padding: 15px 12px;
+  }
+  .payment-col img {
+    display: none;
+  }
+}
 .reports__card {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.reports__card-row {
+  margin-bottom: 20px;
 }
 .reports__card--2 .btn-group button.dropdown-toggle {
   width: 135px;
@@ -1166,10 +1245,22 @@ table tfoot td:last-child {
   background-color: #ff8f6b;
 }
 
+.reports__card-row .reports__card__chart__revenue.revenueLineChart-setHeight, .reports__card-row .reports__card__chart__expense.expenseLineChart-setHeight {
+  height: 175px;
+}
+.reports__card-row .generalLineChart-setHeight {
+  height: 374px;
+}
+
 #generalLineChart {
   padding: 30px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .reports__card-col {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 767px) {
   .reports__card--1 .cssText {
     font-size: 12px;
@@ -1195,6 +1286,9 @@ table tfoot td:last-child {
   justify-content: center;
   align-items: center;
   padding: 30px;
+}
+.accounts__content__title.cssText {
+  font-weight: 500;
 }
 .accounts-row {
   margin-top: 22px;
@@ -1252,6 +1346,19 @@ table tfoot td:last-child {
   color: #292968;
 }
 
+.accounts-row .revenueBarChart-setHeight,
+.accounts-row .expenseDoughnutChart-setHeight {
+  height: 377px;
+}
+.accounts-row .visitorsLineChart-setHeight {
+  height: 277px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .accounts-col {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 767px) {
   #expenseDoughnutChart {
     width: 100%;
@@ -1449,13 +1556,29 @@ ul li {
 }
 @media screen and (max-width: 991px) {
   .dashboard__main {
-    margin-top: 166px;
+    padding-top: 166px;
   }
   .dashboard__main__content {
     width: 100%;
   }
   .dashboard__main__content__title {
     display: none;
+  }
+  .dashboard__main__content__slider__card-desc .cssText {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: max-content;
+  }
+  .dashboard__main__content__slider__card-desc .number {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .serviceInformation__card__button {
+    height: 50px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1504,23 +1627,23 @@ ul li {
     font-size: 10px !important;
   }
   .dashboard__main {
-    margin-top: 174px;
+    padding-top: 174px;
   }
   .dashboard__main__content {
     padding: 30px 10px;
   }
   .dashboard__main__content__slider__card {
     margin: 0 0.5rem 1rem;
-    padding: 20px 0 20px 8px;
+    padding: 20px 15px;
     border-radius: 12px;
   }
   .dashboard__main__content__slider__card-img {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
   }
   .dashboard__main__content__slider__card-img img {
-    width: 18px;
+    width: 100%;
   }
   .dashboard__main__content__slider__card-desc .cssText {
     font-size: 12px;

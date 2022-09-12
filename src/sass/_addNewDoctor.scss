@@ -72,8 +72,9 @@
   }
 }
 
+.imgbb-container {
+  display: none !important;
+}
+
 @media screen and (max-width: 767px) {
-  .imgbb-container {
-    display: none !important;
-  }
 }

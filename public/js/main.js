@@ -9,7 +9,7 @@ $(document).ready(function () {
     .toLowerCase()
     .includes("list");
   console.log("checkTitleVal", checkTitleVal);
-  if (windowSize < 500 && 768 < windowSize < 1045 && checkTitleVal) {
+  if (checkTitleVal && windowSize < 400) {
     $(".dashboard__main__content .container").removeClass("container");
   }
   // handle TitleNavbar

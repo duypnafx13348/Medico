@@ -4,6 +4,12 @@
   align-items: center;
   padding: 30px;
 
+  &__content {
+    &__title.cssText {
+      font-weight: 500;
+    }
+  }
+
   &-row {
     margin-top: 22px;
     margin-bottom: 22px;
@@ -73,6 +79,22 @@
     font-size: 26px;
     line-height: 31px;
     color: $secondary-color-title;
+  }
+}
+
+.accounts-row {
+  .revenueBarChart-setHeight,
+  .expenseDoughnutChart-setHeight {
+    height: 377px;
+  }
+  .visitorsLineChart-setHeight {
+    height: 277px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .accounts-col {
+    margin-bottom: 20px;
   }
 }
 

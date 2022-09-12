@@ -67,6 +67,14 @@
   }
 
   .dashboard__main__content__other {
+    .mySystolicChart-setHeight,
+    .myDiastolicChart-setHeight {
+      height: 140px;
+    }
+    .myHeartRateChart-setHeight {
+      height: 260px;
+    }
+
     &__heartRate__chart,
     &__bloodPressure__chartItem {
       background: linear-gradient(
@@ -122,6 +130,23 @@
           text-align: center;
           padding: 13px 25px;
           border: 1px solid #e0e7fe;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    .row-profile {
+      .dashboard__main__content__profile {
+        margin-bottom: 20px;
+      }
+    }
+    .dashboard__main__content__other__bloodPressure__chartList {
+      .col-lg-6 {
+        &:first-child {
+          margin-bottom: 20px;
         }
       }
     }

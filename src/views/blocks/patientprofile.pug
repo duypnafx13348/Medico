@@ -28,14 +28,17 @@
                 .col-lg-12.dashboard__main__content__other__heartRate
                     .dashboard__main__content__other__heartRate__title.primary-title Heart rate
                     .dashboard__main__content__other__heartRate__chart
-                        canvas(id="myHeartRateChart" height="189")
+                        .myHeartRateChart-setHeight
+                            canvas(id="myHeartRateChart" style="height: 100%")
                 .col-lg-12.dashboard__main__content__other__bloodPressure
                     .dashboard__main__content__other__bloodPressure__title.primary-title Blood Pressure
                     .row.dashboard__main__content__other__bloodPressure__chartList
                         .col-lg-6
-                            canvas(id="mySystolicChart" class="dashboard__main__content__other__bloodPressure__chartItem" height="189")
+                            .mySystolicChart-setHeight
+                                canvas(id="mySystolicChart" style="height: 100%")
                         .col-lg-6
-                            canvas(id="myDiastolicChart" class="dashboard__main__content__other__bloodPressure__chartItem" height="189")
+                            .myDiastolicChart-setHeight
+                                canvas(id="myDiastolicChart" style="height: 100%")
 
                 .col-lg-12.dashboard__main__content__other__bloodReport
                     .dashboard__main__content__other__bloodReport__title.primary-title Blood Report
