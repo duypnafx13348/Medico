@@ -1,5 +1,5 @@
-// const pathName = location.pathname.slice(1);
-const pathName = window.location.pathname.slice(15);
+const pathName = location.pathname.slice(1);
+// const pathName = window.location.pathname.slice(15);
 console.log("pathname", pathName);
 $(document).ready(function () {
   // handle remove ListTable

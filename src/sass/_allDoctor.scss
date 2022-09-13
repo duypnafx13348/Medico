@@ -70,6 +70,45 @@
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content {
+    &__box {
+      &__item {
+        &__avatar {
+          img {
+            height: 50%;
+          }
+        }
+        .cssText {
+          font-size: 13px;
+          line-height: 16px;
+          font-weight: 400;
+        }
+        &__info {
+          &__rating {
+            img {
+              width: 12px;
+            }
+          }
+          &__workTime {
+            span {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          &__biography {
+            font-size: 12px;
+            line-height: 22px;
+          }
+          &__button {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content__box__item__info__workTime {
     span {

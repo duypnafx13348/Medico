@@ -92,12 +92,63 @@
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .accounts {
+    &__review {
+      padding: 20px 10px;
+
+      &__group {
+        .cssAvatar {
+          width: 65px;
+          height: auto;
+          margin-right: 10px;
+        }
+        &__info {
+          .cssText {
+            font-size: 11px;
+            line-height: 13px;
+          }
+          &__name {
+            margin-bottom: 6px;
+          }
+        }
+      }
+      &__star {
+        .cssNumberStar {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &__imgStar {
+          width: max-content;
+
+          img {
+            width: 14px;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+  .accounts-row {
+    .revenueBarChart-setHeight,
+    .expenseDoughnutChart-setHeight {
+      height: 303px;
+    }
+    .visitorsLineChart-setHeight {
+      height: 230px;
+    }
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+  .accounts__review__star {
+    display: none;
+  }
+}
 @media screen and (min-width: 767px) and (max-width: 991px) {
   .accounts-col {
     margin-bottom: 20px;
   }
 }
-
 @media screen and (max-width: 767px) {
   #expenseDoughnutChart {
     width: 100%;

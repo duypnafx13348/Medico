@@ -63,8 +63,9 @@
         color: #495057;
         background-color: #fff;
         background-clip: padding-box;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
+        border: 0.5px solid #e0e7fe;
+        border-radius: 10px;
+        height: 38px;
       }
 
       textarea {
@@ -88,6 +89,34 @@
   margin-top: 32px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content {
+    &__information {
+      &__group {
+        select {
+          font-size: 12px;
+          line-height: 15px;
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .serviceInformation.secondary-title {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .serviceInformation {
+    &__card {
+      &__header {
+        &__name.cssText {
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content {
     &__list {

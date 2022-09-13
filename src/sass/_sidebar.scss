@@ -71,6 +71,14 @@
   }
 }
 
+@media screen and (min-width: 991px) and (max-width: 1144px) {
+  .dashboard__main {
+    &__sidebar {
+      width: 220px;
+    }
+  }
+}
+
 @media screen and (max-width: 991px) {
   .dashboard__main {
     &__sidebar {

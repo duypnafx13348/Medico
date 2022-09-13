@@ -53,6 +53,10 @@
 
         .cssText {
           margin: 8px 0 5px;
+          font-size: 13px;
+          line-height: 16px;
+          font-weight: 400;
+          color: $text-color;
         }
       }
 
@@ -95,6 +99,28 @@
 
   &__text {
     padding: 0 30px;
+    position: relative;
+
+    ::after {
+      content: "Read More";
+      width: 100%;
+      height: 50%;
+      color: $secondary-color-title;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #ffffff 100%
+      );
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
   }
 
   &__workTime {
@@ -219,7 +245,74 @@
     float: left;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content {
+    &__docprofile {
+      &__header {
+        &__avatar {
+          width: 160px;
+          height: 160px;
+          margin-right: 25px;
 
+          img {
+            height: 100%;
+          }
+        }
+        &__rating {
+          display: none;
+        }
+        &__info {
+          &__deparment.cssText {
+            font-size: 13px;
+            line-height: 16px;
+          }
+
+          &__workTime {
+            span {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+    }
+    &__list {
+      .dashboard__main__content__item {
+        margin-right: 40px;
+      }
+    }
+    &__item {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__text {
+      p {
+        font-size: 12px;
+        line-height: 23px;
+      }
+    }
+    &__workTime {
+      &__clock {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+  .buttons-container .label-container .month-label {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .week .day.header {
+    font-size: 13px !important;
+    line-height: 16px;
+  }
+  .day span {
+    font-size: 12px !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content__docprofile.bg-card {
     border-radius: 0;

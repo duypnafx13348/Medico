@@ -75,6 +75,30 @@
 .imgbb-container {
   display: none !important;
 }
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .box1,
+  .box2 {
+    padding: 20px;
 
+    &__img {
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+
+    .buttonDownload,
+    .cssTextDownLoad {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .box1 {
+    &__button {
+      width: 100%;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
 }

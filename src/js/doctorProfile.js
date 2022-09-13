@@ -55,6 +55,9 @@ $(document).ready(function () {
           infinite: true,
           dots: true,
           centerMode: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
       {
@@ -62,6 +65,8 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 1,
           centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
       {

@@ -136,6 +136,32 @@
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content {
+    &__list {
+      .li-item {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    span.key,
+    span.value {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &__other__bloodReport__table__group {
+      font-size: 12px;
+      line-height: 15px;
+
+      &__title {
+        padding: 13px 15px !important;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container {
     .row-profile {

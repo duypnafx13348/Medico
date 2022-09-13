@@ -107,6 +107,36 @@ table {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  table#myTable {
+    th,
+    td {
+      padding: 15px 10px;
+    }
+    tbody {
+      td.sl {
+        input {
+          width: 10px;
+        }
+      }
+    }
+  }
+  .payment {
+    &-form {
+      .form-group {
+        margin-bottom: 15px !important;
+      }
+    }
+    &-col {
+      &:last-child {
+        display: flex;
+        img {
+          width: inherit;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .serviceInformation {
     &__card {

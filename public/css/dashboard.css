@@ -142,6 +142,11 @@ h6 {
     display: none;
   }
 }
+@media screen and (min-width: 991px) and (max-width: 1144px) {
+  .dashboard {
+    padding: 0 20px !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .dashboard {
     padding: 0 !important;
@@ -250,6 +255,11 @@ h6 {
   color: #605bff;
 }
 
+@media screen and (min-width: 991px) and (max-width: 1144px) {
+  .dashboard__main__sidebar {
+    width: 220px;
+  }
+}
 @media screen and (max-width: 991px) {
   .dashboard__main__sidebar {
     display: none;
@@ -318,6 +328,8 @@ h6 {
 }
 .dashboard__main__content__history__card__rank {
   padding: 40px 25px;
+  overflow: scroll;
+  max-height: 400px;
 }
 .dashboard__main__content__history__card__rank__info {
   display: flex;
@@ -369,6 +381,7 @@ h6 {
 }
 .dashboard__main__content__history__card__content__info-flex {
   display: flex;
+  align-items: center;
 }
 .dashboard__main__content__history__card__content__info__avatar {
   width: 50px;
@@ -476,6 +489,24 @@ h6 {
   border: 1px solid #e0e7fe;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__list .li-item {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content span.key,
+.dashboard__main__content span.value {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__other__bloodReport__table__group {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__other__bloodReport__table__group__title {
+    padding: 13px 15px !important;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container .row-profile .dashboard__main__content__profile {
     margin-bottom: 20px;
@@ -550,6 +581,21 @@ h6 {
   border-right: 0.5px solid #e0e7fe;
 }
 
+table.dataTable thead > tr > th.sorting_asc:before,
+table.dataTable thead > tr > th.sorting_asc:after {
+  display: none !important;
+}
+
+@media screen and (min-width: 991px) and (max-width: 1144px) {
+  #example th,
+#expenseListTable th {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    width: max-content !important;
+    padding-right: 0;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   #example thead th:nth-child(1), #example thead th:nth-child(2), #example thead th:nth-child(4),
 #example thead td:nth-child(1),
@@ -676,8 +722,9 @@ h6 {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 0.5px solid #e0e7fe;
+  border-radius: 10px;
+  height: 38px;
 }
 .dashboard__main__content__information__group textarea {
   display: block;
@@ -693,6 +740,21 @@ h6 {
   margin-top: 32px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__information__group select {
+    font-size: 12px;
+    line-height: 15px;
+    color: #70708c;
+  }
+  .serviceInformation.secondary-title {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .serviceInformation__card__header__name.cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content__list {
     justify-content: space-between;
@@ -766,6 +828,27 @@ h6 {
   display: none !important;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .box1,
+.box2 {
+    padding: 20px;
+  }
+  .box1__img img,
+.box2__img img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .box1 .buttonDownload,
+.box1 .cssTextDownLoad,
+.box2 .buttonDownload,
+.box2 .cssTextDownLoad {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .box1__button {
+    width: 100%;
+  }
+}
 .dashboard__main__content__column {
   margin: 15px 0;
 }
@@ -821,6 +904,31 @@ h6 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__box__item__avatar img {
+    height: 50%;
+  }
+  .dashboard__main__content__box__item .cssText {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .dashboard__main__content__box__item__info__rating img {
+    width: 12px;
+  }
+  .dashboard__main__content__box__item__info__workTime span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__box__item__info__biography {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .dashboard__main__content__box__item__info__button {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 @media screen and (max-width: 767px) {
   .dashboard__main__content__box__item__info__workTime span {
     font-size: 12px;
@@ -880,6 +988,10 @@ h6 {
 }
 .dashboard__main__content__docprofile__header__info .cssText {
   margin: 8px 0 5px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #70708c;
 }
 .dashboard__main__content__docprofile__header__rating img {
   margin-right: 4.3px;
@@ -908,6 +1020,23 @@ h6 {
 }
 .dashboard__main__content__text {
   padding: 0 30px;
+  position: relative;
+}
+.dashboard__main__content__text ::after {
+  content: "Read More";
+  width: 100%;
+  height: 50%;
+  color: #292968;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 .dashboard__main__content__workTime {
   margin-top: 30px;
@@ -1013,6 +1142,56 @@ h6 {
     width: 50%;
     text-align: center;
     float: left;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__docprofile__header__avatar {
+    width: 160px;
+    height: 160px;
+    margin-right: 25px;
+  }
+  .dashboard__main__content__docprofile__header__avatar img {
+    height: 100%;
+  }
+  .dashboard__main__content__docprofile__header__rating {
+    display: none;
+  }
+  .dashboard__main__content__docprofile__header__info__deparment.cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__docprofile__header__info__workTime span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__list .dashboard__main__content__item {
+    margin-right: 40px;
+  }
+  .dashboard__main__content__item {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__text p {
+    font-size: 12px;
+    line-height: 23px;
+  }
+  .dashboard__main__content__workTime__clock {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .buttons-container .label-container .month-label {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .week .day.header {
+    font-size: 13px !important;
+    line-height: 16px;
+  }
+  .day span {
+    font-size: 12px !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1149,6 +1328,24 @@ table tfoot td:last-child {
   border-bottom-right-radius: 20px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  table#myTable th,
+table#myTable td {
+    padding: 15px 10px;
+  }
+  table#myTable tbody td.sl input {
+    width: 10px;
+  }
+  .payment-form .form-group {
+    margin-bottom: 15px !important;
+  }
+  .payment-col:last-child {
+    display: flex;
+  }
+  .payment-col:last-child img {
+    width: inherit;
+  }
+}
 @media screen and (max-width: 767px) {
   .serviceInformation__card__box {
     padding: 15px 12px;
@@ -1256,6 +1453,11 @@ table tfoot td:last-child {
   padding: 30px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .reports__card--1__statement {
+    margin-bottom: 4px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .reports__card-col {
     margin-bottom: 20px;
@@ -1354,6 +1556,46 @@ table tfoot td:last-child {
   height: 277px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .accounts__review {
+    padding: 20px 10px;
+  }
+  .accounts__review__group .cssAvatar {
+    width: 65px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .accounts__review__group__info .cssText {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .accounts__review__group__info__name {
+    margin-bottom: 6px;
+  }
+  .accounts__review__star .cssNumberStar {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .accounts__review__star__imgStar {
+    width: max-content;
+  }
+  .accounts__review__star__imgStar img {
+    width: 14px;
+    margin-right: 2px;
+  }
+  .accounts-row .revenueBarChart-setHeight,
+.accounts-row .expenseDoughnutChart-setHeight {
+    height: 303px;
+  }
+  .accounts-row .visitorsLineChart-setHeight {
+    height: 230px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+  .accounts__review__star {
+    display: none;
+  }
+}
 @media screen and (min-width: 767px) and (max-width: 991px) {
   .accounts-col {
     margin-bottom: 20px;
@@ -1462,11 +1704,11 @@ ul li {
 .cssInput {
   display: block;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
-  border: 0.5px solid #e0e7fe;
-  border-radius: 10px;
-  padding: 16px 0 16px 20px;
+  border: 0.5px solid #e0e7fe !important;
+  border-radius: 10px !important;
 }
-.cssInput ::placeholder {
+
+::placeholder {
   font-weight: 400;
   font-size: 15px;
   line-height: 18.15px;
@@ -1528,6 +1770,86 @@ ul li {
     line-height: 26px;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .primary-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .cssTitleChild {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .cssButton {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .slick-next {
+    right: -10px !important;
+  }
+  .slick-prev {
+    left: -15px !important;
+  }
+  .li-item,
+.cssLabel {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  ::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content {
+    padding: 30px 10px;
+  }
+  .dashboard__main__content__avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .dashboard__main__content__history__card__rank {
+    padding: 30px 20px;
+    max-height: 300px;
+  }
+  .dashboard__main__content__history__card__rank__info__avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  .dashboard__main__content__history__card__rank__info__avatar img {
+    width: 100%;
+    height: 100%;
+  }
+  .dashboard__main__content__history__card__rank__info__name div.cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__history__card__rank__info__name span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-star {
+    width: max-content;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-star img {
+    margin-right: 3px;
+    width: 15px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-review {
+    font-size: 12px;
+    line-height: 15px;
+    color: #9898a3;
+  }
+  .serviceInformation__card__button {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+  .dashboard__main__content__slider__card {
+    border-radius: 20px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating, .dashboard__main__content__history__card__content__info__status {
+    display: none;
+  }
+}
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   .primary-title,
 .secondary-title {
@@ -1538,6 +1860,14 @@ ul li {
     font-size: 12px;
     line-height: 15px;
     font-weight: 500;
+  }
+  .titleDoc {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .dashboard__main__content__slider__card-desc span {
+    font-size: 20px;
+    line-height: 24px;
   }
   .dashboard__main__content__card {
     border-radius: 20px;
@@ -1576,7 +1906,11 @@ ul li {
     line-height: 22px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .li-item {
+    font-size: 13px;
+    line-height: 16px;
+  }
   .serviceInformation__card__button {
     height: 50px;
   }

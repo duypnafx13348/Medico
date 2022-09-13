@@ -121,9 +121,6 @@
 }
 
 @media screen and (min-width: 992px) {
-  // .navbar-expand-lg .navbar-collapse#navbarTogglerDashboard {
-  //   display: none !important;
-  // }
   .collapse {
     display: none !important;
   }
@@ -132,6 +129,12 @@
     button {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1144px) {
+  .dashboard {
+    padding: 0 20px !important;
   }
 }
 
