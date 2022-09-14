@@ -134,6 +134,22 @@
 #generalLineChart {
   padding: 30px;
 }
+
+@media screen and (max-width: 1143px) {
+  .reports__card {
+    &--2 {
+      .btn-group {
+        button.dropdown-toggle {
+          width: 115px;
+          height: 40px;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1143px) {
   .reports__card {
     &--1 {

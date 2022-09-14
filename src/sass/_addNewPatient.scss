@@ -48,40 +48,6 @@
       }
     }
   }
-  &__information {
-    &__group {
-      display: flex;
-      justify-content: space-between;
-
-      select {
-        display: block;
-        width: 100%;
-        padding: 6px 12px;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 0.5px solid #e0e7fe;
-        border-radius: 10px;
-        height: 38px;
-      }
-
-      textarea {
-        display: block;
-        width: 100%;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.9) 0%,
-          rgba(255, 255, 255, 0.9) 100%
-        );
-        border: 0.5px solid #e0e7fe;
-        border-radius: 10px;
-        padding: 16px 0 16px 20px;
-      }
-    }
-  }
 }
 
 .guardianInformation {
@@ -90,17 +56,6 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1143px) {
-  .dashboard__main__content {
-    &__information {
-      &__group {
-        select {
-          font-size: 12px;
-          line-height: 15px;
-          color: $text-color;
-        }
-      }
-    }
-  }
   .serviceInformation.secondary-title {
     font-size: 17px;
     line-height: 21px;

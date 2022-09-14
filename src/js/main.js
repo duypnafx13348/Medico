@@ -1,8 +1,9 @@
 const pathName = location.pathname.slice(1);
 // const pathName = window.location.pathname.slice(15);
 console.log("pathname", pathName);
+
 $(document).ready(function () {
-  // handle remove ListTable
+  // handle remove class container in Table
   const windowSize = $(window).width();
   console.log("size", windowSize);
   const checkTitleVal = $(".dashboard__main__content__title")
@@ -13,6 +14,7 @@ $(document).ready(function () {
   if (checkTitleVal && windowSize < 400) {
     $(".dashboard__main__content .container").removeClass("container");
   }
+
   // handle TitleNavbar
   $(".dashboard__nav__title").text(
     $(".dashboard__main__content__title").text()

@@ -2,7 +2,7 @@
     .dashboard__main__content__title.primary-title Add New Doctor
     form(action="", class="dashboard__main__content__information")
         .row.dashboard__main__content__information__picture
-            .col-lg-4.profilePicture
+            .col-md-5.col-lg-4.profilePicture
                 .form-group
                     label.cssLabel(for="profilePicture") Profile Picture
                     .box1.block
@@ -13,7 +13,7 @@
                             | Drop Your Image Here
                         .box1__text 
                             span.cssTextDownLoad Maximum Image Size 2MB
-            .col-lg-8.coverPicture
+            .col-md-7.col-lg-8.coverPicture
                 .form-group
                     label.cssLabel(for="coverPicture") Cover Picture
                     .box2.block
@@ -27,32 +27,28 @@
                     .box2__input 
                         input(type="file" hidden id="coverPicture")
         .row.dashboard__main__content__information__group
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +signupForm("Doctor Name", "text", "doctorName", "Dr. Sara Graham")
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +signupForm("Address", "text", "address", "San Joss, California, USA")
-        .row.dashboard__main__content__information__group
-            .col-lg-4
+        
+            .col-md-6.col-lg-4
                 +signupForm("Age", "number", "age", 59)
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +selectForm("Gender","gender", ['Male', 'Female'])
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +selectForm("Select Department","department", ['Medicine Specialist', 'Sale', 'IT'])
-        .row.dashboard__main__content__information__group
-            .col-lg-4
+        
+            .col-md-6.col-lg-4
                 +signupForm("Email Address", "email", "emailAddress", "saragraham101@gmail.com")
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +signupForm("Date of Birth", "date", "doB")
-            .col-lg-4
+            .col-md-6.col-lg-4
                 +selectForm("Skills","skills", ["Lorem ipsum amet sit dolor", "Lorem ipsum amet sit dolor"])
-        .row.dashboard__main__content__information__group
+        
             .col-lg-12.form-group 
-                label(for="biography") Biography
-                textarea(name="biography", rows="4", placeholder="Write a short Biography") 
-                //- +signupForm("Description", "text", "desc", "Write a short description")
+                label(for="biography" class="cssLabel") Biography
+                textarea(name="biography", rows="4", placeholder="Write a short Biography")
         .serviceInformation__card__button.cssButton.addNewDoctor-add Add Doctor
-        //- .dashboard__main__content__information__button
-        //-     .form-group
-        //-         button(type="submit" class="cssButton") Add Doctor

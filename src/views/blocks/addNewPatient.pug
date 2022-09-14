@@ -32,9 +32,9 @@
                     +selectForm("Gender","gender", ["Male", "Female"])
                 .col-md-6.col-lg-4
                     +selectForm("Marital Status","maritalStatus", ["Married", "Single"])
-            .row.dashboard__main__content__information__group
-                .col-lg-12.form-group 
-                    label(for="description") Description
+            
+                .col-md-12.col-lg-12.form-group 
+                    label(for="description" class="cssLabel") Description
                     textarea(name="description", rows="4", id="description")
             .serviceInformation__card__button.cssButton.personalInformation-next Next
             .hehe
@@ -55,9 +55,8 @@
                     +selectForm("Relation","relation", ['Father', 'Mother', 'Brother'])
                 .col-md-6.col-lg-4
                     +selectForm("Occupation","occupation", ['Bussiness', 'Sale', 'IT', 'QC'])
-            .row.dashboard__main__content__information__group
+            
                 .col-lg-12.form-group 
-                    label(for="description") Description
+                    label(for="description" class="cssLabel") Description
                     textarea(name="description", rows="4", placeholder="Write a short description") 
-                    //- +signupForm("Description", "text", "desc", "Write a short description")
             .serviceInformation__card__button.cssButton.guardianInformation-add Add Patient

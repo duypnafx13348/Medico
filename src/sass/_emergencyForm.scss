@@ -107,7 +107,7 @@ table {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   table#myTable {
     th,
     td {
@@ -117,6 +117,22 @@ table {
       td.sl {
         input {
           width: 10px;
+        }
+      }
+    }
+  }
+
+  .serviceInformation {
+    .secondary-title {
+      margin: 40px 0 12px;
+    }
+
+    &__card {
+      &__header {
+        padding: 15px 12px;
+        &__titleName.cssTitleChild {
+          font-size: 13px;
+          line-height: 16px;
         }
       }
     }

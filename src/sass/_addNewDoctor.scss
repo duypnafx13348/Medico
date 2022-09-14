@@ -75,7 +75,8 @@
 .imgbb-container {
   display: none !important;
 }
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+
+@media screen and (max-width: 1143px) {
   .box1,
   .box2 {
     padding: 20px;
@@ -99,6 +100,4 @@
       width: 100%;
     }
   }
-}
-@media screen and (max-width: 767px) {
 }

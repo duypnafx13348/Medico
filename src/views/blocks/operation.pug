@@ -2,28 +2,28 @@
     .dashboard__main__content__title.primary-title Operation
     form.operation
         .row.operation-row
-            .col-lg-4.operation-col
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Patient ID", "text", "patientID", "#A-122014")
-            .col-lg-4.operation-col
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Operation Date", "text", "operationDate", "31 Jan 2021")
-            .col-lg-4.operation-col
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Operation Time", "text", "operationTime", "12.00 AM")
-        .row.operation-row.dashboard__main__content__information__group
-            .col-lg-6.operation-col
+        
+            .col-md-6.col-lg-6.operation-col
                 +selectForm("Select Operation Type", "operationType", ["Breast Surgery", "Eyes Surgery"])
-            .col-lg-6.operation-col
+            .col-md-6.col-lg-6.operation-col
                 +selectForm("Select Operation Service", "operationService", ["Breast Surgery", "Breast Surgery"])
-        .row.operation-row
-            .col-lg-4.operation-col
+        
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Price", "text", "price", "$5600")
-            .col-lg-4.operation-col
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Discount", "text", "discount", "0%")
-            .col-lg-4.operation-col
+            .col-md-6.col-lg-4.operation-col
                 +signupForm("Grand Total", "text", "grandTotal", "$5600")
-        .row.operation-row.dashboard__main__content__information__group
-            .col-lg-8.operation-col.form-group 
-                label(for="remark") Remark
+        
+            .col-md-7.col-lg-8.operation-col.form-group 
+                label(for="remark" class="cssLabel") Remark
                 textarea(name="remark" rows="4" id="remark") 
-            .col-lg-4.operation-col
+            .col-md-5.col-lg-4.operation-col
                 +signupForm("Paid Amount", "text", "paidAmount", "$5600")
         .serviceInformation__card__button.cssButton.operation-submit Submit

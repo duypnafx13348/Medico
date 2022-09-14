@@ -7,49 +7,49 @@
     .personalInformation
         form(action="", class="dashboard__main__content__information")
             .row.dashboard__main__content__information__group
-                .col-lg-4
+                .col-md-6.col-md-6.col-lg-4
                     +signupForm("Patient Name", "text", "patientName", "Charlene Reed")
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +signupForm("Address", "text", "address", "San Joss, California, USA")
-            .row.dashboard__main__content__information__group
-                .col-lg-4
+            
+                .col-md-6.col-lg-4
                     +signupForm("Age", "number", "age", 20)
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +selectForm("Blood Group","bloodGroup", ['O', 'A+', 'B+', 'AB'])
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +selectForm("Occupation","occupation", ['Bussiness', 'Sale', 'IT', 'QC'])
-            .row.dashboard__main__content__information__group
-                .col-lg-4
+            
+                .col-md-6.col-lg-4
                     +selectForm("Religion","religion", ['Islam'])
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +selectForm("Gender","gender", ["Male", "Female"])
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +selectForm("Marital Status","maritalStatus", ["Married", "Single"])
-            .row.dashboard__main__content__information__group
-                .col-lg-4
+            
+                .col-md-6.col-lg-4
                     +signupForm("Guardian Name", "text", "guardianName", "Charlene Reed ")
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +signupForm("Phone Number", "tel", "phoneNumberGN", "8975 456 25")
-                .col-lg-4
+                .col-md-6.col-lg-4
                     +signupForm("Address", "text", "address", "San Joss, California, USA")
-            .row.dashboard__main__content__information__group
-                .col-lg-4
+            
+                .col-md-6.col-lg-4
                     +selectForm("Relationship","relationship", ['Father', 'Mother', 'Brother'])
-                .col-lg-8
+                .col-md-6.col-lg-8
                     +signupForm("Remark", "text", "remark", "Write here")
-            .row.dashboard__main__content__information__group
-                .col-lg-6
+            
+                .col-md-6.col-lg-6
                     +selectForm("Referral","referral", ['Self', 'Oh Yeah!'])
-                .col-lg-6
+                .col-md-6.col-lg-6
                     +selectForm("Consultant","consultant", ["Self Consultant", "OK"])
             .serviceInformation__card__button.cssButton.personalInformation-next Next
 
     .serviceInformation
         .serviceInformation.secondary-title Select your desire service
         .row.serviceInformation-row
-            .col-lg-7.serviceInformation-col
+            .col-md-7.col-lg-7.serviceInformation-col
                 .serviceInformation__card 
                     .serviceInformation__card__header
                         .serviceInformation__card__header__titleName.cssTitleChild Service Name
@@ -60,7 +60,7 @@
                             .serviceInformation__card__header__price.cssText $#{value.price}
                     //- .serviceInformation__card__button.cssButton.serviceInformation-next Next
 
-            .col-lg-5.serviceInformation-col
+            .col-md-5.col-lg-5.serviceInformation-col
                 .serviceInformation__card 
                     .serviceInformation__card__header2
                         .serviceInformation__card__header2__title.cssTitleChild Given Services List
@@ -80,7 +80,7 @@
         .serviceInformation__card__button.cssButton.serviceInformation-next Next
 
     .row.payment
-        .col-lg-6.payment-col
+        .col-md-6.col-lg-6.payment-col
             form.payment-form
                 +signupForm("Sub Total", "text", "subTotal", "$3400")
                 .row.payment-form-row 
@@ -92,5 +92,5 @@
                 +signupForm("Paid Amount", "text", "paidAmount", "$3060")
                 +signupForm("Due", "text", "due", "0")
                 .serviceInformation__card__button.cssButton.payment-submit Submit
-        .col-lg-6.payment-col
+        .col-md-6.col-lg-6.payment-col
             img(src="./images/payment.svg", alt="payment")

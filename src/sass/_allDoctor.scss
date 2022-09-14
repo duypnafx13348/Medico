@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .dashboard__main__content {
     &__box {
       &__item {
@@ -103,6 +103,7 @@
           &__button {
             font-size: 14px;
             line-height: 17px;
+            height: 40px;
           }
         }
       }
@@ -110,10 +111,17 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .dashboard__main__content__box__item__info__workTime {
-    span {
-      font-size: 12px;
-      line-height: 15px;
+  .dashboard__main__content__box__item {
+    &__info__workTime {
+      span {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__avatar {
+      img {
+        height: 100%;
+      }
     }
   }
 
@@ -129,6 +137,13 @@
       img {
         max-width: 200px;
       }
+    }
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .dashboard__main__content__box__item {
+    &__info__button {
+      height: 35px;
     }
   }
 }

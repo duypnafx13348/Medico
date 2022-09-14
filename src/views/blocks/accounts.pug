@@ -23,38 +23,20 @@
                 canvas(id="visitorsLineChart" class="bg-card" style="height: 100%")
         .col-lg-6.accounts-col 
             .dashboard__main__content__title-child.primary-title Recent Review
-            - var dataInfoReview = [{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 4},{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 5}]
-                each value in dataInfoReview
-                    .accounts__review.bg-card
-                        .accounts__review__group 
-                            .accounts__review__group__avatar.cssAvatar
-                                img(src= value.avatar, alt="avatar")
-                            .accounts__review__group__info
-                                .accounts__review__group__info__name.cssTitleChild= value.name
-                                .accounts__review__group__info__review.cssText= value.review
-                        .accounts__review__star
-                            .accounts__review__star__numberStar.cssNumberStar= value.star
-                            .accounts__review__star__imgStar
-                                case value.star 
-                                    when 1
-                                        img(src="./images/star.svg", alt="star")
-                                    when 2
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                    when 3
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                    when 4
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                    default 
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        img(src="./images/star.svg", alt="star")
-                                        
+            .row.review-row
+                - var dataInfoReview = [{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 4},{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 5}]
+                    each value in dataInfoReview
+                        .col-md-6.col-lg-12
+                            .accounts__review.bg-card
+                                .accounts__review__group 
+                                    .accounts__review__group__avatar.cssAvatar
+                                        img(src= value.avatar, alt="avatar")
+                                    .accounts__review__group__info
+                                        .accounts__review__group__info__name.cssTitleChild= value.name
+                                        .accounts__review__group__info__review.cssText= value.review
+                                .accounts__review__star
+                                    .accounts__review__star__numberStar.cssNumberStar= value.star
+                                    .accounts__review__star__imgStar
+                                        - for (var x = 0; x < value.star ; x++)
+                                            img(src="./images/star.svg", alt="star")    
                 

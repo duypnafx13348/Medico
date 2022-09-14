@@ -157,9 +157,14 @@ h6 {
     background: linear-gradient(180deg, #f0f2fd 100%, #fff8f9 0%);
     width: 100%;
     z-index: 3;
+    padding: 10px 0;
   }
   .dashboard__nav button:focus {
     outline: none;
+  }
+  .dashboard__nav__avatar-circle {
+    width: 30px;
+    height: 30px;
   }
   .dashboard__nav__search-tablet {
     display: block;
@@ -172,6 +177,9 @@ h6 {
     width: 50%;
     margin: 0 auto;
   }
+  .dashboard__nav__search input {
+    height: 40px;
+  }
   .dashboard__nav__title {
     display: block;
   }
@@ -179,6 +187,9 @@ h6 {
 .dashboard__nav__notification,
 .dashboard__nav__add {
     display: none;
+  }
+  .navbar-toggler {
+    font-size: 1rem !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -190,13 +201,24 @@ h6 {
     padding: 0.2rem 0.5rem !important;
   }
   .dashboard__nav__search-tablet {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .dashboard__nav__search-tablet i {
     left: calc(0% + 25px);
   }
   .dashboard__nav__search-tablet input {
     width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .dashboard__nav__search-tablet {
+    margin-top: 10px;
+  }
+  .dashboard__nav__search-tablet i {
+    left: calc(25% + 25px);
+  }
+  .dashboard__nav__search-tablet input {
+    width: 50%;
   }
 }
 .dashboard__main {
@@ -269,6 +291,10 @@ h6 {
   }
   .dashboard__main__sidebar__item:first-child {
     margin-top: 35px;
+  }
+  #navbarTogglerDashboard {
+    overflow: scroll;
+    max-height: 300px;
   }
 }
 .dashboard__main__content {
@@ -437,6 +463,9 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+.container .row-profile .dashboard__main__content__profile__body__item .value {
+  font-weight: 500;
+}
 .container .row-profile .dashboard__main__content__profile .dashboard__main__content__list {
   justify-content: space-between;
 }
@@ -489,7 +518,7 @@ h6 {
   border: 1px solid #e0e7fe;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .dashboard__main__content__list .li-item {
     font-size: 12px;
     line-height: 15px;
@@ -549,6 +578,10 @@ h6 {
 #expenseListTable th {
   border: none;
   text-align: center;
+  color: #3d3d66;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 #example tbody,
 #expenseListTable tbody {
@@ -586,7 +619,7 @@ table.dataTable thead > tr > th.sorting_asc:after {
   display: none !important;
 }
 
-@media screen and (min-width: 991px) and (max-width: 1144px) {
+@media screen and (max-width: 1144px) {
   #example th,
 #expenseListTable th {
     font-weight: 500;
@@ -594,6 +627,13 @@ table.dataTable thead > tr > th.sorting_asc:after {
     line-height: 15px;
     width: max-content !important;
     padding-right: 0;
+  }
+  #example_length label,
+#example_filter label,
+#example_info,
+ul.pagination {
+    font-size: 13px;
+    line-height: 16px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -708,32 +748,6 @@ table.dataTable thead > tr > th.sorting_asc:after {
 .dashboard__main__content__avatar .editAvatar input {
   display: none;
 }
-.dashboard__main__content__information__group {
-  display: flex;
-  justify-content: space-between;
-}
-.dashboard__main__content__information__group select {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0.5px solid #e0e7fe;
-  border-radius: 10px;
-  height: 38px;
-}
-.dashboard__main__content__information__group textarea {
-  display: block;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
-  border: 0.5px solid #e0e7fe;
-  border-radius: 10px;
-  padding: 16px 0 16px 20px;
-}
 
 .guardianInformation {
   display: none;
@@ -741,11 +755,6 @@ table.dataTable thead > tr > th.sorting_asc:after {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1143px) {
-  .dashboard__main__content__information__group select {
-    font-size: 12px;
-    line-height: 15px;
-    color: #70708c;
-  }
   .serviceInformation.secondary-title {
     font-size: 17px;
     line-height: 21px;
@@ -828,7 +837,7 @@ table.dataTable thead > tr > th.sorting_asc:after {
   display: none !important;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .box1,
 .box2 {
     padding: 20px;
@@ -904,7 +913,7 @@ table.dataTable thead > tr > th.sorting_asc:after {
   cursor: pointer;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .dashboard__main__content__box__item__avatar img {
     height: 50%;
   }
@@ -927,12 +936,16 @@ table.dataTable thead > tr > th.sorting_asc:after {
   .dashboard__main__content__box__item__info__button {
     font-size: 14px;
     line-height: 17px;
+    height: 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .dashboard__main__content__box__item__info__workTime span {
     font-size: 12px;
     line-height: 15px;
+  }
+  .dashboard__main__content__box__item__avatar img {
+    height: 100%;
   }
   .dashboard__main__content {
     padding: 30px 0;
@@ -942,6 +955,11 @@ table.dataTable thead > tr > th.sorting_asc:after {
   }
   .box2__img img {
     max-width: 200px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .dashboard__main__content__box__item__info__button {
+    height: 35px;
   }
 }
 .dashboard__main__content__docprofile__header {
@@ -1131,20 +1149,7 @@ table.dataTable thead > tr > th.sorting_asc:after {
   cursor: pointer;
 }
 
-@media screen and (min-width: 767px) and (max-width: 991px) {
-  .dashboard__main__content__docprofile.bg-card {
-    border-radius: 0;
-    border: none;
-    background: none;
-    margin-bottom: 20px;
-  }
-  .dashboard__main__content__workTime {
-    width: 50%;
-    text-align: center;
-    float: left;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .dashboard__main__content__docprofile__header__avatar {
     width: 160px;
     height: 160px;
@@ -1152,9 +1157,6 @@ table.dataTable thead > tr > th.sorting_asc:after {
   }
   .dashboard__main__content__docprofile__header__avatar img {
     height: 100%;
-  }
-  .dashboard__main__content__docprofile__header__rating {
-    display: none;
   }
   .dashboard__main__content__docprofile__header__info__deparment.cssText {
     font-size: 13px;
@@ -1179,7 +1181,8 @@ table.dataTable thead > tr > th.sorting_asc:after {
     font-size: 12px;
     line-height: 15px;
   }
-  .buttons-container .label-container .month-label {
+  .buttons-container .label-container .month-label,
+.buttons-container .label-container .year-label {
     font-size: 16px;
     line-height: 19px;
   }
@@ -1192,6 +1195,24 @@ table.dataTable thead > tr > th.sorting_asc:after {
     width: 30px !important;
     height: 30px !important;
     line-height: 30px !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__docprofile__header__rating {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .dashboard__main__content__docprofile.bg-card {
+    border-radius: 0;
+    border: none;
+    background: none;
+    margin-bottom: 20px;
+  }
+  .dashboard__main__content__workTime {
+    width: 50%;
+    text-align: center;
+    float: left;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1328,13 +1349,23 @@ table tfoot td:last-child {
   border-bottom-right-radius: 20px;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   table#myTable th,
 table#myTable td {
     padding: 15px 10px;
   }
   table#myTable tbody td.sl input {
     width: 10px;
+  }
+  .serviceInformation .secondary-title {
+    margin: 40px 0 12px;
+  }
+  .serviceInformation__card__header {
+    padding: 15px 12px;
+  }
+  .serviceInformation__card__header__titleName.cssTitleChild {
+    font-size: 13px;
+    line-height: 16px;
   }
   .payment-form .form-group {
     margin-bottom: 15px !important;
@@ -1453,6 +1484,14 @@ table#myTable td {
   padding: 30px;
 }
 
+@media screen and (max-width: 1143px) {
+  .reports__card--2 .btn-group button.dropdown-toggle {
+    width: 115px;
+    height: 40px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
 @media screen and (min-width: 992px) and (max-width: 1143px) {
   .reports__card--1__statement {
     margin-bottom: 4px;
@@ -1516,6 +1555,7 @@ table#myTable td {
 }
 .accounts__review__group__info__review {
   max-width: 200px;
+  width: 90%;
 }
 .accounts__review__group .cssAvatar {
   width: 90px;
@@ -1556,7 +1596,7 @@ table#myTable td {
   height: 277px;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .accounts__review {
     padding: 20px 10px;
   }
@@ -1611,9 +1651,6 @@ table#myTable td {
   }
   .accounts-col {
     margin-bottom: 20px;
-  }
-  .accounts__review__star {
-    display: none;
   }
 }
 * {
@@ -1758,6 +1795,28 @@ ul li {
 .form-group {
   margin-bottom: 22px !important;
 }
+.form-group select {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.5px solid #e0e7fe;
+  border-radius: 10px;
+  height: 38px;
+}
+.form-group textarea {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 0.5px solid #e0e7fe;
+  border-radius: 10px;
+  padding: 16px;
+}
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .cssText {
@@ -1770,7 +1829,7 @@ ul li {
     line-height: 26px;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .primary-title {
     font-size: 18px;
     line-height: 22px;
@@ -1779,9 +1838,18 @@ ul li {
     font-size: 13px;
     line-height: 16px;
   }
+  .cssText {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+  }
   .cssButton {
     font-size: 16px;
     line-height: 19px;
+  }
+  .form-group select,
+.form-group textarea {
+    font-size: 12px;
   }
   .slick-next {
     right: -10px !important;
@@ -1843,27 +1911,12 @@ ul li {
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1023px) {
-  .dashboard__main__content__slider__card {
-    border-radius: 20px;
-  }
-  .dashboard__main__content__history__card__rank__info__rating, .dashboard__main__content__history__card__content__info__status {
-    display: none;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1023px) {
-  .primary-title,
-.secondary-title {
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .cssText {
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: 500;
-  }
   .titleDoc {
     font-size: 16px;
     line-height: 19px;
+  }
+  .dashboard__main__content__slider__card {
+    border-radius: 20px;
   }
   .dashboard__main__content__slider__card-desc span {
     font-size: 20px;
@@ -1883,13 +1936,29 @@ ul li {
     font-size: 18px;
     line-height: 22px;
   }
+  .dashboard__main__content__history__card__rank__info__rating, .dashboard__main__content__history__card__content__info__status {
+    display: none;
+  }
 }
 @media screen and (max-width: 991px) {
+  .cssLabel {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  ::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
   .dashboard__main {
     padding-top: 166px;
   }
   .dashboard__main__content {
     width: 100%;
+  }
+  .dashboard__main__content__information__group select {
+    font-size: 12px;
+    line-height: 15px;
+    color: #70708c;
   }
   .dashboard__main__content__title {
     display: none;
@@ -1905,6 +1974,49 @@ ul li {
     font-size: 18px;
     line-height: 22px;
   }
+  .dashboard__main__content__history__card__rank__info__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .dashboard__main__content__history__card__rank__info__avatar img {
+    width: 100%;
+  }
+  .dashboard__main__content__history__card__rank__info__name div.cssText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .dashboard__main__content__history__card__rank__info__name span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-star img {
+    width: 15px;
+    margin-right: 3px;
+  }
+  .dashboard__main__content__history__card__rank__info__rating-review span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__content__info__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .dashboard__main__content__history__card__content__info__avatar img {
+    height: 100%;
+  }
+  .dashboard__main__content__history__card__content__info__name div.cssText,
+.dashboard__main__content__history__card__content__info__name span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__content__info__sick span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .dashboard__main__content__history__card__content__info__status span.cssText {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .li-item {
@@ -1913,6 +2025,16 @@ ul li {
   }
   .serviceInformation__card__button {
     height: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .primary-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .secondary-title {
+    font-size: 17px;
+    line-height: 21px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1930,10 +2052,6 @@ ul li {
     margin: 20px 0 12px;
   }
   .li-item {
-    font-size: 13px;
-    line-height: 16px;
-  }
-  .cssLabel {
     font-size: 13px;
     line-height: 16px;
   }
@@ -1989,50 +2107,36 @@ ul li {
     line-height: 22px;
     font-weight: 700;
   }
-  .dashboard__main__content__history__card__rank__info__avatar {
-    width: 40px;
-    height: 40px;
-  }
-  .dashboard__main__content__history__card__rank__info__avatar img {
-    width: 100%;
-  }
-  .dashboard__main__content__history__card__rank__info__name div.cssText {
-    font-size: 13px;
-    line-height: 16px;
-  }
-  .dashboard__main__content__history__card__rank__info__name span.cssText {
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .dashboard__main__content__history__card__rank__info__rating-star img {
-    width: 15px;
-    margin-right: 3px;
-  }
-  .dashboard__main__content__history__card__rank__info__rating-review span {
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .dashboard__main__content__history__card__content__info__avatar {
-    width: 40px;
-    height: 40px;
-  }
-  .dashboard__main__content__history__card__content__info__avatar img {
-    width: 100%;
-  }
-  .dashboard__main__content__history__card__content__info__sick {
-    display: none;
-  }
-  .dashboard__main__content__history__card__content__info__name div.cssText,
-.dashboard__main__content__history__card__content__info__name span.cssText {
-    font-size: 12px;
-    line-height: 15px;
-  }
-  .dashboard__main__content__history__card__content__info__status span.cssText {
-    font-size: 12px;
-    line-height: 15px;
-  }
   .serviceInformation__card__button {
     width: 100%;
     height: 45px;
+  }
+  .myLineChart-setHeight {
+    padding: 15px !important;
+    height: 245px !important;
+  }
+  .myDoughnutChart-setHeight {
+    padding: 15px !important;
+    height: 260px !important;
+  }
+  .myBarChart-setHeight {
+    padding: 15px !important;
+    height: 237px !important;
+  }
+  .myNewLineChart-setHeight {
+    padding: 15px !important;
+    height: 212px !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .serviceInformation__card__button {
+    width: 50%;
+    height: 40px;
+    margin: 30px auto 0;
+  }
+}
+@media screen and (max-width: 410px) {
+  .dashboard__main__content__history__card__content__info__sick {
+    display: none;
   }
 }

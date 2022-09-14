@@ -37,6 +37,7 @@
         }
         &__review {
           max-width: 200px;
+          width: 90%;
         }
       }
 
@@ -92,7 +93,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1143px) {
+@media screen and (max-width: 1143px) {
   .accounts {
     &__review {
       padding: 20px 10px;
@@ -159,8 +160,5 @@
   }
   .accounts-col {
     margin-bottom: 20px;
-  }
-  .accounts__review__star {
-    display: none;
   }
 }

@@ -10,7 +10,7 @@ $(document).ready(function () {
         return html;
       };
       return `
-      <div class="col-lg-6 dashboard__main__content__column">
+      <div class="col-md-6 col-lg-6 dashboard__main__content__column">
         <div class="dashboard__main__content__box__item bg-card d-flex">
           <div class="dashboard__main__content__box__item__avatar">
             <img src="${item.avatar}" alt="avatar" />
