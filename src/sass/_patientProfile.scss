@@ -71,6 +71,12 @@
   }
 
   .dashboard__main__content__other {
+    &__bloodPressure__chartList {
+      .col-md-6 {
+        padding: 10px;
+      }
+    }
+
     .mySystolicChart-setHeight,
     .myDiastolicChart-setHeight {
       height: 140px;
@@ -88,6 +94,7 @@
       );
       border: 0.5px solid #e0e7fe;
       border-radius: 20px;
+      padding: 6px;
     }
 
     &__heartRate__chart,
@@ -179,6 +186,9 @@
           margin-bottom: 20px;
         }
       }
+    }
+    .dashboard__main__content__other__heartRate__title {
+      display: none;
     }
   }
 }

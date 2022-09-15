@@ -164,7 +164,7 @@
         <div class="dashboard__main__content">
           <div class="container"> 
             <div class="row row-profile">
-              <div class="col-lg-7">
+              <div class="col-md-7 col-lg-7">
                 <div class="dashboard__main__content__title primary-title">Patient Profile</div>
                 <div class="dashboard__main__content__profile">
                   <div class="dashboard__main__content__profile__header"> 
@@ -195,7 +195,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-5 dashboard__main__content__other"> 
+              <div class="col-md-5 col-lg-5 dashboard__main__content__other"> 
                 <div class="row"> 
                   <div class="col-lg-12 dashboard__main__content__other__heartRate">
                     <div class="dashboard__main__content__other__heartRate__title primary-title">Heart rate</div>
@@ -208,13 +208,13 @@
                   <div class="col-lg-12 dashboard__main__content__other__bloodPressure">
                     <div class="dashboard__main__content__other__bloodPressure__title primary-title">Blood Pressure</div>
                     <div class="row dashboard__main__content__other__bloodPressure__chartList">
-                      <div class="col-lg-6">
-                        <div class="mySystolicChart-setHeight">
+                      <div class="col-md-6 col-lg-6">
+                        <div class="mySystolicChart-setHeight dashboard__main__content__other__bloodPressure__chartItem">
                           <canvas id="mySystolicChart" style="height: 100%"></canvas>
                         </div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="myDiastolicChart-setHeight">
+                      <div class="col-md-6 col-lg-6">
+                        <div class="myDiastolicChart-setHeight dashboard__main__content__other__bloodPressure__chartItem">
                           <canvas id="myDiastolicChart" style="height: 100%"></canvas>
                         </div>
                       </div>
@@ -253,7 +253,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/patientProfile.js"> </script>
-    <script src="./js/main.js"> </script>
+    <script src="./js/patientProfile.js" type="module"> </script>
+    <script src="./js/main.js" type="module"> </script>
   </body>
 </html>

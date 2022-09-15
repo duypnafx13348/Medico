@@ -100,3 +100,23 @@ $(document).ready(function () {
   $(".dashboard__main__sidebar__item-event").on("click", handleClickSideBar);
   $(".dashboard__main__sidebar__item-child").on("click", handleListChild);
 });
+
+export const handleChart = function (
+  labelChart,
+  datasets,
+  typeChart,
+  options,
+  chartName
+) {
+  const labelsChart = labelChart;
+  const dataChart = {
+    labels: labelsChart,
+    datasets: datasets,
+  };
+  const configChart = {
+    type: typeChart,
+    data: dataChart,
+    options: options,
+  };
+  const myChart = new Chart(chartName, configChart);
+};

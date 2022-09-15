@@ -1,5 +1,7 @@
 const doctorId = window.location.search.slice(4) || 1;
+console.log("doctorId", doctorId);
 const doctorApi = `https://6305c1c6dde73c0f844abb5d.mockapi.io/doctors/${doctorId}`;
+
 $(document).ready(function () {
   $.get(doctorApi, function (data, status) {
     const handleRating = function (rate) {
@@ -85,10 +87,6 @@ $(document).ready(function () {
 
   $(".dashboard__nav__add").on("click", function () {
     $(".dashboard__main__content__slider").hide();
-  });
-
-  $(".calendar-wrapper").calendar({
-    // date: new Date(),
   });
 
   function selectDate(date) {

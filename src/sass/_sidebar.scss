@@ -71,6 +71,26 @@
   }
 }
 
+.dashboard__nav {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, #f1f1f1, #f1f1f1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #159fed, #f85a47);
+    border-radius: 100rem;
+  }
+}
+
 @media screen and (min-width: 991px) and (max-width: 1144px) {
   .dashboard__main {
     &__sidebar {
@@ -95,7 +115,14 @@
   }
 
   #navbarTogglerDashboard {
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #navbarTogglerDashboard {
+    margin-right: 500px;
+    padding-right: 30px;
   }
 }

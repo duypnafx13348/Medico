@@ -1,218 +1,207 @@
+import { handleChart } from "./main.js";
+
 const patientId = window.location.search.slice(4) || 1;
 const api = `https://6305c1c6dde73c0f844abb5d.mockapi.io/patient/${patientId}`;
-let width, height, gradient;
-function getGradient(ctx, chartArea) {
-  const chartWidth = chartArea.right - chartArea.left;
-  const chartHeight = chartArea.bottom - chartArea.top;
-  if (!gradient || width !== chartWidth || height !== chartHeight) {
-    // Create the gradient because this is either the first render
-    // or the size of the chart has changed
-    width = chartWidth;
-    height = chartHeight;
-    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-    gradient.addColorStop(0.5, "rgba(255,255, 255, 1)");
-    gradient.addColorStop(1, "rgba(255, 85, 191, 0.1)");
-  }
+const windowSize = $(window).width();
 
-  return gradient;
-}
+const heartRateChart = $("#myHeartRateChart");
+const systolicChart = $("#mySystolicChart");
+const diastolicChart = $("#myDiastolicChart");
 
-const myHeartRateChart = document
-  .getElementById("myHeartRateChart")
-  .getContext("2d");
-const data = {
-  labels: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-  ],
-  datasets: [
-    {
-      label: "",
-      data: [10, 10, 15, 10, 5, 10, 10, 10, 15, 10, 10, 8, 10, 10, 10, 10],
-      borderWidth: 3,
-      borderColor: "#5DD971",
-    },
-  ],
-};
-const myLineChart = new Chart(myHeartRateChart, {
-  type: "line",
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        min: 0,
-        max: 20,
-        ticks: {
-          display: false,
-        },
-      },
-      x: {
-        ticks: {
-          display: false,
-        },
-      },
-    },
-    plugins: {
-      legend: {
+// HeartRateChart
+const labelHeartRateChart = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+];
+const datasetHeartRateChart = [
+  {
+    label: "",
+    data: [10, 10, 15, 10, 5, 10, 10, 10, 15, 10, 10, 8, 10, 10, 10, 10],
+    borderWidth: 3,
+    borderColor: "#5DD971",
+  },
+];
+var optionHeartRateChart = {
+  scales: {
+    y: {
+      beginAtZero: true,
+      min: 0,
+      max: 20,
+      ticks: {
         display: false,
       },
     },
-    elements: {
-      point: {
-        radius: 0,
+    x: {
+      ticks: {
+        display: false,
       },
     },
   },
-});
-
-const mySystolicChart = document
-  .getElementById("mySystolicChart")
-  .getContext("2d");
-const dataSystolicChart = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  datasets: [
-    {
-      label: "",
-      data: [70, 80, 50, 70, 80, 30],
-      fill: true,
-      borderColor: "#FF55BF",
-      borderWidth: 2,
-      tension: 0.4,
-      backgroundColor: "rgba(255, 143, 107, 0.1)",
+  plugins: {
+    legend: {
+      display: false,
     },
-  ],
+  },
+  elements: {
+    point: {
+      radius: 0,
+    },
+  },
 };
-const myLineSystolicChart = new Chart(mySystolicChart, {
-  type: "line",
-  data: dataSystolicChart,
-  options: {
-    scales: {
-      y: {
-        min: -10,
-        max: 100,
-        display: false,
-        beginAtZero: true,
-      },
-      x: {
-        display: false,
+
+// SystolicChart
+const labelSystolicChart = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+const datasetSystolicChart = [
+  {
+    label: "",
+    data: [70, 80, 50, 70, 80, 30],
+    fill: true,
+    borderColor: "#FF55BF",
+    borderWidth: 2,
+    tension: 0.4,
+    backgroundColor: "rgba(255, 143, 107, 0.1)",
+  },
+];
+var optionSystolicChart = {
+  scales: {
+    y: {
+      min: -10,
+      max: 100,
+      display: false,
+      beginAtZero: true,
+    },
+    x: {
+      display: false,
+    },
+  },
+  plugins: {
+    legend: {
+      display: false,
+    },
+    title: {
+      display: true,
+      text: "150 mmhz",
+      position: "bottom",
+      align: "start",
+      color: "#FF8F6B",
+      font: {
+        size: 18,
+        weight: 700,
       },
     },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      title: {
-        display: true,
-        text: "150 mmhz",
-        position: "bottom",
-        align: "start",
-        color: "#FF8F6B",
-        font: {
-          size: 18,
-          weight: 700,
-        },
-      },
-      subtitle: {
-        display: true,
-        text: "Systolic",
-        position: "bottom",
-        align: "start",
-        color: "#70708C",
-        font: {
-          size: 12,
-          weight: 400,
-        },
-      },
-    },
-    elements: {
-      point: {
-        radius: 0,
+    subtitle: {
+      display: true,
+      text: "Systolic",
+      position: "bottom",
+      align: "start",
+      color: "#70708C",
+      font: {
+        size: 12,
+        weight: 400,
       },
     },
   },
-});
-
-const myDiastolicChart = document
-  .getElementById("myDiastolicChart")
-  .getContext("2d");
-const dataDiastolicChart = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  datasets: [
-    {
-      label: "",
-      data: [70, 90, 60, 80, 100, 70],
-      fill: true,
-      tension: 0.4,
-      borderColor: "rgba(93, 217, 113, 1)",
-      borderWidth: 2,
-      backgroundColor: "rgba(93, 217, 113, 0.1)",
+  elements: {
+    point: {
+      radius: 0,
     },
-  ],
+  },
 };
-const myLineDiastolicChart = new Chart(myDiastolicChart, {
-  type: "line",
-  data: dataDiastolicChart,
-  options: {
-    scales: {
-      y: {
-        display: false,
-        beginAtZero: true,
-        min: -10,
-        max: 100,
-      },
-      x: {
-        display: false,
+
+// DiastolicChart
+const labelDiastolicChart = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+const datasetDiastolicChart = [
+  {
+    label: "",
+    data: [70, 90, 60, 80, 100, 70],
+    fill: true,
+    tension: 0.4,
+    borderColor: "rgba(93, 217, 113, 1)",
+    borderWidth: 2,
+    backgroundColor: "rgba(93, 217, 113, 0.1)",
+  },
+];
+var optionDiastolicChart = {
+  scales: {
+    y: {
+      display: false,
+      beginAtZero: true,
+      min: -10,
+      max: 100,
+    },
+    x: {
+      display: false,
+    },
+  },
+  plugins: {
+    legend: {
+      display: false,
+    },
+    title: {
+      display: true,
+      text: "75 mhz",
+      position: "bottom",
+      align: "start",
+      color: "#5DD971",
+      font: {
+        size: 18,
+        weight: 700,
       },
     },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      title: {
-        display: true,
-        text: "75 mhz",
-        position: "bottom",
-        align: "start",
-        color: "#5DD971",
-        font: {
-          size: 18,
-          weight: 700,
-        },
-      },
-      subtitle: {
-        display: true,
-        text: "Diastolic",
-        position: "bottom",
-        align: "start",
-        color: "#70708C",
-        font: {
-          size: 12,
-          weight: 400,
-        },
-      },
-    },
-    elements: {
-      point: {
-        radius: 0,
+    subtitle: {
+      display: true,
+      text: "Diastolic",
+      position: "bottom",
+      align: "start",
+      color: "#70708C",
+      font: {
+        size: 12,
+        weight: 400,
       },
     },
   },
-});
+  elements: {
+    point: {
+      radius: 0,
+    },
+  },
+};
+
+handleChart(
+  labelHeartRateChart,
+  datasetHeartRateChart,
+  "line",
+  optionHeartRateChart,
+  heartRateChart
+);
+handleChart(
+  labelSystolicChart,
+  datasetSystolicChart,
+  "line",
+  optionSystolicChart,
+  systolicChart
+);
+handleChart(
+  labelDiastolicChart,
+  datasetDiastolicChart,
+  "line",
+  optionDiastolicChart,
+  diastolicChart
+);
 
 $(document).ready(function () {
   $.get(api, function (data) {

@@ -1,6 +1,6 @@
 .container 
     .row.row-profile
-        .col-lg-7
+        .col-md-7.col-lg-7
             .dashboard__main__content__title.primary-title Patient Profile
 
             .dashboard__main__content__profile
@@ -23,7 +23,7 @@
                     each value in dataPatientProfile
                         +patientProfile(value)
                         
-        .col-lg-5.dashboard__main__content__other 
+        .col-md-5.col-lg-5.dashboard__main__content__other 
             .row 
                 .col-lg-12.dashboard__main__content__other__heartRate
                     .dashboard__main__content__other__heartRate__title.primary-title Heart rate
@@ -33,11 +33,11 @@
                 .col-lg-12.dashboard__main__content__other__bloodPressure
                     .dashboard__main__content__other__bloodPressure__title.primary-title Blood Pressure
                     .row.dashboard__main__content__other__bloodPressure__chartList
-                        .col-lg-6
-                            .mySystolicChart-setHeight
+                        .col-md-6.col-lg-6
+                            .mySystolicChart-setHeight.dashboard__main__content__other__bloodPressure__chartItem
                                 canvas(id="mySystolicChart" style="height: 100%")
-                        .col-lg-6
-                            .myDiastolicChart-setHeight
+                        .col-md-6.col-lg-6
+                            .myDiastolicChart-setHeight.dashboard__main__content__other__bloodPressure__chartItem
                                 canvas(id="myDiastolicChart" style="height: 100%")
 
                 .col-lg-12.dashboard__main__content__other__bloodReport

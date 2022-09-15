@@ -169,6 +169,7 @@ h6 {
   .dashboard__nav__search-tablet {
     display: block;
     width: 100%;
+    margin-top: 10px;
   }
   .dashboard__nav__search-tablet i {
     left: calc(25% + 25px);
@@ -277,6 +278,24 @@ h6 {
   color: #605bff;
 }
 
+.dashboard__nav {
+  /* width */
+  /* Track */
+  /* Handle */
+}
+.dashboard__nav ::-webkit-scrollbar {
+  width: 5px;
+}
+.dashboard__nav ::-webkit-scrollbar-track {
+  background-image: linear-gradient(to bottom, #f1f1f1, #f1f1f1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.dashboard__nav ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #159fed, #f85a47);
+  border-radius: 100rem;
+}
+
 @media screen and (min-width: 991px) and (max-width: 1144px) {
   .dashboard__main__sidebar {
     width: 220px;
@@ -293,8 +312,14 @@ h6 {
     margin-top: 35px;
   }
   #navbarTogglerDashboard {
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #navbarTogglerDashboard {
+    margin-right: 500px;
+    padding-right: 30px;
   }
 }
 .dashboard__main__content {
@@ -303,6 +328,9 @@ h6 {
   border: 0.5px solid #e0e7fe;
   border-radius: 30px;
   padding: 30px 15px;
+  /* width */
+  /* Track */
+  /* Handle */
 }
 .dashboard__main__content-padding {
   padding: 0 15px;
@@ -354,7 +382,7 @@ h6 {
 }
 .dashboard__main__content__history__card__rank {
   padding: 40px 25px;
-  overflow: scroll;
+  overflow-y: scroll;
   max-height: 400px;
 }
 .dashboard__main__content__history__card__rank__info {
@@ -419,6 +447,18 @@ h6 {
 .dashboard__main__content__history__card hr {
   margin: 29px 0;
 }
+.dashboard__main__content ::-webkit-scrollbar {
+  width: 5px;
+}
+.dashboard__main__content ::-webkit-scrollbar-track {
+  background-image: linear-gradient(to bottom, #f1f1f1, #f1f1f1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.dashboard__main__content ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #159fed, #f85a47);
+  border-radius: 100rem;
+}
 
 .container .row-profile {
   padding: 0 15px;
@@ -472,6 +512,9 @@ h6 {
 .container .row-profile .dashboard__main__content__profile .dashboard__main__content__list .dashboard__main__content__item {
   margin-right: 0;
 }
+.container .dashboard__main__content__other__bloodPressure__chartList .col-md-6 {
+  padding: 10px;
+}
 .container .dashboard__main__content__other .mySystolicChart-setHeight,
 .container .dashboard__main__content__other .myDiastolicChart-setHeight {
   height: 140px;
@@ -483,6 +526,7 @@ h6 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
   border: 0.5px solid #e0e7fe;
   border-radius: 20px;
+  padding: 6px;
 }
 .container .dashboard__main__content__other__heartRate__chart, .container .dashboard__main__content__other__bloodPressure__chartList {
   margin-bottom: 20px;
@@ -543,6 +587,9 @@ h6 {
   .container .dashboard__main__content__other__bloodPressure__chartList .col-lg-6:first-child {
     margin-bottom: 20px;
   }
+  .container .dashboard__main__content__other__heartRate__title {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .container .dashboard__main__content__other__bloodReport__table__group__title {
@@ -577,7 +624,6 @@ h6 {
 #example th,
 #expenseListTable th {
   border: none;
-  text-align: center;
   color: #3d3d66;
   font-weight: 500;
   font-size: 16px;
@@ -600,7 +646,6 @@ h6 {
   padding-bottom: 20px;
   border-right: none;
   border-left: none;
-  text-align: center;
   font-size: 12px;
 }
 #example tbody tr td:first-child,
@@ -1910,6 +1955,11 @@ ul li {
     height: 50px;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content__history__card__rank__info__rating, .dashboard__main__content__history__card__content__info__status {
+    display: none;
+  }
+}
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   .titleDoc {
     font-size: 16px;
@@ -1935,9 +1985,6 @@ ul li {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-  }
-  .dashboard__main__content__history__card__rank__info__rating, .dashboard__main__content__history__card__content__info__status {
-    display: none;
   }
 }
 @media screen and (max-width: 991px) {

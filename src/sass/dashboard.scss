@@ -331,6 +331,15 @@ ul {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1143px) {
+  .dashboard__main__content {
+    &__history__card__rank__info__rating,
+    &__history__card__content__info__status {
+      display: none;
+    }
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   .titleDoc {
     font-size: 16px;
@@ -365,10 +374,6 @@ ul {
           line-height: 22px;
         }
       }
-    }
-    &__history__card__rank__info__rating,
-    &__history__card__content__info__status {
-      display: none;
     }
   }
 }
