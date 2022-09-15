@@ -6,43 +6,6 @@ const expenseDoughnutChart = $("#expenseDoughnutChart");
 const visitorsLineChart = $("#visitorsLineChart");
 
 function chartGroup() {
-  const labelsDoughnutChart = ["Equipment", "Salary", "Rent Expense", "Others"];
-  const dataDoughnutChart = [
-    {
-      label: "Doughnut",
-      backgroundColor: ["#FF6864", "#F9BB01", "#C532F9", "#00ACE2"],
-      data: [250, 250, 250, 250],
-      hoverOffset: 4,
-    },
-  ];
-  const configExpenseDoughnutChart = {
-    maintainAspectRatio: false,
-    cutout: 30,
-
-    layout: {
-      padding: 30,
-    },
-    plugins: {
-      legend: {
-        position: "bottom",
-
-        labels: {
-          pointStyle: "circle",
-          usePointStyle: true,
-          padding: 25,
-        },
-      },
-    },
-  };
-  handleChart(
-    labelsDoughnutChart,
-    dataDoughnutChart,
-    "doughnut",
-    configExpenseDoughnutChart,
-    expenseDoughnutChart
-  );
-  // ----------------------------------------------------------------------------------------------
-
   const labelsVisitorsLineChart = [
     "Sat",
     "Sun",
@@ -199,6 +162,162 @@ if (windowSize < 500) {
       plugins: {
         legend: {
           labels: {
+            color: "#70708c",
+            pointStyle: "circle",
+            usePointStyle: true,
+            padding: 20,
+            boxWidth: 7,
+            boxHeight: 7,
+            font: {
+              size: 12,
+              weight: 400,
+            },
+          },
+        },
+      },
+    };
+    handleChart(
+      labelsRevenueChart,
+      dataRevenueChart,
+      "bar",
+      configRevenueChart,
+      revenueBarChart
+    );
+  }
+
+  function handleExpenseChart() {
+    const labelsDoughnutChart = [
+      "Equipment",
+      "Salary",
+      "Rent Expense",
+      "Others",
+    ];
+    const dataDoughnutChart = [
+      {
+        label: "Doughnut",
+        backgroundColor: ["#FF6864", "#F9BB01", "#C532F9", "#00ACE2"],
+        data: [250, 250, 250, 250],
+        hoverOffset: 4,
+      },
+    ];
+    const configExpenseDoughnutChart = {
+      maintainAspectRatio: false,
+      cutout: 30,
+
+      layout: {
+        padding: 15,
+      },
+      plugins: {
+        legend: {
+          position: "bottom",
+
+          labels: {
+            color: "#70708c",
+            pointStyle: "circle",
+            usePointStyle: true,
+            padding: 20,
+            boxWidth: 7,
+            boxHeight: 7,
+            font: {
+              size: 12,
+              weight: 400,
+            },
+          },
+        },
+      },
+    };
+    handleChart(
+      labelsDoughnutChart,
+      dataDoughnutChart,
+      "doughnut",
+      configExpenseDoughnutChart,
+      expenseDoughnutChart
+    );
+  }
+
+  handleRevenueChart();
+  handleExpenseChart();
+} else {
+  function handleRevenueChart() {
+    const labelsRevenueChart = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "July",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const dataRevenueChart = [
+      {
+        label: "Income",
+        backgroundColor: "#605BFF",
+        borderColor: "#605BFF",
+        data: [15, 20, 15, 25, 22, 25, 28, 25, 15, 20, 15, 25],
+        stack: "Stack 0",
+      },
+      {
+        label: "Expense",
+        backgroundColor: "#FF8F6B",
+        borderColor: "#FF8F6B",
+        data: [-20, -30, -25, -40, -20, -15, -18, -20, -20, -30, -25, -40],
+        stack: "Stack 0",
+      },
+    ];
+    const configRevenueChart = {
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+          ticks: {
+            color: "#C2C2DD",
+            font: {
+              size: 13,
+              weight: 400,
+            },
+          },
+        },
+        y: {
+          min: -60,
+          max: 60,
+          stacked: true,
+          grid: {
+            display: false,
+          },
+
+          ticks: {
+            stepSize: 20,
+            color: "#C2C2DD",
+            font: {
+              size: 11,
+              weight: 400,
+            },
+          },
+        },
+      },
+      layout: {
+        padding: 15,
+      },
+      elements: {
+        bar: {
+          borderRadius: 50,
+        },
+      },
+      datasets: {
+        bar: {
+          barThickness: 10,
+        },
+      },
+      plugins: {
+        legend: {
+          labels: {
             pointStyle: "circle",
             usePointStyle: true,
           },
@@ -213,100 +332,59 @@ if (windowSize < 500) {
       revenueBarChart
     );
   }
-  handleRevenueChart();
-} else {
-  const labelsRevenueChart = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "July",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const dataRevenueChart = [
-    {
-      label: "Income",
-      backgroundColor: "#605BFF",
-      borderColor: "#605BFF",
-      data: [15, 20, 15, 25, 22, 25, 28, 25, 15, 20, 15, 25],
-      stack: "Stack 0",
-    },
-    {
-      label: "Expense",
-      backgroundColor: "#FF8F6B",
-      borderColor: "#FF8F6B",
-      data: [-20, -30, -25, -40, -20, -15, -18, -20, -20, -30, -25, -40],
-      stack: "Stack 0",
-    },
-  ];
-  const configRevenueChart = {
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: "#C2C2DD",
-          font: {
-            size: 13,
-            weight: 400,
-          },
-        },
-      },
-      y: {
-        min: -60,
-        max: 60,
-        stacked: true,
-        grid: {
-          display: false,
-        },
 
-        ticks: {
-          stepSize: 20,
-          color: "#C2C2DD",
-          font: {
-            size: 11,
-            weight: 400,
+  function handleExpenseChart() {
+    const labelsDoughnutChart = [
+      "Equipment",
+      "Salary",
+      "Rent Expense",
+      "Others",
+    ];
+    const dataDoughnutChart = [
+      {
+        label: "Doughnut",
+        backgroundColor: ["#FF6864", "#F9BB01", "#C532F9", "#00ACE2"],
+        data: [250, 250, 250, 250],
+        hoverOffset: 4,
+      },
+    ];
+    const configExpenseDoughnutChart = {
+      maintainAspectRatio: false,
+      cutout: 30,
+
+      layout: {
+        padding: 30,
+      },
+      plugins: {
+        legend: {
+          position: "bottom",
+
+          labels: {
+            color: "#70708c",
+            pointStyle: "circle",
+            usePointStyle: true,
+            padding: 25,
+            boxWidth: 10,
+            boxHeight: 10,
+            font: {
+              size: 13,
+              weight: 400,
+            },
           },
         },
       },
-    },
-    layout: {
-      padding: 15,
-    },
-    elements: {
-      bar: {
-        borderRadius: 50,
-      },
-    },
-    datasets: {
-      bar: {
-        barThickness: 10,
-      },
-    },
-    plugins: {
-      legend: {
-        labels: {
-          pointStyle: "circle",
-          usePointStyle: true,
-        },
-      },
-    },
-  };
-  handleChart(
-    labelsRevenueChart,
-    dataRevenueChart,
-    "bar",
-    configRevenueChart,
-    revenueBarChart
-  );
+    };
+    handleChart(
+      labelsDoughnutChart,
+      dataDoughnutChart,
+      "doughnut",
+      configExpenseDoughnutChart,
+      expenseDoughnutChart
+    );
+  }
+
+  handleRevenueChart();
+  handleExpenseChart();
 }
 
 $(document).ready(function () {
