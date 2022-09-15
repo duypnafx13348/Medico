@@ -5,45 +5,65 @@ $(document).ready(function () {
   $.get(api, function (data, status) {
     const handleRating = function (rate) {
       let html = "";
-      for (let x = 1; x <= 5; x++) {
-        if (x <= rate) {
-          html += `<img src="./images/star.svg" alt="star" />`;
-        } else {
-          html += `<img src="./images/Stargrey.svg" alt="star" />`;
-        }
+      for (let x = 0; x < rate; x++) {
+        // if (x <= rate) {
+        html += `<img src="./images/star.svg" alt="star" />`;
+        // } else {
+        //   html += `<img src="./images/Stargrey.svg" alt="star" />`;
+        // }
       }
       return html;
     };
-    const initDoctorProfile = `
-    <div class="dashboard__main__content__docprofile__header__bg">
-      <img src="${data.background}" alt="background" />
-    </div>
-    <div class="dashboard__main__content__docprofile__header__group">
-      <div class="dashboard__main__content__docprofile__header__group-child">
-        <div class="dashboard__main__content__docprofile__header__avatar">
-          <img src="${data.avatar}" alt="avatar" />
-        </div>
-        <div class="dashboard__main__content__docprofile__header__info">
-          <div class="dashboard__main__content__docprofile__header__info__name titleDoc">${
-            data.doctorName
-          }</div>
-          <div class="dashboard__main__content__docprofile__header__info__department cssText">${
-            data.department
-          }</div>
-          <div class="dashboard__main__content__docprofile__header__info__workTime">
-            <img src="/images/clock.svg" alt="clock" />
-            <span>${data.workTimes}</span>
-          </div>
-        </div>
-      </div>
-      <div class="dashboard__main__content__docprofile__header__rating">
-        ${handleRating(data.rating)}
-        <div class="dashboard__main__content__docprofile__header__rating__review">5 from 32 reviews</div>
-      </div>
-    </div>
-    `;
-    $(".dashboard__main__content__docprofile__header").append(
-      initDoctorProfile
+    // const initDoctorProfile = `
+    // <div class="dashboard__main__content__docprofile__header__bg">
+    //   <img src="${data.background}" alt="background" />
+    // </div>
+    // <div class="dashboard__main__content__docprofile__header__group">
+    //   <div class="dashboard__main__content__docprofile__header__group-child">
+    //     <div class="dashboard__main__content__docprofile__header__avatar">
+    //       <img src="${data.avatar}" alt="avatar" />
+    //     </div>
+    //     <div class="dashboard__main__content__docprofile__header__info">
+    //       <div class="dashboard__main__content__docprofile__header__info__name titleDoc">${
+    //         data.doctorName
+    //       }</div>
+    //       <div class="dashboard__main__content__docprofile__header__info__department cssText">${
+    //         data.department
+    //       }</div>
+    //       <div class="dashboard__main__content__docprofile__header__info__workTime">
+    //         <img src="/images/clock.svg" alt="clock" />
+    //         <span>${data.workTimes}</span>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div class="dashboard__main__content__docprofile__header__rating">
+    //     ${handleRating(data.rating)}
+    //     <div class="dashboard__main__content__docprofile__header__rating__review">5 from 32 reviews</div>
+    //   </div>
+    // </div>
+    // `;
+    // $(".dashboard__main__content__docprofile__header").append(
+    //   initDoctorProfile
+    // );
+    $(".dashboard__main__content__docprofile__header__bg img").attr(
+      "src",
+      `${data.background}`
+    );
+    $(".dashboard__main__content__docprofile__header__avatar img").attr(
+      "src",
+      `${data.avatar}`
+    );
+    $(
+      ".dashboard__main__content__docprofile__header__info__name.titleDoc"
+    ).text(`${data.doctorName}`);
+    $(
+      ".dashboard__main__content__docprofile__header__info__workTime span"
+    ).text(`${data.workTimes}`);
+    $(
+      ".dashboard__main__content__docprofile__header__info__department.cssText"
+    ).text(`${data.department}`);
+    $(".dashboard__main__content__docprofile__header__rating__img").html(
+      `${handleRating(data.rating)}`
     );
   });
 
