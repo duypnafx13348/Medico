@@ -47,7 +47,7 @@ $(document).ready(function () {
       "click",
       function () {
         const doctorId = $(this).parent().find("input").val();
-        window.location.replace(`/doctorProfile.html?id=${doctorId}`);
+        window.location.replace(`doctorProfile.html?id=${doctorId}`);
       }
     );
   });
