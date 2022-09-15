@@ -127,3 +127,9 @@
     padding-right: 30px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  #navbarTogglerDashboard {
+    padding-right: 50px;
+  }
+}
