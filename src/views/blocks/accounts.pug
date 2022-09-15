@@ -7,26 +7,26 @@
         +card("./images/expense.svg", "Expense in this Week", "$25,600")
 
     .row.accounts-row 
-        .col-lg-8.accounts-col 
+        .col-md-8.col-lg-8.accounts-col 
             .dashboard__main__content__title-child.primary-title Revenue
             .revenueBarChart-setHeight
                 canvas(id="revenueBarChart" class="bg-card" style="height: 100%")
-        .col-lg-4.accounts-col 
+        .col-md-4.col-lg-4.accounts-col 
             .dashboard__main__content__title-child.primary-title Expense Statistics
             .expenseDoughnutChart-setHeight
                 canvas(id="expenseDoughnutChart" class="bg-card" style="height: 100%")
     
     .row.accounts-row 
-        .col-lg-6.accounts-col 
+        .col-md-6.col-lg-6.accounts-col 
             .dashboard__main__content__title-child.primary-title Visitors
             .visitorsLineChart-setHeight
                 canvas(id="visitorsLineChart" class="bg-card" style="height: 100%")
-        .col-lg-6.accounts-col 
+        .col-md-6.col-lg-6.accounts-col 
             .dashboard__main__content__title-child.primary-title Recent Review
             .row.review-row
                 - var dataInfoReview = [{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 4},{avatar: "./images/avatar.svg", name: "Benjamin", review: "“Excellent visit. This was for a second opinion and an attempt.”", star: 5}]
                     each value in dataInfoReview
-                        .col-md-6.col-lg-12
+                        .col-md-12.col-lg-12
                             .accounts__review.bg-card
                                 .accounts__review__group 
                                     .accounts__review__group__avatar.cssAvatar

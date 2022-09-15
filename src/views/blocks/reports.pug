@@ -14,23 +14,23 @@
                             button.dropdown-item(type='button')= value
 
     .row.reports__card-row.mt-5
-        .col-lg-4.reports__card-col 
+        .col-md-4.col-lg-4.reports__card-col 
             .reports__card__chart 
                 .reports__card__chart__revenue.revenueLineChart-setHeight.mb-4
                     canvas(id="revenueLineChart" class="bg-card" style="height: 100%")
                 .reports__card__chart__expense.expenseLineChart-setHeight
                     canvas(id="expenseLineChart" class="bg-card" style="height: 100%")
-        .col-lg-8.reports__card-col
+        .col-md-8.col-lg-8.reports__card-col
             .generalLineChart-setHeight
                 canvas(id="generalLineChart" class="bg-card" style="height: 100%")
     .row.reports__card-row
-        .col-lg-6.reports__card-col 
+        .col-md-6.col-lg-6.reports__card-col 
             .reports__card__revenues.primary-title Revenues
             .reports__card__revenues.reports__card--block.bg-card
                 - var revenues = [{id: "hospitalBill", title: "Hospital Bill", percent: 50},{id: "operation", title: "Operation", percent: 25},{id: "emergencyBill", title: "Emergency Bill", percent: 30},{id: "bedService", title: "Bed Service", percent: 20},{id: "dueCollection", title: "Due Collection", percent: 25}]
                     each value, key in revenues 
                         +progressReport(value.title, value.id, value.percent)
-        .col-lg-6.reports__card-col 
+        .col-md-6.col-lg-6.reports__card-col 
             .reports__card__expenses.primary-title Expenses
             .reports__card__expenses.reports__card--block.bg-card
                 - var expenses = [{id: "salary", title: "Salary", percent: 100},{id: "equipment", title: "Equipment", percent: 30},{id: "servicing", title: "Servicing", percent: 30},{id: "referralPayment ", title: "Referral Payment ", percent: 20},{id: "others", title: "Others", percent: 25}]

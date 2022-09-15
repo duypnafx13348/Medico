@@ -6,8 +6,12 @@ $(document).ready(function () {
   $.get(doctorApi, function (data, status) {
     const handleRating = function (rate) {
       let html = "";
-      for (let x = 0; x < rate; x++) {
-        html += `<img src="./images/star.svg" alt="star" />`;
+      for (let x = 1; x <= 5; x++) {
+        if (x <= rate) {
+          html += `<img src="./images/star.svg" alt="star" />`;
+        } else {
+          html += `<img src="./images/Stargrey.svg" alt="star" />`;
+        }
       }
       return html;
     };
