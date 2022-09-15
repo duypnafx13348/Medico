@@ -1,9 +1,9 @@
 const doctorId = window.location.search.slice(4) || 1;
-console.log("doctorId", doctorId);
-const doctorApi = `https://6305c1c6dde73c0f844abb5d.mockapi.io/doctors/${doctorId}`;
+const api = `https://6305c1c6dde73c0f844abb5d.mockapi.io/doctors/${doctorId}`;
+a;
 
 $(document).ready(function () {
-  $.get(doctorApi, function (data, status) {
+  $.get(api, function (data, status) {
     const handleRating = function (rate) {
       let html = "";
       for (let x = 1; x <= 5; x++) {
