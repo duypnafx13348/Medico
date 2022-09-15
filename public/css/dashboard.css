@@ -908,6 +908,9 @@ ul.pagination {
   .box1__button {
     width: 100%;
   }
+  input[type=date] {
+    height: 38px;
+  }
 }
 .dashboard__main__content__column {
   margin: 15px 0;
