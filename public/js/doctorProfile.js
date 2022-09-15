@@ -1,6 +1,5 @@
 const doctorId = window.location.search.slice(4) || 1;
 const api = `https://6305c1c6dde73c0f844abb5d.mockapi.io/doctors/${doctorId}`;
-a;
 
 $(document).ready(function () {
   $.get(api, function (data, status) {
