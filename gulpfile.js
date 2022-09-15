@@ -55,6 +55,7 @@ function server() {
   browserSync.init({
     server: {
       baseDir: "./public",
+      index: "dashboard.html",
     },
   });
   watch(FilesPath.htmlFiles, htmlTask);

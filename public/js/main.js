@@ -1,6 +1,6 @@
 const windowSize = $(window).width();
-// const pathName = location.pathname.slice(1);
-const pathName = window.location.pathname.slice(15);
+// const pathName = location.pathname.slice(1) || "dashboard.html";
+const pathName = window.location.pathname.slice(15) || "dashboard.html";
 console.log("pathname", pathName);
 
 $(document).ready(function () {
