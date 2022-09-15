@@ -96,7 +96,6 @@ $(document).ready(function () {
     $("#calendar-wrapper").updateCalendarOptions({
       date: date,
     });
-    // console.log(calendar.getSelectedDate());
   }
   let currentDay = new Date();
   let getDate = currentDay.getDate();
@@ -118,5 +117,4 @@ $(document).ready(function () {
   };
 
   var calendar = $("#calendar-wrapper").calendar(defaultConfig);
-  // console.log(calendar.getSelectedDate());
 });

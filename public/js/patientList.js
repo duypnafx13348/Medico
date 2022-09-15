@@ -35,10 +35,6 @@ $(document).ready(function () {
     });
     const handleClickPatientProfile = function () {
       const patientId = $(this).children("td:nth-child(2)").text();
-      console.log(
-        "hehe",
-        `https://6305c1c6dde73c0f844abb5d.mockapi.io/patient/${patientId}`
-      );
       window.location.replace(`patientProfile.html?id=${patientId}`);
     };
 
