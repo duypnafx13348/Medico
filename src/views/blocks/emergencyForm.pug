@@ -5,17 +5,17 @@
         li.dashboard__main__content__item.li-item Service Information
         li.dashboard__main__content__item.li-item Payment
     .personalInformation
-        form(action="", class="dashboard__main__content__information")
+        form(action="",id="personalInformation-form" class="dashboard__main__content__information")
             .row.dashboard__main__content__information__group
                 .col-md-6.col-md-6.col-lg-4
                     +signupForm("Patient Name", "text", "patientName", "Charlene Reed")
                 .col-md-6.col-lg-4
-                    +signupForm("Phone Number", "tel", "phoneNumber", "1234 5874 25")
+                    +signupForm("Phone Number", "tel", "phoneNumberP", "1234 5874 25")
                 .col-md-6.col-lg-4
-                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+                    +signupForm("Address", "text", "addressP", "San Joss, California, USA")
             
                 .col-md-6.col-lg-4
-                    +signupForm("Age", "number", "age", 20)
+                    +signupForm("Age", "number", "ageP", 20)
                 .col-md-6.col-lg-4
                     +selectForm("Blood Group","bloodGroup", ['O', 'A+', 'B+', 'AB'])
                 .col-md-6.col-lg-4
@@ -31,9 +31,9 @@
                 .col-md-6.col-lg-4
                     +signupForm("Guardian Name", "text", "guardianName", "Charlene Reed ")
                 .col-md-6.col-lg-4
-                    +signupForm("Phone Number", "tel", "phoneNumberGN", "8975 456 25")
+                    +signupForm("Phone Number", "tel", "phoneNumberG", "8975 456 25")
                 .col-md-6.col-lg-4
-                    +signupForm("Address", "text", "address", "San Joss, California, USA")
+                    +signupForm("Address", "text", "addressG", "San Joss, California, USA")
             
                 .col-md-6.col-lg-4
                     +selectForm("Relationship","relationship", ['Father', 'Mother', 'Brother'])
@@ -44,7 +44,7 @@
                     +selectForm("Referral","referral", ['Self', 'Oh Yeah!'])
                 .col-md-6.col-lg-6
                     +selectForm("Consultant","consultant", ["Self Consultant", "OK"])
-            .serviceInformation__card__button.cssButton.personalInformation-next Next
+            button.serviceInformation__card__button.cssButton.personalInformation-next Next
 
     .serviceInformation
         .serviceInformation.secondary-title Select your desire service
@@ -58,7 +58,6 @@
                         div(class="serviceInformation__card__box" id= value.id )
                             .serviceInformation__card__header__name.cssText= value.serviceName
                             .serviceInformation__card__header__price.cssText $#{value.price}
-                    //- .serviceInformation__card__button.cssButton.serviceInformation-next Next
 
             .col-md-5.col-lg-5.serviceInformation-col
                 .serviceInformation__card 

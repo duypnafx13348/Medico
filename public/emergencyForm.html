@@ -170,7 +170,7 @@
               <li class="dashboard__main__content__item li-item">Payment</li>
             </ul>
             <div class="personalInformation">
-              <form class="dashboard__main__content__information" action="">
+              <form class="dashboard__main__content__information" action="" id="personalInformation-form">
                 <div class="row dashboard__main__content__information__group">
                   <div class="col-md-6 col-md-6 col-lg-4">
                     <div class="form-group">
@@ -180,20 +180,20 @@
                   </div>
                   <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                      <label class="cssLabel" for="phoneNumber">Phone Number</label>
-                      <input class="form-control cssInput" type="tel" id="phoneNumber" placeholder="1234 5874 25" name="phoneNumber"/>
+                      <label class="cssLabel" for="phoneNumberP">Phone Number</label>
+                      <input class="form-control cssInput" type="tel" id="phoneNumberP" placeholder="1234 5874 25" name="phoneNumberP"/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                      <label class="cssLabel" for="address">Address</label>
-                      <input class="form-control cssInput" type="text" id="address" placeholder="San Joss, California, USA" name="address"/>
+                      <label class="cssLabel" for="addressP">Address</label>
+                      <input class="form-control cssInput" type="text" id="addressP" placeholder="San Joss, California, USA" name="addressP"/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                      <label class="cssLabel" for="age">Age</label>
-                      <input class="form-control cssInput" type="number" id="age" placeholder="20" name="age"/>
+                      <label class="cssLabel" for="ageP">Age</label>
+                      <input class="form-control cssInput" type="number" id="ageP" placeholder="20" name="ageP"/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-4">
@@ -252,14 +252,14 @@
                   </div>
                   <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                      <label class="cssLabel" for="phoneNumberGN">Phone Number</label>
-                      <input class="form-control cssInput" type="tel" id="phoneNumberGN" placeholder="8975 456 25" name="phoneNumberGN"/>
+                      <label class="cssLabel" for="phoneNumberG">Phone Number</label>
+                      <input class="form-control cssInput" type="tel" id="phoneNumberG" placeholder="8975 456 25" name="phoneNumberG"/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                      <label class="cssLabel" for="address">Address</label>
-                      <input class="form-control cssInput" type="text" id="address" placeholder="San Joss, California, USA" name="address"/>
+                      <label class="cssLabel" for="addressG">Address</label>
+                      <input class="form-control cssInput" type="text" id="addressG" placeholder="San Joss, California, USA" name="addressG"/>
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-4">
@@ -297,7 +297,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="serviceInformation__card__button cssButton personalInformation-next">Next</div>
+                <button class="serviceInformation__card__button cssButton personalInformation-next">Next</button>
               </form>
             </div>
             <div class="serviceInformation">
@@ -413,6 +413,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="./js/emergencyForm.js"> </script>
     <script src="./js/main.js" type="module"> </script>
   </body>

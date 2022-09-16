@@ -1,6 +1,6 @@
 .container 
     .dashboard__main__content__title.primary-title Add New Doctor
-    form(action="", class="dashboard__main__content__information")
+    form(action="", id="doctor-form" class="dashboard__main__content__information")
         .row.dashboard__main__content__information__picture
             .col-md-5.col-lg-4.profilePicture
                 .form-group
@@ -51,4 +51,4 @@
             .col-lg-12.form-group 
                 label(for="biography" class="cssLabel") Biography
                 textarea(name="biography", rows="4", placeholder="Write a short Biography")
-        .serviceInformation__card__button.cssButton.addNewDoctor-add Add Doctor
+        button.serviceInformation__card__button.cssButton.addNewDoctor-add(type="submit") Add Doctor

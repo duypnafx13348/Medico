@@ -205,6 +205,10 @@ ul {
     border-radius: 10px;
     padding: 16px;
   }
+
+  .error {
+    color: rgba(255, 0, 0, 0.6);
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -328,6 +332,12 @@ ul {
   }
   .serviceInformation__card__button {
     height: 50px;
+  }
+
+  .form-group {
+    .error {
+      font-size: 13px;
+    }
   }
 }
 

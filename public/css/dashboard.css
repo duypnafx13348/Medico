@@ -780,6 +780,7 @@ ul.pagination {
   height: 100%;
   border-radius: 100rem;
   display: none;
+  object-fit: cover;
 }
 .dashboard__main__content__avatar .editAvatar {
   width: 30px;
@@ -1353,6 +1354,10 @@ ul.pagination {
   align-items: center;
   margin-top: 30px;
   cursor: pointer;
+  border: none;
+}
+.serviceInformation__card__button:focus {
+  outline: none;
 }
 .serviceInformation__card__header2__title {
   padding: 20px 60px 20px 0;
@@ -1875,6 +1880,9 @@ ul li {
   border-radius: 10px;
   padding: 16px;
 }
+.form-group .error {
+  color: rgba(255, 0, 0, 0.6);
+}
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .cssText {
@@ -1966,6 +1974,9 @@ ul li {
   }
   .serviceInformation__card__button {
     height: 50px;
+  }
+  .form-group .error {
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1143px) {

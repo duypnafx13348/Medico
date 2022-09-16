@@ -27,13 +27,13 @@ $(document).ready(function () {
     $(".dashboard__main__content__item").removeClass("active");
     $(this).addClass("active");
     const checkTextItem = $(this).text();
-    if (checkTextItem == "Personal Information") {
-      $(".guardianInformation").fadeOut(500);
-      $(".personalInformation").fadeIn(500);
-    } else {
-      $(".personalInformation").fadeOut(500);
-      $(".guardianInformation").fadeIn(500);
-    }
+    // if (checkTextItem == "Personal Information") {
+    $(".guardianInformation").fadeOut(500);
+    $(".personalInformation").fadeIn(500);
+    // } else {
+    //   $(".personalInformation").fadeOut(500);
+    //   $(".guardianInformation").fadeIn(500);
+    // }
   };
 
   const patient = {};
@@ -93,8 +93,96 @@ $(document).ready(function () {
     });
   };
 
+  $("#personalInformation-form").validate({
+    rules: {
+      patientName: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      phoneNumber: {
+        required: true,
+        number: true,
+        rangelength: [8, 11],
+      },
+      address: {
+        required: true,
+      },
+      age: {
+        required: true,
+        number: true,
+        min: 1,
+        max: 99,
+      },
+    },
+    messages: {
+      patientName: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      phoneNumber: {
+        required: "This field is required.",
+        number: "This field is number.",
+        rangelength: "Please enter a value between 8 and 11 characters long.",
+      },
+      address: {
+        required: "This field is required.",
+      },
+      age: {
+        required: "This field is required.",
+        number: "This field is number.",
+        min: "Value greater than or equal to 1.",
+        max: "Value less than or equal to 99.",
+      },
+    },
+    submitHandler: handleClickNext,
+  });
+
+  $("#guardianInformation-form").validate({
+    rules: {
+      guardianName: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      phoneNumber: {
+        required: true,
+        number: true,
+        rangelength: [8, 11],
+      },
+      address: {
+        required: true,
+      },
+      age: {
+        required: true,
+        number: true,
+        min: 1,
+        max: 99,
+      },
+    },
+    messages: {
+      guardianName: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      phoneNumber: {
+        required: "This field is required.",
+        number: "This field is number.",
+        rangelength: "Please enter a value between 8 and 11 characters long.",
+      },
+      address: {
+        required: "This field is required.",
+      },
+      age: {
+        required: "This field is required.",
+        number: "This field is number.",
+        min: "Value greater than or equal to 1.",
+        max: "Value less than or equal to 99.",
+      },
+    },
+    submitHandler: handleClickAdd,
+  });
+
   $("#patientAvatar").on("change", handleChangeInputAvatar);
-  $(".dashboard__main__content__item").on("click", handleClickList);
-  $(".personalInformation-next").on("click", handleClickNext);
-  $(".guardianInformation-add").on("click", handleClickAdd);
+  $(".dashboard__main__content__item:first-child").on("click", handleClickList);
+  // $(".personalInformation-next").on("click", handleClickNext);
+  // $(".guardianInformation-add").on("click", handleClickAdd);
 });

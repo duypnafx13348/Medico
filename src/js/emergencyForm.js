@@ -75,6 +75,8 @@ $(document).ready(function () {
   };
 
   const handleClickList = function () {
+    const valueAttrItem = $(this).attr();
+    console.log("attr", valueAttrItem);
     const valueTextItem = $(this).text();
     switch (valueTextItem) {
       case "Service Information":
@@ -142,7 +144,86 @@ $(document).ready(function () {
     $("#due").val(0);
   };
 
+  const handlePersionalNext = function () {
+    $(".personalInformation").hide();
+    $(".serviceInformation").fadeIn(500);
+    $(".dashboard__main__content__item").removeClass("active");
+    $(".dashboard__main__content__item:nth-child(2)").addClass("active");
+  };
+
+  $("#personalInformation-form").validate({
+    rules: {
+      patientName: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      phoneNumberP: {
+        required: true,
+        number: true,
+        rangelength: [8, 11],
+      },
+      addressP: {
+        required: true,
+      },
+      ageP: {
+        required: true,
+        number: true,
+        min: 1,
+        max: 99,
+      },
+      guardianName: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      phoneNumberG: {
+        required: true,
+        number: true,
+        rangelength: [8, 11],
+      },
+      addressG: {
+        required: true,
+      },
+    },
+    messages: {
+      patientName: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      phoneNumber: {
+        required: "This field is required.",
+        number: "This field is number.",
+        rangelength: "Please enter a value between 8 and 11 characters long.",
+      },
+      address: {
+        required: "This field is required.",
+      },
+      age: {
+        required: "This field is required.",
+        number: "This field is number.",
+        min: "Value greater than or equal to 1.",
+        max: "Value less than or equal to 99.",
+      },
+      guardianName: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      phoneNumberG: {
+        required: "This field is required.",
+        number: "This field is number.",
+        rangelength: "Please enter a value between 8 and 11 characters long.",
+      },
+      addressG: {
+        required: "This field is required.",
+      },
+    },
+    submitHandler: handlePersionalNext,
+  });
+
   $(".serviceInformation__card__box").on("click", handleClickPrice);
-  $(".dashboard__main__content__item").on("click", handleClickList);
+  $(".dashboard__main__content__item:first-child").on("click", handleClickList);
+  $(".dashboard__main__content__item:nth-child(2)").on(
+    "click",
+    handleClickList
+  );
   $(".serviceInformation-next").on("click", handleClickServiceNext);
 });

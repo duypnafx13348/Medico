@@ -4,13 +4,13 @@
         li.dashboard__main__content__item.li-item.active Personal Information
         li.dashboard__main__content__item.li-item Guardian Information
     .personalInformation
-        .dashboard__main__content__avatar 
-            img(src="" id="avatar")
-            .editAvatar
-                label(for="patientAvatar") 
-                    img(src="./images/EditAvatar.svg", alt="editavatar" id="EditAvatar")
-                input(type="file" id="patientAvatar" name="patientAvatar")
-        form(action="", class="dashboard__main__content__information-personalInformation")
+        form(action="", id="personalInformation-form" class="dashboard__main__content__information-personalInformation")
+            .dashboard__main__content__avatar 
+                img(src="" id="avatar")
+                .editAvatar
+                    label(for="patientAvatar") 
+                        img(src="./images/EditAvatar.svg", alt="editavatar" id="EditAvatar")
+                    input(type="file" id="patientAvatar" name="patientAvatar")
             .row.dashboard__main__content__information__group
                 .col-md-6.col-lg-4
                     +signupForm("Patient Name", "text", "patientName", "Charlene Reed")
@@ -35,12 +35,11 @@
             
                 .col-md-12.col-lg-12.form-group 
                     label(for="description" class="cssLabel") Description
-                    textarea(name="description", rows="4", id="description")
-            .serviceInformation__card__button.cssButton.personalInformation-next Next
-            .hehe
+                    textarea(name="description", rows="4", id="description" placeholder="Write a short description")
+            button.serviceInformation__card__button.cssButton.personalInformation-next Next
 
     .guardianInformation
-        form(action="", class="dashboard__main__content__information-guardianInformation")
+        form(action="", id="guardianInformation-form" class="dashboard__main__content__information-guardianInformation")
             .row.dashboard__main__content__information__group
                 .col-md-6.col-lg-4
                     +signupForm("Guardian Name", "text", "guardianName", "Charlene Reed")
@@ -58,5 +57,5 @@
             
                 .col-lg-12.form-group 
                     label(for="description" class="cssLabel") Description
-                    textarea(name="description", rows="4", placeholder="Write a short description") 
-            .serviceInformation__card__button.cssButton.guardianInformation-add Add Patient
+                    textarea(name="description", rows="4", id="description" placeholder="Write a short description")
+            button.serviceInformation__card__button.cssButton.guardianInformation-add Add Patient

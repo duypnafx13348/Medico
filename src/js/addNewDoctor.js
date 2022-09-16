@@ -59,6 +59,67 @@ $(document).ready(function () {
     });
   };
 
+  $("#doctor-form").validate({
+    rules: {
+      doctorName: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      phoneNumber: {
+        required: true,
+        number: true,
+        rangelength: [8, 11],
+      },
+      address: {
+        required: true,
+      },
+      age: {
+        required: true,
+        number: true,
+        min: 1,
+        max: 99,
+      },
+      emailAddress: {
+        required: true,
+        email: true,
+      },
+      doB: {
+        required: true,
+      },
+    },
+    messages: {
+      doctorName: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      phoneNumber: {
+        required: "This field is required.",
+        number: "This field is number.",
+        rangelength: "Please enter a value between 8 and 11 characters long.",
+      },
+      address: {
+        required: "This field is required.",
+      },
+      age: {
+        required: "This field is required.",
+        number: "This field is number.",
+        min: "Value greater than or equal to 1.",
+        max: "Value less than or equal to 99.",
+      },
+      emailAddress: {
+        required: "This field is required.",
+        email: "This field is email.",
+      },
+      doB: {
+        required: "This field is required.",
+      },
+    },
+    submitHandler: () => {
+      $("#doctor-form").submit((e) => e.preventDefault());
+      handleFormDoctor();
+    },
+  });
+
   $(".profilePicture input[type='file']").on("change", () => {
     previewFile(".profilePicture");
   });
@@ -66,5 +127,5 @@ $(document).ready(function () {
     previewFile(".coverPicture");
   });
 
-  $(".addNewDoctor-add").on("click", handleFormDoctor);
+  // $(".addNewDoctor-add").on("click", handleFormDoctor);
 });
