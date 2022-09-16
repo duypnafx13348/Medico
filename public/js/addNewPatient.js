@@ -55,8 +55,8 @@ $(document).ready(function () {
       const valueForm = $(
         "form.dashboard__main__content__information-personalInformation"
       ).serializeArray();
-      valueForm.map((item) => {
-        return (patient[item.name] = item.value);
+      valueForm.forEach((item) => {
+        patient[item.name] = item.value;
       });
       $(".dashboard__main__content__item").removeClass("active");
       $(".dashboard__main__content__item:last-child").addClass("active");
@@ -70,8 +70,8 @@ $(document).ready(function () {
     const valueForm = $(
       "form.dashboard__main__content__information-guardianInformation"
     ).serializeArray();
-    valueForm.map((item) => {
-      return (guardian[item.name] = item.value);
+    valueForm.forEach((item) => {
+      guardian[item.name] = item.value;
     });
     const date = new Date().getDate();
     const month = new Date().getMonth() + 1;

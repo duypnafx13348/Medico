@@ -223,15 +223,13 @@ $(document).ready(function () {
         required: "This field is required.",
       },
     },
-    submitHandler: (e) => {
-      console.log(handlePersionalNext(e));
-    },
+    submitHandler: handlePersionalNext,
   });
 
   const handlePaymentSubmit = function () {
     $.post(api, emergencyForm, function (data) {
       console.log("data", data);
-      // window.location.replace("emergencyList.html");
+      window.location.replace("emergencyList.html");
     });
   };
 
