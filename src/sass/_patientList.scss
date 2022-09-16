@@ -1,5 +1,6 @@
 #example,
-#expenseListTable {
+#expenseListTable,
+#emergencyTable {
   border-spacing: 0 7px;
   border-collapse: separate;
 
@@ -51,7 +52,8 @@ table.dataTable thead > tr > th.sorting_asc:after {
 
 @media screen and (max-width: 1144px) {
   #example,
-  #expenseListTable {
+  #expenseListTable,
+  #emergencyTable {
     th {
       font-weight: 500;
       font-size: 12px;
@@ -62,20 +64,24 @@ table.dataTable thead > tr > th.sorting_asc:after {
   }
 
   #example_length label,
+  #expenseListTable_length label,
+  #emergencyTable_length label,
   #example_filter label,
+  #expenseListTable_filter label,
+  #emergencyTable_filter label,
   #example_info,
+  #expenseListTable_info,
+  #emergencyTable_info,
   ul.pagination {
     font-size: 13px;
     line-height: 16px;
   }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1144px) {
-}
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
   #example,
-  #expenseListTable {
+  #expenseListTable,
+  #emergencyTable {
     thead,
     tbody {
       th,
@@ -99,7 +105,8 @@ table.dataTable thead > tr > th.sorting_asc:after {
 
 @media screen and (max-width: 767px) {
   #example,
-  #expenseListTable {
+  #expenseListTable,
+  #emergencyTable {
     width: 100% !important;
     thead {
       th {

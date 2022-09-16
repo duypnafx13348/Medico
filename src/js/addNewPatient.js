@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     $.post(api, patient, function (data, status) {
       console.log("POSTED");
-      window.location.replace("/patientList.html");
+      window.location.replace("patientList.html");
     });
   };
 

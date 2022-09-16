@@ -15,5 +15,35 @@ $(document).ready(function () {
     });
   };
 
-  $(".addExpense-submit").on("click", handleSubmitExpense);
+  $("#addExpense-form").validate({
+    rules: {
+      expenseHead: {
+        required: true,
+        rangelength: [3, 15],
+      },
+      amount: {
+        required: true,
+      },
+      checkNumber: {
+        required: true,
+        number: true,
+      },
+    },
+    messages: {
+      expenseHead: {
+        required: "This field is required.",
+        rangelength: "Please enter a value between 3 and 15 characters long.",
+      },
+      amount: {
+        required: "This field is required.",
+      },
+      checkNumber: {
+        required: "This field is required.",
+        number: "This field is number",
+      },
+    },
+    submitHandler: handleSubmitExpense,
+  });
+
+  // $(".addExpense-submit").on("click", handleSubmitExpense);
 });

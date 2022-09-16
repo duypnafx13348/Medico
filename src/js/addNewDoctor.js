@@ -53,7 +53,7 @@ $(document).ready(function () {
         });
 
         $.post(doctorApi, addNewDoctor, function (data) {
-          window.location.replace("./allDoctor.html");
+          window.location.replace("allDoctor.html");
         });
       });
     });
@@ -114,10 +114,7 @@ $(document).ready(function () {
         required: "This field is required.",
       },
     },
-    submitHandler: () => {
-      $("#doctor-form").submit((e) => e.preventDefault());
-      handleFormDoctor();
-    },
+    submitHandler: handleFormDoctor,
   });
 
   $(".profilePicture input[type='file']").on("change", () => {

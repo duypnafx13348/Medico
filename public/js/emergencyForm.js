@@ -1,4 +1,7 @@
+const api = "https://6305c1c6dde73c0f844abb5d.mockapi.io/emergency";
+
 $(document).ready(function () {
+  const emergencyForm = {};
   const data = [];
   const handleTotalPrice = function () {
     var totalCoin = 0;
@@ -76,7 +79,6 @@ $(document).ready(function () {
 
   const handleClickList = function () {
     const valueTextItem = $(this).text();
-    console.log("valuetext", valueTextItem);
     switch (valueTextItem) {
       case "Service Information":
         $(".personalInformation").hide();
@@ -141,13 +143,19 @@ $(document).ready(function () {
     );
     $("#paidAmount").val($("#grandTotal").val());
     $("#due").val(0);
+    console.log("service", emergencyForm);
   };
 
   const handlePersionalNext = function () {
+    const valueForm = $("#personalInformation-form").serializeArray();
+    valueForm.forEach((item) => {
+      emergencyForm[item.name] = item.value;
+    });
     $(".personalInformation").hide();
     $(".serviceInformation").fadeIn(500);
     $(".dashboard__main__content__item").removeClass("active");
     $(".dashboard__main__content__item:nth-child(2)").addClass("active");
+    console.log("per", emergencyForm);
   };
 
   $("#personalInformation-form").validate({
@@ -215,10 +223,20 @@ $(document).ready(function () {
         required: "This field is required.",
       },
     },
-    submitHandler: handlePersionalNext,
+    submitHandler: (e) => {
+      console.log(handlePersionalNext(e));
+    },
   });
 
+  const handlePaymentSubmit = function () {
+    $.post(api, emergencyForm, function (data) {
+      console.log("data", data);
+      // window.location.replace("emergencyList.html");
+    });
+  };
+
   $(".serviceInformation__card__box").on("click", handleClickPrice);
-  $(".dashboard__main__content__item:first-child").on("click", handleClickList);
+  $(".dashboard__main__content__item").on("click", handleClickList);
   $(".serviceInformation-next").on("click", handleClickServiceNext);
+  $(".payment-submit").on("click", handlePaymentSubmit);
 });

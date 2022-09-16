@@ -1,6 +1,6 @@
 .container 
     .dashboard__main__content__title.primary-title Add Expense
-    form.addExpense-form
+    form#addExpense-form.addExpense-form
         .row.addExpense-row
             .col-md-6.col-lg-6.addExpense-col 
                 +signupForm("Expense Head", "text", "expenseHead", "Repair Equipment")
@@ -21,4 +21,4 @@
                 +signupForm("Check Number", "text", "checkNumber", "**** **** **** 5648")
             .col-md-6.col-lg-6.addExpense-col
                 +selectForm("Bank Account","bankAccount", ["SHB", "TECHCOMBANK", "VIB", "SACOMBANK"])
-        div(class="serviceInformation__card__button cssButton addExpense-submit") Submit
+        button(class="serviceInformation__card__button cssButton addExpense-submit") Submit
