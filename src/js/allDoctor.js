@@ -1,6 +1,10 @@
 const doctorApi = "https://6305c1c6dde73c0f844abb5d.mockapi.io/doctors";
 $(document).ready(function () {
   $.get(doctorApi, function (data, status) {
+    if (data == "") {
+      const emptyDoctor = `<div class="empty m-auto">No Doctor Yet!</div>`;
+      $(".dashboard__main__content__box").append(emptyDoctor);
+    }
     const initAllDoctor = data.map((item) => {
       const handleRating = function (rate) {
         let html = "";

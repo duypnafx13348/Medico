@@ -385,3 +385,9 @@
     }
   }
 }
+
+@media screen and (max-width: 455px) {
+  .dashboard__main__content__list .dashboard__main__content__item {
+    margin-right: 0;
+  }
+}

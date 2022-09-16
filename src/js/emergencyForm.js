@@ -75,8 +75,6 @@ $(document).ready(function () {
   };
 
   const handleClickList = function () {
-    const valueAttrItem = $(this).attr();
-    console.log("attr", valueAttrItem);
     const valueTextItem = $(this).text();
     switch (valueTextItem) {
       case "Service Information":

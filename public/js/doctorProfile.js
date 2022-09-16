@@ -45,13 +45,13 @@ $(document).ready(function () {
     // $(".dashboard__main__content__docprofile__header").append(
     //   initDoctorProfile
     // );
-    $(".dashboard__main__content__docprofile__header__bg img").attr(
-      "src",
-      `${data.background}`
+    const imgBackground = `<img src="${data.background}" alt="background" />`;
+    const imgAvatar = `<img src="${data.avatar}" alt="background" />`;
+    $(".dashboard__main__content__docprofile__header__bg").append(
+      imgBackground
     );
-    $(".dashboard__main__content__docprofile__header__avatar img").attr(
-      "src",
-      `${data.avatar}`
+    $(".dashboard__main__content__docprofile__header__avatar").append(
+      imgAvatar
     );
     $(
       ".dashboard__main__content__docprofile__header__info__name.titleDoc"
