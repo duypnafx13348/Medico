@@ -76,6 +76,7 @@ $(document).ready(function () {
 
   const handleClickList = function () {
     const valueTextItem = $(this).text();
+    console.log("valuetext", valueTextItem);
     switch (valueTextItem) {
       case "Service Information":
         $(".personalInformation").hide();
@@ -219,9 +220,5 @@ $(document).ready(function () {
 
   $(".serviceInformation__card__box").on("click", handleClickPrice);
   $(".dashboard__main__content__item:first-child").on("click", handleClickList);
-  $(".dashboard__main__content__item:nth-child(2)").on(
-    "click",
-    handleClickList
-  );
   $(".serviceInformation-next").on("click", handleClickServiceNext);
 });
