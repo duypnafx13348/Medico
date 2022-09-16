@@ -236,7 +236,7 @@ $(document).ready(function () {
   };
 
   $(".serviceInformation__card__box").on("click", handleClickPrice);
-  $(".dashboard__main__content__item").on("click", handleClickList);
+  $(".dashboard__main__content__item:first-child").on("click", handleClickList);
   $(".serviceInformation-next").on("click", handleClickServiceNext);
   $(".payment-submit").on("click", handlePaymentSubmit);
 });
